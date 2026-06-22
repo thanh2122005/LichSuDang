@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn Tập Trắc Nghiệm CNXHKH - 150 Câu</title>
+    <style>
+        /* CSS STYLE */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --success-color: #2ecc71;
+            --error-color: #e74c3c;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .menu-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #eee;
+            border-radius: 8px;
+            overflow: visible;
+            /* thêm dòng này */
+            min-height: 50px;
+            /* thêm dòng này */
+        }
+
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        button.active {
+            background: var(--primary-color);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .control-buttons {
+            display: none;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .btn-shuffle {
+            background: #9b59b6;
+        }
+
+        .btn-total {
+            background: #e67e22 !important;
+        }
+
+        .question-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .question-text {
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin: 10px 0;
+            padding: 12px 15px;
+            border: 2px solid #edf2f7;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            position: relative;
+        }
+
+        .options li:hover:not(.locked) {
+            background: #f8fafc;
+            border-color: var(--secondary-color);
+        }
+
+        .options li.selected {
+            background: #ebf8ff;
+            border-color: var(--secondary-color);
+        }
+
+        /* Trạng thái kết quả */
+        .options li.correct {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+            color: #155724;
+            font-weight: bold;
+        }
+
+        .options li.incorrect {
+            background-color: #f8d7da !important;
+            border-color: #dc3545 !important;
+            color: #721c24;
+        }
+
+        .result-area {
+            display: none;
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        #submit-btn {
+            background: var(--success-color);
+            font-size: 1.2em;
+            padding: 15px 40px;
+        }
+
+        #score-display {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Tối ưu cho điện thoại */
+        @media (max-width: 768px) {
+
+            body {
+                padding: 8px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .menu-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+                padding: 10px;
+                overflow-x: auto;
+            }
+
+            .menu-buttons button {
+                min-width: 80px;
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .control-buttons button {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+
+            .question-text {
+                font-size: 16px;
+            }
+
+            .options li {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            #submit-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>THI TRẮC NGHIỆM CNXHKH</h1>
+
+        <div id="part-selector" class="menu-buttons">
+        </div>
+        <div style="text-align:center; margin-bottom:15px;">
+            <label>
+                <input type="radio" name="mode" value="submit" checked>
+                Làm xong rồi nộp
+            </label>
+            &nbsp;&nbsp;
+            <label>
+                <input type="radio" name="mode" value="instant">
+                Chọn là biết đúng sai
+            </label>
+        </div>
+
+        <div class="control-buttons" id="controls">
+            <button class="btn-shuffle" onclick="shuffleQuestions()">Đảo câu hỏi</button>
+            <button class="btn-shuffle" onclick="shuffleAnswers()">Đảo đáp án</button>
+        </div>
+
+        <div id="quiz-container">
+            <p style="text-align:center; color:#666;">Vui lòng chọn một phần để bắt đầu làm bài.</p>
+        </div>
+
+        <div id="result-area" class="result-area">
+            <button onclick="submitQuiz()" id="submit-btn">
+                Nộp bài & Xem kết quả
+            </button>
+
+            <button onclick="retryWrongQuestions()" id="retry-btn"
+                style="display:none;background:#e67e22;margin-left:10px;">
+                Làm lại câu sai
+            </button>
+
+            <div id="score-display"></div>
+        </div>
+    </div>
+
+    <script>
+        /* DATA & LOGIC */
+        // Dữ liệu được trích xuất từ file của bạn (Ví dụ mẫu 30 câu đầu, bạn có thể copy thêm đủ 150 câu vào mảng này)
+        const rawData = [
+
+            //Chương 1
+            { id: 1, q: "Đối tượng nghiên cứu của môn học Lịch sử Đảng Cộng sản Việt Nam là:", a: ["Các sự kiện Lịch sử Đảng", "Cương lĩnh, đường lối, chủ trương, chính sách lớn của Đảng", "Quá trình lãnh đạo, chỉ đạo, tổ chức thực hiện của Đảng trong tiến trình cách mạng", "Tất cả các phương án A, B, C đều đúng"], c: 3 },
+
+            { id: 2, q: "Môn học Lịch sử Đảng Cộng sản Việt Nam có chức năng gì?", a: ["Chức năng nhận thức, tuyên truyền và giáo dục", "Chức năng nhận thức, chức năng giáo dục, chức năng dự báo và phê phán", "Chức năng dự báo và phê bình", "Chức năng giáo dục và phê bình"], c: 1 },
+
+            { id: 3, q: "Môn học Lịch sử Đảng Cộng sản Việt Nam có những nhiệm vụ gì?", a: ["Trình bày hệ thống cương lĩnh, đường lối của Đảng", "Tái hiện tiến trình lịch sử sự lãnh đạo, đấu tranh của Đảng", "Tổng kết lịch sử Đảng, và làm rõ vai trò sức chiến đấu của hệ thống tổ chức Đảng", "Cả A, B, C đều đúng"], c: 3 },
+
+            { id: 4, q: "Học tập môn học Lịch sử Đảng Cộng sản Việt Nam có ý nghĩa gì đối với sinh viên:", a: ["Để tham gia vào lãnh đạo đất nước", "Để học tập các môn học hiệu quả hơn", "Giáo dục lý tưởng, truyền thống đấu tranh cách mạng của Đảng và dân tộc, củng cố, bồi đắp niềm tin đối với sự lãnh đạo của Đảng", "Để cải cách đất nước tiến nhanh, tiến mạnh, tiến vững chắc"], c: 2 },
+
+            { id: 5, q: "Một trong chức năng giáo dục của khoa học Lịch sử Đảng là:", a: ["Sự lãnh đạo của Đảng là nhân tố hàng đầu quyết định thắng lợi của cách mạng", "Tăng cường sự lãnh đạo, nâng cao sức chiến đấu của Đảng, tự phê bình và phê bình là quy luật phát triển của Đảng", "Lý tưởng cách mạng với mục tiêu chiến lược là độc lập dân tộc và chủ nghĩa xã hội", "Từ những gì diễn ra trong quá khứ để hiểu rõ hiện tại và dự báo tương lai"], c: 2 },
+
+            { id: 6, q: "Tại sao khi nghiên cứu, học tập Lịch sử Đảng Cộng sản Việt Nam lại cần phải nhận thức và vận dụng chủ nghĩa duy vật lịch sử?", a: ["Để thấy được sự ưu việt của Đảng Cộng sản Việt Nam so với các đảng phái ở phương Tây", "Để hiểu được sứ mệnh lịch sử của giai cấp công nhân", "Để nhận thức tiến trình cách mạng do Đảng Cộng sản Việt Nam lãnh đạo", "Để hiểu con đường cách mạng giải phóng dân tộc"], c: 2 },
+
+            { id: 7, q: "Trong nghiên cứu Lịch sử Đảng Cộng sản Việt Nam, khi xem xét, đối chiếu các hiện tượng lịch sử trong hình thức tổng quát nhằm mục đích vạch ra bản chất, quy luật, khuynh hướng chung trong sự vận động của sự vật thì đó là cách nghiên cứu dựa trên phương pháp nào?", a: ["Phương pháp logic", "Phương pháp lịch sử", "Phương pháp tổng hợp", "Phương pháp so sánh"], c: 0 },
+
+            { id: 8, q: "Câu nói: “Lịch sử Đảng Cộng sản Việt Nam là cả một pho lịch sử bằng vàng” là của ai?", a: ["Hồ Chí Minh", "Trường Chinh", "Lê Duẩn", "Nguyễn Phú Trọng"], c: 0 },
+
+            { id: 9, q: "Điền từ còn thiếu vào chỗ chấm: “Đảng Cộng sản Việt Nam là đội tiên phong của giai cấp công nhân, đồng thời là đội tiên phong của nhân dân lao động và của dân tộc Việt Nam; đại biểu trung thành lợi ích của giai cấp công nhân, nhân dân lao động và của dân tộc. Đảng lấy chủ nghĩa Mác - Lenin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động, lấy…. làm nguyên tắc tổ chức cơ bản”", a: ["Phê bình và tự phê bình", "Đoàn kết thống nhất trong Đảng", "Kỷ luật nghiêm minh tự giác", "Tập trung dân chủ"], c: 3 },
+
+            { id: 10, q: "Một trong chức năng giáo dục của khoa học lịch sử Đảng là:", a: ["Sự lãnh đạo của Đảng là nhân tố hàng đầu quyết định thắng lợi của cách mạng Việt Nam", "Tăng cường sự lãnh đạo, nâng cao sức chiến đấu của Đảng", "Lý tưởng cách mạng với mục tiêu chiến lược là độc lập dân tộc và chủ nghĩa xã hội", "Từ những gì diễn ra trong quá khứ để hiểu rõ hiện tại và dự báo tương lai"], c: 2 },
+            //Chương2
+            { id: 11, q: "Thực dân Pháp nổ súng xâm lược nước ta vào ngày tháng năm nào?", a: ["1/9/1858", "1/8/1858", "1/9/1859", "1/8/1859"], c: 0 },
+
+            { id: 12, q: "Thời gian thực dân Pháp tiến hành khai thác thuộc địa lần thứ nhất ở Việt Nam khi nào?", a: ["1858-1884", "1884-1899", "1914-1918", "1897-1914"], c: 3 },
+
+            { id: 13, q: "Trước khi thực dân Pháp xâm lược Việt Nam (1858), xã hội Việt Nam có mấy giai cấp? Đó là giai cấp nào?", a: ["2 giai cấp (Nông dân, Công nhân)", "4 giai cấp (Công nhân, Nông dân, Tư sản, Tiểu tư sản)", "3 giai cấp (Địa chủ phong kiến, Công nhân, Nông dân)", "2 giai cấp (Địa chủ phong kiến, Nông dân)"], c: 3 },
+
+            { id: 14, q: "Trong cuộc khai thác thuộc địa lần thứ nhất của thực dân Pháp ở nước ta có giai cấp mới nào được hình thành?", a: ["Giai cấp tiểu tư sản", "Giai cấp địa chủ", "Giai cấp nông dân và công nhân", "Giai cấp công nhân"], c: 3 },
+
+            { id: 15, q: "Mâu thuẫn chủ yếu và gay gắt nhất ở Việt Nam vào đầu thế kỷ XX là mâu thuẫn nào?", a: ["Mâu thuẫn giữa giai cấp nông dân với đại chủ phong kiến", "Mâu thuẫn giữa giai cấp công nhân với giai cấp tư sản", "Mâu thuẫn giữa giai cấp nông dân, giai cấp công nhân với địa chủ phong kiến", "Mâu thuẫn giữa toàn thể dân tộc Việt Nam với thực dân Pháp và phong kiến phản động"], c: 3 },
+
+            { id: 16, q: "Giai cấp công nhân Việt Nam ra đời có những đặc điểm nào sau đây?", a: ["Chủ yếu xuất thân từ nông dân", "Ra đời trước giai cấp tư sản Việt Nam", "Chịu sự áp bức bóc lột của thực dân Pháp, tư sản và phong kiến", "Cả A, B, C đều đúng"], c: 3 },
+
+            { id: 17, q: "Phong trào Cần Vương (1885-1896) do ai khởi xướng?", a: ["Phan Đình Phùng", "Vua Hàm Nghi và Tôn Thất Thuyết", "Hoàng Hoa Thám", "Nguyễn Thiện Thuật"], c: 1 },
+
+            { id: 18, q: "Hoàng Hoa Thám đã lãnh đạo phong trào yêu nước nào ?", a: ["Bãi Sậy", "Nông dân Yên Thế", "Ba Đình", "Hương Khê"], c: 1 },
+
+            { id: 19, q: "Phong trào Đông Du theo khuynh hướng dân chủ tư sản đầu thế kỷ XX do ai khởi xướng và lãnh đạo?", a: ["Phan Bội Châu", "Phan Châu Trinh", "Huỳnh Thúc Kháng", "Phan Đình Phùng"], c: 0 },
+
+            { id: 20, q: "Tổ chức Cộng sản nào ra đời đầu tiên ở Việt Nam?", a: ["Hội Việt Nam cách mạng thanh niên", "Đông Dương Cộng sản Đảng", "An Nam Cộng sản Đảng", "Đông Dương Cộng sản liên đoàn"], c: 1 },
+
+            { id: 21, q: "Tháng 6 năm 1929 tổ chức Cộng sản nào đã ra đời ở Việt Nam?", a: ["Hội Việt Nam cách mạng thanh niên", "An Nam Cộng sản Đảng", "Đông Dương Cộng sản Đảng", "Đông Dương Cộng sản liên đoàn"], c: 2 },
+
+            { id: 22, q: "Tổ chức An Nam Cộng sản Đảng được thành lập vào thời gian nào?", a: ["Tháng 6/1927", "Tháng 6/1928", "Tháng 6/1929", "Tháng 11/1929"], c: 3 },
+
+            { id: 23, q: "Tổ chức Đông Dương Cộng sản Đảng liên đoàn được thành lập vào thời gian nào?", a: ["Tháng 1/1930", "Tháng 9/1929", "Tháng 2/1930", "Tháng 6/1929"], c: 1 },
+
+            { id: 24, q: "Hội nghị hợp nhất các Tổ chức Cộng sản Đảng diễn ra trong khoảng thời gian nào sau đây?", a: ["7/1/1930- 7/2/1930", "7/2/1930- 8/2/1930", "6/2/1930-8/2/1930", "6/1/1930-7/2/1930"], c: 3 },
+
+            { id: 25, q: "Tại Hội nghị thành lập Đảng Cộng sản Việt Nam, văn kiện nào của Nguyễn Ái Quốc đã được Hội nghị thông qua?", a: ["Chính cương vắn tắt", "Sách lược vắn tắt", "Chương trình tóm tắt và điều lệ vắn tắt", "Cả A, B và C"], c: 3 },
+
+            { id: 26, q: "Chương trình hành động của Đảng Cộng sản Đông Dương tháng 6 năm 1932 do ai soạn thảo?", a: ["Trần Phú", "Hà Huy Tập", "Nguyễn Văn Cừ", "Lê Hồng Phong"], c: 3 },
+
+            { id: 27, q: "Động lực chính của cách mạng Đông Dương được xác định trong Luận cương chính trị tháng 10/1930 là?", a: ["Địa chủ và nông dân", "Toàn thể dân tộc Việt Nam", "Tư sản, tiểu tư sản", "Vô sản và nông dân"], c: 3 },
+
+            { id: 28, q: "Văn kiện nào khẳng định: “Vấn đề thổ địa là cái cốt của cách mạng tư sản dân quyền”?", a: ["Chương trình hành động của Đảng Cộng sản Đông Dương (6/1932)", "Luận cương chính trị (10/1930)", "Chính cương vắn tắt, sách lược vắn tắt (3/2/1930)", "Chung quanh vấn đề chính sách mới của Đảng (10/1936)"], c: 1 },
+
+            { id: 29, q: "Đại hội VII Quốc tế Cộng sản (7/1935) xác định kẻ thù nguy hiểm trước mắt của nhân dân thế giới là gì?", a: ["Chủ nghĩa đế quốc", "Chủ nghĩa thực dân cũ", "Chủ nghĩa sô vanh", "Chủ nghĩa phát xít"], c: 3 },
+
+            { id: 30, q: "Nhiệm vụ trước mắt của cao trào cách mạng 1936-1939 là:", a: ["Đòi những quyền dân chủ đơn sơ (tự do, dân chủ, cơm áo, hòa bình)", "Ruộng đất cho dân cày", "Độc lập dân tộc", "Tiến lên chủ nghĩa xã hội"], c: 0 },
+
+            { id: 31, q: "Đại hội lần thứ mấy của Đảng Cộng sản Việt Nam quyết định lấy ngày 3/2 làm ngày kỉ niệm thành lập Đảng?", a: ["Đại hội I (3/1935)", "Đại Hội II (2/1951)", "Đại hội IV (12/1976)", "Đại hội III (9/1960)"], c: 3 },
+
+            { id: 32, q: "Trong Cương lĩnh chính trị đầu tiên của Đảng (2/1930) nhiệm vụ nào được đặt lên hàng đầu?", a: ["Đánh đổ địa chủ phong kiến giành ruộng đất cho dân cày", "Đánh đổ đế quốc chủ nghĩa Pháp làm cho nước Nam được hoàn toàn độc lập", "Đánh đổ chủ nghĩa Pháp và bọn phong kiến", "Độc lập dân tộc và chủ nghĩa xã hội"], c: 1 },
+
+            { id: 33, q: "Lực lượng cách mạng được Nguyễn Ái Quốc xác định trong bản Cương lĩnh chính trị đầu tiên của Đảng (2/1930) là?", a: ["Nông dân, Công nhân", "Bao gồm toàn dân những người yêu nước (Công nhân, nông dân, tư sản, tiểu tư sản, phú nông, trung nông, địa chủ có tinh thần yêu nước)", "Địa chủ tiến bộ yêu nước", "Tư sản, tiểu tư sản"], c: 1 },
+
+            { id: 34, q: "Đảng Cộng sản Việt Nam ra đời là sự kết hợp của những yếu tố nào sau đây:", a: ["Chủ nghĩa Mác - Lênin, Phong trào công nhân và Phong trào yêu nước", "Chủ nghĩa Mác - Lênin và phong trào công nhân", "Chủ nghĩa Mác - Lênin và phong trào yêu nước", "Phong trào công nhân và phong trào yêu nước"], c: 0 },
+
+            { id: 35, q: "Câu nói: “Đảng muốn vững thì phải có chủ nghĩa làm cốt, trong Đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy. Đảng mà không có chủ nghĩa giống như người không có trí khôn, tàu không có bàn chỉ nam” của Nguyễn Ái Quốc trích trong:", a: ["Tác phẩm Đường cách mệnh", "Tạp chí Cộng sản", "Báo Người cùng khổ", "Báo Nhân đạo"], c: 2 },
+
+            { id: 36, q: "Hội nghị nào sau đây có sự chủ trì của Nguyễn Ái Quốc?", a: ["Hội nghị Ban Chấp hành TW Đảng lần thứ 6 (11/1939)", "Hội nghị Ban Chấp hành TW Đảng lần thứ 7 (11/1940)", "Hội nghị Ban Chấp hành TW Đảng lần thứ 8 (5/1941)", "Hội nghị Ban thường vụ TW Đảng (3/1945)"], c: 2 },
+
+            { id: 37, q: "Vua Bảo Đại thoái vị, giao nộp ấn, kiếm cho Chính phủ lâm thời nước Việt Nam dân chủ cộng hòa ngày tháng năm nào?", a: ["25/8/1945", "19/8/1945", "30/8/1945", "23/8/1945"], c: 2 },
+
+            { id: 38, q: "Khẩu hiệu đấu tranh được Đảng xác định tại Hội nghị toàn quốc của Đảng Cộng sản Đông Dương họp ở Tân Trào – Tuyên Quang là:", a: ["Đánh đuổi phát xít Nhật", "Đánh đuổi thực dân Pháp xâm lược giành độc lập dân tộc", "Đánh đổ phong kiến dành ruộng đất dân cày", "Phản đối xâm lược! Hoàn toàn độc lập! Chính quyền nhân dân!"], c: 3 },
+
+            { id: 39, q: "Quân đội Phát xít Nhật nhảy vào xâm lược nước ta năm nào?", a: ["9/1940", "9/1939", "5/1941", "11/1940"], c: 0 },
+            //Chương 3
+            { id: 40, q: "Tình hình nước Việt Nam Dân chủ Cộng hòa sau Cách mạng tháng Tám năm 1945 được ví như:", a: ["Nước sôi lửa nóng", "Nước sôi lửa bỏng", "Trứng nước", "Ngàn cân treo sợi tóc"], c: 3 },
+
+            { id: 41, q: "Những khó khăn, thách thức đối với nước Việt Nam Dân chủ Cộng hòa sau Cách mạng tháng Tám năm 1945:", a: ["Trên 90% dân số mù chữ", "Kinh tế kiệt quệ, ngân khố quốc gia trống rỗng, nạn đói", "Nạn thù trong giặc ngoài", "Cả A,B,C đều đúng"], c: 3 },
+
+            { id: 42, q: "Những thuận lợi cơ bản của nước Việt Nam Dân chủ Cộng hòa sau Cách mạng tháng Tám năm 1945:", a: ["Việt Nam trở thành quốc gia độc lập tự do", "Hệ thống chính quyền được thiết lập từ Trung ương xuống địa phương", "Phong trào cách mạng thế giới phát triển mạnh mẽ", "Cả A,B,C đều đúng"], c: 3 },
+
+            { id: 43, q: "Chỉ thị Kháng chiến kiến quốc của BCHTW Đảng ra đời ngày tháng năm nào?", a: ["24/12/1945", "25/12/1945", "24/11/1945", "25/11/1945"], c: 3 },
+
+            { id: 44, q: "Kẻ thù chính của Cách mạng Việt Nam được xác định trong Chỉ thị Kháng chiến kiến quốc ngày 25/11/1945 là:", a: ["Tưởng giới thạch và tay sai", "Phát xít Nhật", "Thực dân Anh xâm lược", "Thực dân Pháp xâm lược"], c: 3 },
+
+            { id: 45, q: "Hiệp định Sơ bộ được Hồ Chí Minh ký với J Xanhtơny vào thời gian nào?", a: ["19/12/1946", "6/3/1946", "3/6/1946", "20/12/1946"], c: 3 },
+
+            { id: 46, q: "Chủ tịch Hồ Chí Minh viết Lời kêu gọi toàn quốc kháng chiến vào thời điểm nào?", a: ["Ngày 18/12/1946", "Ngày 21/12/1946", "Ngày 20/12/1946", "Ngày 19/12/1946"], c: 3 },
+
+            { id: 47, q: "Tại Đại hội đại biểu toàn quốc lần thứ II (2/1951). Đảng ta quyết định đổi tên thành:", a: ["Đảng Cộng sản Việt Nam", "Đảng Dân chủ Việt Nam", "Hội nghiên cứu Chủ nghĩa Mác-Lênin", "Đảng Lao động Việt Nam"], c: 3 },
+
+            { id: 48, q: "Phương châm “Đánh chắc, tiến chắc, đánh chắc thắng” xuất hiện trong chiến dịch nào sau đây:", a: ["Chiến dịch Hồ Chí Minh (1975)", "Chiến dịch Biên giới (1950)", "Chiến dịch Việt Bắc (1947)", "Chiến dịch Điện Biên Phủ (1954)"], c: 3 },
+
+            { id: 49, q: "Ai đã được cử làm Tư lệnh kiêm Bí thư Đảng ủy chiến dịch Điện Biên Phủ?", a: ["Phạm Văn Đồng", "Nguyễn Chí Thanh", "Văn Tiến Dũng", "Võ Nguyên Giáp"], c: 3 },
+
+            { id: 50, q: "Những nhiệm vụ trước mắt được Đảng xác định trong bản Chỉ thị kháng chiến kiến quốc ngày 25/11/1945 là:", a: ["Mở lớp học các cấp", "Đánh đuổi quân Tưởng", "Hòa hoãn với thực dân Pháp", "Củng cố chính quyền, chống thực dân Pháp, bài trừ nội phản, cải thiện đời sống của nhân dân"], c: 3 },
+
+            { id: 51, q: "Chủ trương và sách lược của Trung ương Đảng trong việc đối phó với các lực lượng đế quốc sau cách mạng tháng Tám năm 1945", a: ["Thêm bạn bớt thù", "Hoa - Việt thân thiện", "Độc lập về kinh tế, nhân nhượng về chính trị với Pháp", "Cả A, B, C đều đúng"], c: 3 },
+
+            { id: 52, q: "Đâu là phương châm tiến hành cuộc kháng chiến chống thực dân Pháp?", a: ["Kháng chiến toàn dân", "Kháng chiến toàn diện", "Kháng chiến lâu dài và dựa vào sức mình là chính", "Cả A,B,C đều đúng"], c: 3 },
+
+            { id: 53, q: "Nhân dân Nam Bộ đứng lên kháng chiến chống thực dân Pháp xâm lược và bảo vệ chính quyền cách mạng vào thời gian nào?", a: ["6/1/1946", "19/12/1946", "20/12/1946", "23/9/1945"], c: 3 },
+
+            { id: 54, q: "Quốc hội đầu tiên của nước Việt Nam Dân chủ Cộng hòa được bầu vào thời gian nào?", a: ["4/1/1946", "5/1/1946", "7/1/1945", "6/1/1946"], c: 3 },
+
+            { id: 55, q: "Cuộc chiến đấu mở đầu cho cuộc kháng chiến chống Pháp của quân và dân ta tại Hà Nội diễn ra trong bao nhiêu ngày?", a: ["12 ngày đêm", "30 ngày đêm", "90 ngày đêm", "60 ngày đêm"], c: 3 },
+
+            { id: 56, q: "Đại hội đại biểu toàn toàn quốc lần thứ II (2/1951), đã thông qua bản Chính cương của Đảng Lao động Việt Nam do ai soạn thảo:", a: ["Chủ tịch Hồ Chí Minh", "Lê Duẩn", "Võ Nguyên Giáp", "Trường Chinh"], c: 3 },
+
+            { id: 57, q: "Chiến dịch nào đã căn bản đánh bại âm mưu đánh nhanh, thắng nhanh của thực dân Pháp?", a: ["Chiến dịch Biên Giới (1950)", "Chiến dịch Hòa Bình (1951)", "Chiến dịch Việt Bắc (1947)", "Chiến dịch Điện Biên Phủ (1954)"], c: 2 },
+
+            { id: 58, q: "Chiến dịch nào đã đưa cuộc kháng chiến chống thực dân Pháp sang giai đoạn phát triển cao hơn", a: ["Chiến dịch Điện Biên Phủ (1954)", "Chiến dịch Việt Bắc (1947)", "Chiến dịch Hòa Bình (1951)", "Chiến dịch Biên Giới (1950)"], c: 3 },
+
+            { id: 59, q: "Chiến dịch Điện Biên Phủ kết thúc thắng lợi vào thời gian nào?", a: ["21/7/1954", "10/5/1954", "8/5/19565", "7/5/1954"], c: 3 },
+
+            { id: 60, q: "Nghị quyết về đường lối cách mạng miền Nam được thông qua tại Hội nghị nào?", a: ["Hội nghị BCH Trung ương 12 - khóa II (3/1957)", "Hội nghị BCH Trung ương 13 - khóa II (12/1957)", "Hội nghị BCH Trung ương 15 - khóa II (1/1959)", "Hội nghị BCH Trung ương 14 - khóa II (11/1958)"], c: 2 },
+
+            { id: 61, q: "Đường lối cách mạng xã hội chủ nghĩa ở miền Bắc được thông qua tại Đại hội nào?", a: ["Đại hội đại biểu toàn quốc lần thứ II (2/1951)", "Đại hội đại biểu toàn quốc lần thứ V (3/1982)", "Đại hội đại biểu toàn quốc lần thứ IV (12/1976)", "Đại hội đại biểu toàn quốc lần thứ III (9/1960)"], c: 3 },
+
+            { id: 62, q: "Mặt trận dân tộc giải phóng miền Nam Việt Nam ra đời vào thời gian nào?", a: ["21/12/1961", "20/12/1961", "21/12/1960", "20/12/1960"], c: 3 },
+
+            { id: 63, q: "Sự kiện “Vịnh Bắc Bộ” ngày 5/8/1964 của đế quốc Mỹ nhằm mục đích gì?", a: ["Đánh phá phong trào cách mạng ở miền Nam Việt Nam", "Đánh vào bệnh viện Bạch Mai", "Đánh phá các trường học", "Lấy cớ dùng hải quân và không quân đánh phá miền Bắc Việt Nam, thực hiện chiến tranh phá hoại lần thứ nhất"], c: 3 },
+
+            { id: 64, q: "Bản Hiến pháp đầu tiên của nước Việt Nam Dân chủ Cộng hòa được thông qua vào thời gian nào?", a: ["Tháng 1/1946", "Tháng 9/1945", "Tháng 12/1946", "Tháng 11/1946"], c: 3 },
+
+            { id: 65, q: "Để tránh các mũi nhọn tấn công đối phó với kẻ thù, Đảng ta đã tuyên bố tự giải tán lấy tên là gì? Vào ngày tháng năm nào?", a: ["2/9/1945 - Đảng Cộng sản Việt Nam", "3/2/1946 - Đảng Lao động Việt Nam", "11/11/1945 - Hội nghiên cứu Chủ nghĩa Mác ở Đông Dương", "25/11/1945 - Đảng Cộng sản Đông Dương"], c: 2 },
+
+            { id: 66, q: "Nội dung thỏa thuận của Hiệp ước Trùng Khánh (Hiệp ước Hoa – Pháp) ký ngày 28/2/1946 là gì?", a: ["Quân Tưởng cho 20.000 quân vào giải giáp quân đội Nhật từ vĩ tuyến 16 trở vào Nam", "Quân Tưởng và quân Pháp cùng thực hiện nhiệm vụ giải giáp quân đội Nhật", "Quân Pháp đưa quân đội ra miền Bắc và rút dần về nước trong vòng 10 năm", "Quân Pháp đưa quân đội ra Bắc vĩ tuyến 16 thay thế cho quân Tưởng làm nhiệm vụ giải giáp quân đội Nhật"], c: 3 },
+
+            { id: 67, q: "Chính cương của Đảng Lao động Việt Nam được thông qua tại Đại hội II (2/1951) đã xác định xã hội Việt Nam gồm 3 tính chất, đó là:", a: ["Phong kiến, dân tộc, dân chủ", "Thuộc địa, dân chủ, xã hội chủ nghĩa", "Dân tộc, dân chủ, xã hội chủ nghĩa", "Dân chủ nhân dân, một phần thuộc địa và nửa phong kiến"], c: 3 },
+
+            { id: 68, q: "Chính cương của Đảng Lao động Việt Nam được thông qua tại Đại hội II (2/1951) đã xác định động lực của cách mạng gồm:", a: ["Công nhân, nông dân, trí thức, địa chủ phong kiến", "Nông dân, tư sản, tiểu tư sản, địa chủ phong kiến", "Công nhân, trí thức, địa chủ phong kiến, tư sản", "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc (ngoài ra còn có thân sĩ yêu nước)"], c: 3 },
+
+            { id: 69, q: "Nội dung chủ yếu của kế hoạch Nava của Pháp và Mỹ trên chiến trường Đông Dương là gì?", a: ["Tăng cường tập trung binh lực, hình thành những quả đấm thép để quyết chiến với chủ lực của Việt Minh", "Phân tán lực lượng ra các chiến trường", "Có quân đội Mỹ viện trợ", "Lập khu tự trị ở vùng Tây Bắc"], c: 0 },
+
+            { id: 70, q: "Hiệp định Giơnevơ về chấm dứt chiến tranh, lập lại hòa bình ở Đông Dương đã quy định:", a: ["Pháp và các nước tham dự Hội nghị cam kết tôn trọng các quyền cơ bản của Việt Nam, Lào và Campuchia là độc lập, chủ quyền và toàn vẹn lãnh thổ, không can thiệp vào nội bộ của các nước đó.", "Pháp phải công nhận Việt Nam là nước tự do", "Đế quốc Mỹ thay chân Pháp ở miền Nam Việt Nam", "Pháp và các nước tham dự Hội nghị phải tôn trọng các quyền cơ bản của Việt Nam là độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ."], c: 0 },
+
+            { id: 71, q: "Đại hội đại biểu toàn quốc lần thứ III (9/1960) của Đảng đã đưa ra đường lối chiến lược chung của cách mạng Việt Nam trong giai đoạn mới. Đường lối đó là:", a: ["Tiến hành ba cuộc cách mạng: Cách mạng về quan hệ sản xuất, cách mạng khoa học kỹ thuật và cách mạng về tư tưởng văn hóa.", "Cách mạng tư sản dân quyền và thổ địa cách mạng, đưa cả nước đi lên xây dựng chủ nghĩa xã hội.", "Cách mạng dân tộc dân chủ nhân dân, đánh đuổi đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước.", "Tiến hành đồng thời và kết hợp chặt chẽ hai chiến lược cách mạng: Cách mạng xã hội chủ nghĩa ở miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam."], c: 3 },
+
+            { id: 72, q: "Nghị quyết Trung ương lần thứ 15 (tháng 1/1959) của BCHTW Đảng khóa II đã xác định phương pháp của cách mạng miền Nam là:", a: ["Kết hợp đấu tranh chính trị và đấu tranh quân sự", "Đấu tranh vũ trang", "Đấu tranh ngoại giao", "Đấu tranh chính trị"], c: 0 },
+
+            { id: 73, q: "Khẩu hiệu “Thóc không thiếu một cân, quân không thiếu một người” dùng để chỉ hoạt động nào sau đây:", a: ["Sự chi viện của nhân dân miền Bắc đối với tiền tuyến lớn miền Nam trong thời kỳ kháng chiến chống Pháp", "Sự gian khổ của miền Bắc khi chống lại chiến tranh phá hoại của đế quốc Mỹ", "Sự chi viện của miền Nam cho miền Bắc chống chiến tranh phá hoại của đế quốc Mỹ", "Sự chi viện của hậu phương miền Bắc đối với tiền tuyến miền Nam trong những năm kháng chiến chống Mỹ"], c: 3 },
+
+            { id: 74, q: "Vì sao nói thắng lợi của phong trào “Đồng khởi” (1960) là bước nhảy vọt có ý nghĩa lịch sử của cách mạng miền Nam?", a: ["Vì đã đánh bại âm mưu xâm lược của đế quốc Mỹ", "Vì đã làm lung lay tận gốc chính quyền của Việt Nam Cộng hòa", "Vì đã đánh dấu sự thất bại hoàn toàn của đế quốc Mỹ ở miền Nam Việt Nam", "Vì đã chuyển cách mạng miền Nam từ thế giữ gìn lực lượng sang thế tiến công."], c: 3 },
+            //Chương4
+            { id: 75, q: "Hoàn cảnh nổi bật của nước ta sau năm 1975 là gì?", a: ["Đất nước tạm thời bị chia cắt làm hai miền, miền Bắc được hoàn toàn giải phóng", "Đất nước bước vào thời kỳ đổi mới", "Đất nước đang bước vào thời kỳ đẩy mạnh Công nghiệp hóa, hiện đại hóa", "Đất nước hòa bình, độc lập, thống nhất, cả nước quá độ lên chủ nghĩa xã hội."], c: 3 },
+
+            { id: 76, q: "Ban Chấp hành Trung ương Đảng đã đề ra chủ trương hoàn thành thống nhất nước nhà, đưa cả nước tiến nhanh, tiến mạnh, tiến vững chắc lên chủ nghĩa xã hội tại Hội nghị nào?", a: ["Hội nghị BCH Trung ương lần thứ 24 khóa III (8/1975)", "Hội nghị BCH Trung ương lần thứ 6 khóa IV (8/1979)", "Hội nghị BCH Trung ương lần thứ 6 khóa V (7/1984)", "Hội nghị BCH Trung ương lần thứ 7 khóa V (12/1984)"], c: 0 },
+
+            { id: 77, q: "Cuộc Tổng tuyển cử bầu Quốc hội chung của nước Việt Nam thống nhất được tiến hành vào thời gian nào?", a: ["25/4/1976", "15/4/1976", "15/4/1975", "25/4/1975"], c: 0 },
+
+            { id: 78, q: "Sau năm 1975 nhiệm vụ cấp bách đầu tiên của nước ta là gì?", a: ["Hoàn thành cải cách ruộng đất", "Hoàn thành cải tạo xã hội chủ nghĩa", "Hoàn thành cách mạng dân tộc dân chủ nhân dân", "Hoàn thành thống nhất nước nhà về mặt nhà nước"], c: 3 },
+
+            { id: 79, q: "Quốc hội nước Việt Nam thống nhất đã quyết định đặt tên nước ta là nước Cộng hòa xã hội chủ nghĩa Việt Nam vào năm nào?", a: ["Năm 1974", "Năm 1975", "Năm 1977", "Năm 1976"], c: 3 },
+
+            { id: 80, q: "Kỳ hỌp thứ nhất (1976) Quốc hội nước Việt Nam thống nhất đã đặt tên nước ta là:", a: ["Nước Việt Nam Dân chủ cộng hòa", "Nước Việt Nam dân chủ cộng hòa", "Nước Việt Nam thống nhất", "Nước Cộng hòa xã hội chủ nghĩa Việt Nam"], c: 3 },
+
+            { id: 81, q: "Tại Đại hội Đảng toàn quốc lần thứ IV(12/1976), đã quyết định đổi tên Đảng Lao động Việt Nam thành:", a: ["Đảng Cộng sản Đông Dương", "Đảng nhân dân cách mạng Việt Nam", "Đảng xã hội Việt Nam", "Đảng Cộng sản Việt Nam"], c: 3 },
+
+            { id: 82, q: "Hội nghị nào của Ban chấp hành Trung ương Đảng khóa IV đã đánh dấu “bước đột phá đầu tiên” trong quá trình đổi mới tư duy về kinh tế của Đảng?", a: ["Hội nghị BCH Trung ương lần thứ 5 (12/1978)", "Hội nghị BCH Trung ương lần thứ 8 (9/1980)", "Hội nghị BCH Trung ương lần thứ 7 (3/1980)", "Hội nghị BCH Trung ương lần thứ 6 (8/1979)"], c: 3 },
+
+            { id: 83, q: "Sau năm 1975, Việt Nam phải đối mặt với các cuộc chiến tranh nào?", a: ["Chiến tranh biên giới phía Bắc", "Chiến tranh biên giới Tây nam", "Hai cuộc chiến tranh biên giới phía Bắc và Tây Nam", "Chiến tranh lạnh"], c: 2 },
+
+            { id: 84, q: "Cuộc chiến tranh bảo vệ biên giới Tây Nam của nhân dân Việt Nam những năm 1978-1979 để chống lại:", a: ["Tập đoàn Pônpốt (quân Khơmer đỏ - Camphuchia)", "Quân Trung Quốc", "Lực lượng phản động trong nước", "Tổ chức FULRO"], c: 0 },
+
+            { id: 85, q: "Chiến tranh biên giới phía Bắc để bảo vệ Tổ quốc diễn ra vào năm nào?", a: ["1980", "1976", "1979", "1978"], c: 2 },
+
+            { id: 86, q: "Đại hội Đại biểu toàn quốc của Đảng lần thứ V diễn ra vào năm nào?", a: ["1980", "1981", "1983", "1982"], c: 3 },
+
+            { id: 87, q: "Hội nghị nào của Ban Chấp hành Trung ương Đảng khóa V được coi là “bước đột phá thứ hai” trong quá trình đổi mới tư duy về kinh tế của Đảng?", a: ["Hội nghị BCH Trung ương 6 (7/1984)", "Hội nghị BCH Trung ương 7 (12/1984)", "Hội nghị Bộ chính trị (8/1986)", "Hội nghị BCH Trung ương 8 (6/1985)"], c: 3 },
+
+            { id: 88, q: "Hội nghị nào của Ban Chấp hành Trung ương Đảng khóa V được coi là “bước đột phá thứ ba” trong quá trình đổi mới tư duy về kinh tế của Đảng?", a: ["Hội nghị BCH Trung ương 6 (7/1984)", "Hội nghị BCH Trung ương 7 (12/1984)", "Hội nghị Bộ chính trị (8/1986)", "Hội nghị BCH Trung ương 8 (6/1985)"], c: 2 },
+
+            { id: 89, q: "Đại hội đại biểu toàn quốc lần thứ VI của Đảng diễn ra vào năm nào?", a: ["1983", "1984", "1986", "1985"], c: 2 },
+
+            { id: 90, q: "Đường lối đổi mới toàn diện đất nước được thông qua tại Đại hội nào?", a: ["Đại hội XIX (4/2001)", "Đại hội VII (6/1991)", "Đại hội VIII (7/1996)", "Đại hội VI (12/1986)"], c: 3 },
+
+            { id: 91, q: "Tại kỳ hỌp thứ nhất Quốc hội nước Việt Nam thống nhất đã bầu ai là chủ tịch nước Cộng hòa xã hội chủ nghĩa Việt Nam?", a: ["Tôn Đức Thắng", "Trường Chinh", "Phạm Văn Đồng", "Nguyễn Hữu Thọ"], c: 0 },
+
+            { id: 92, q: "Hoàn thành nội dung trong câu sau: “Hoàn thành… là một trong những thành tự nổi bật, có ý nghĩa to lớn, là cơ sở để thống nhất trên các lĩnh vực khác, nhanh chóng tạo ra sức mạnh toàn diện của đất nước”.", a: ["Phát triển văn hóa giáo dục", "Xây dựng phát triển kinh tế", "Cải cách ruộng đất", "Thống nhất nước nhà về mặt nhà nước"], c: 3 },
+
+            { id: 93, q: "Nhiệm vụ trung tâm trong đường lối phát triển kinh tế thông qua Đại hội IV(12/1976) là gì ?", a: ["Coi nông nghiệp là mặt trận hàng đầu, đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "Phát triển ngành công nghiệp nhẹ", "Xây dựng cơ cấu công nông nghiệp hiện đại", "Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa bằng ưu tiên phát triển công nghiệp nặng một cách hợp lý"], c: 3 },
+
+            { id: 94, q: "Hiện tượng “Khoán chui” ở một số địa phương được thực hiện trong lĩnh vực nào?", a: ["Công nghiệp", "Công nghiệp nặng", "Công nghiệp nhẹ", "Nông nghiệp"], c: 3 },
+            { id: 95, q: "Đại hội đại biểu toàn quốc lần thứ V (3/1982) đã đề ra phương hướng, nội dung của công nghiệp hóa trong chặng đường đầu tiên của thời kỳ quá độ là gì?", a: ["Ưu tiên phát triển công nghiệp nặng", "Coi công nghiệp là mặt trận hàng đầu", "Đẩy mạnh quá trình công nghiệp hóa, hiện đại hóa", "Tập trung phát triển mạnh nông nghiệp, coi nông nghiệp là mặt trận hàng đầu."], c: 3 },
+
+            { id: 96, q: "Tổng kết 10 năm 1975-1986, Đảng ta đã khẳng định những thành tựu nổi bật nào?", a: ["Hoàn thành cách mạng dân tộc dân chủ nhân dân, thực hiện cải cách ruộng đất, bước đầu xây dựng chủ nghĩa xã hội.", "Hoàn thành cách mạng dân tộc dân chủ nhân dân, thực hiện nghĩa vụ quốc tế với 2 nước bạn Lào và Campuchia", "Xây dựng thành công chủ nghĩa xã hội, kinh tế, chính trị ổn định.", "Hoàn thành thống nhất nước nhà về mặt nhà nước, đạt được một số thành tựu trong xây dựng chủ nghĩa xã hội, giành thắng lợi trong sự nghiệp bảo vệ Tổ quốc và làm nghĩa vụ quốc tế."], c: 3 },
+
+            { id: 97, q: "Nguyên nhân chủ quan dẫn đến khủng hoảng kinh tế - xã hội giai đoạn 1975-1986 là gì?", a: ["Duy trì quá lâu cơ chế kế hoạch hóa, tập trung, quan lieu, bao cấp", "Chiến tranh tàn phá", "Viện trợ nước ngoài giảm mạnh", "Xuất phát điểm thấp"], c: 0 },
+
+            { id: 98, q: "Tại sao Đảng chủ trương tiến hành công cuộc đổi mới đất nước?", a: ["Các nước Xã hội chủ nghĩa đã tiến hành đổi mới.", "Để khắc phục những sai lầm khuyết điểm và đưa đất nước thoát ra khỏi khủng hoảng.", "Đất nước đang trên đà phát triển và được quốc tế ủng hộ.", "Nắm bắt thời cơ, tranh thủ sự đồng tình ủng hộ của quốc tế."], c: 1 },
+
+            { id: 99, q: "Đại hội Đảng toàn quốc lần thứ VI (12/1986) đã đưa ra nhiệm vụ bao trùm, mục tiêu tổng quát trong đó chú trọng ba chương trình kinh tế đó là:", a: ["Công nghiệp nhẹ, nông nghiệp, thương nghiệp", "Công nghiệp, nông nghiệp, thương nghiệp", "Công nghiệp nặng, nông nghiệp, dịch vụ", "Lương thực - thực phẩm, hàng tiêu dùng và hàng xuất khẩu"], c: 3 },
+
+            { id: 100, q: "Nghị quyết số 10 ngày 5/4/1988 của Bộ chính trị (gọi tắt là khoán 10) về vấn đề gì?", a: ["Luật đầu tư nước ngoài vào Việt Nam", "Quyền tự chủ của các doanh nghiệp", "Quy định xuất - nhập khẩu", "Đổi mới quản lý trong nông nghiệp"], c: 3 },
+
+            { id: 101, q: "Đại hội Đảng toàn quốc lần thứ VI (12/1986) đã bầu ai làm Tổng Bí thư của Đảng?", a: ["Lê Duẩn", "Lê Khả Phiêu", "Đỗ Mười", "Nguyễn Văn Linh"], c: 3 },
+
+            { id: 102, q: "Đại hội Đảng toàn quốc lần thứ VII (6/1991) đã bầu ai làm Tổng Bí thư của Đảng?", a: ["Lê Duẩn", "Nguyễn Văn Linh", "Lê Khả Phiêu", "Đỗ Mười"], c: 3 },
+
+            { id: 103, q: "Lần đầu tiên Đảng giương cao ngọn cờ tư tưởng Hồ Chí Minh và khẳng định: “Đảng Cộng sản Việt Nam lấy chủ nghĩa Mác-Lênin và Tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động” tại Đại hội nào?", a: ["Đại hội V (3/1982)", "Đại hội VI (12/1986)", "Đại hội VIII (7/1996)", "Đại hội VII (6/1991)"], c: 3 },
+
+            { id: 104, q: "Việt Nam và Trung Quốc bình thường hóa quan hệ vào năm nào?", a: ["1990", "1993", "1992", "1991"], c: 3 },
+
+            { id: 105, q: "Việt Nam ra nhập Hiệp hội các quốc gia Đông Nam Á (ASEAN) vào thời gian nào?", a: ["28/7/1998", "28/7/1996", "28/7/1997", "28/7/1995"], c: 3 },
+
+            { id: 106, q: "Việt Nam và Hoa Kỳ bình thường hóa quan hệ vào năm nào?", a: ["1995", "1994", "1993", "1996"], c: 0 },
+
+            { id: 107, q: "Đại hội nào đã khẳng định nước ta đã ra khỏi khủng hoảng kinh tế - xã hội cho phép chuyển sang thời kỳ đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước?", a: ["Đại hội đại biểu toàn quốc của Đảng lần thứ VI (12/1986)", "Đại hội đại biểu toàn quốc của Đảng lần thứ VII (6/1991)", "Đại hội đại biểu toàn quốc của Đảng lần thứ VIII (7/1996)", "Đại hội đại biểu toàn quốc của Đảng lần thứ IX (4/2001)"], c: 2 },
+
+            { id: 108, q: "Chiến lược Bảo vệ Tổ quốc trong tình hình mới được thông qua tại hội nghị nào sau đây:", a: ["Hội nghị BCH Trung ương 5 khóa IX (3/2002)", "Hội nghị BCH Trung ương 7 khóa IX (3/2003)", "Hội nghị BCH Trung ương 8 khóa IX (7/2003)", "Hội nghị BCH Trung ương 3 khóa IX (9/2001)"], c: 2 },
+
+            { id: 109, q: "Đại hội Đảng toàn quốc lần thứ IX (4/2001) đã bầu ai làm Tổng Bí thư của Đảng?", a: ["Lê Khả Phiêu", "Nguyễn Văn Linh", "Đỗ Mười", "Nông Đức Mạnh"], c: 3 },
+
+            { id: 110, q: "Đại hội nào đã cho phép đảng viên làm kinh tế tư nhân?", a: ["Đại hội đại biểu toàn quốc của Đảng lần VII (6/1991)", "Đại hội đại biểu toàn quốc của Đảng lần VIII (7/1996)", "Đại hội đại biểu toàn quốc của Đảng lần IX (4/2001)", "Đại hội đại biểu toàn quốc của Đảng lần X (4/2006)"], c: 3 },
+
+            { id: 111, q: "Hội nghị Trung ương 4 khóa X Đảng ta ban hành Nghị quyết 09-NQ/TW ngày 9/2/2007 về vấn đề gì?", a: ["Chiến lược phát triển kinh tế đến năm 2020", "Chiến lược biển Việt Nam đến năm 2020", "Chiến lược Bảo vệ Tổ quốc trong tình hình mới", "Chiến lược phát triển văn hóa xã hội đến năm 2020"], c: 1 },
+
+            { id: 112, q: "Việt Nam ra nhập Tổ chức thương mại thế giới WTO vào năm nào?", a: ["2005", "2004", "2007", "2006"], c: 3 },
+
+            { id: 113, q: "Đại hội đại biểu toàn quốc lần thứ XI của Đảng đã bầu ai làm Tổng bí thư?", a: ["Nông Đức Mạnh", "Lê Khả Phiêu", "Nguyễn Phú Trọng", "Đỗ Mười"], c: 2 },
+
+            { id: 114, q: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) được thông qua tại Đại hội nào?", a: ["Đại hội đại biểu toàn quốc của Đảng lần VIII (7/1996)", "Đại hội đại biểu toàn quốc của Đảng lần IX (4/2001)", "Đại hội đại biểu toàn quốc của Đảng lần XI (1/2011)", "Đại hội đại biểu toàn quốc của Đảng lần X (4/2006)"], c: 2 },
+
+            { id: 115, q: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) được thông qua tại Đại hội Đảng lần thứ XI (2011) đã bổ sung đặc trưng nào?", a: ["Dân giàu, nước mạnh, dân chủ, công bằng, văn minh.", "Có Nhà nước pháp quyền xã hội chủ nghĩa của nhân dân, do nhân dân, vì nhân dân do Đảng Cộng sản lãnh đạo.", "Có nền văn hóa tiên tiến, đậm đà bản sắc dân tộc.", "Cả A,B đều đúng"], c: 3 },
+
+            { id: 116, q: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) thông qua tại Đại hội Đảng lần thứ XI (2011) đã đưa ra bao nhiêu phương hướng xây dựng chủ nghĩa xã hội?", a: ["5 phương hướng", "8 phương hướng", "7 phương hướng", "6 phương hướng"], c: 1 },
+
+            { id: 117, q: "Hội nghị lần thứ 24 Ban Chấp hành Trung ương Đảng khóa III (8/1975) đã đưa ra chủ trương gì?", a: ["Đẩy mạnh cuộc kháng chiến chống Mỹ cứu nước giải phóng hoàn toàn miền Nam, thống nhất đất nước", "Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "Hoàn thành thống nhất nước nhà, đưa cả nước tiến nhanh, tiến mạnh, tiến vững chắc lên chủ nghĩa xã hội.", "Phát triển nền kinh tế hàng hóa nhiều thành phần định hướng xã hội chủ nghĩa."], c: 2 },
+
+            { id: 118, q: "Đặc điểm lớn nhất của cách mạng Việt Nam trong giai đoạn mới được Đại hội Đảng toàn quốc lần thứ IV (1976) xác định là:", a: ["Nước ta đang ở trong quá trình từ một xã hội mà nền kinh tế còn phổ biến là sản xuất nhỏ tiến thẳng lên chủ nghĩa xã hội, bỏ qua giai đoạn phát triển tư bản chủ nghĩa.", "Nước ta thoát khỏi tình trạng bị bao vây cô lập, cấm vận", "Nước ta chuyển sang thời kỳ đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "Nước ta đã đạt được một số thành tựu quan trọng trong công cuộc xây dựng chủ nghĩa xã hội."], c: 0 },
+
+            { id: 119, q: "Đại hôi IV (tháng 12/1976) đã xác định đường lối xây dựng, phát triển kinh tế, trong đó nổi bật là:", a: ["Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa bằng ưu tiên phát triển công nghiệp nặng một cách hợp lý trên cơ sở phát triển nông nghiệp và công nghiệp nhẹ.", "Lấy nông nghiệp là mặt trận hàng đầu, ra sức phát triển công nghiệp nhẹ", "Phát triển công nghiệp nặng phải có lựa chọn cả về quy mô, nhịp độ, chú trọng quy mô vừa và nhỏ", "Tạo ra một cơ cấu kinh tế hợp lý, trong đó đặc biệt chú trọng 3 chương trình kinh tế lớn: lương thực – thực phẩm, hàng tiêu dùng, hàng xuất khẩu."], c: 0 },
+
+            { id: 120, q: "Điền từ còn thiếu vào chỗ trống trong đường lối chung của cách mạng xã hội chủ nghĩa được Đảng ta xác định tại Đại hội IV: “Nắm vững chuyên chính vô sản, phát huy quyền làm chủ tập thể của nhân dân lao động, tiến hành đồng thời ba cuộc cách mạng: cách mạng về quan hệ sản xuất, cách mạng khoa học-kỹ thuật, cách mạng tư tưởng và văn hoá, trong đó cách mạng... là then chốt.”", a: ["Khoa học - kỹ thuật", "Quan hệ sản xuất", "Tư tưởng văn hóa", "Khoa học – công nghệ"], c: 0 },
+
+            { id: 121, q: "Hội nghị Trung ương 6 (8/1979) được coi là “bước đột phá đầu tiên” trong tư duy đổi mới kinh tế của Đảng đã đưa ra chủ trương gì:", a: ["Khắc phục những sai lầm, khuyết điểm trong quản lý kinh tế, trong cải tạo xã hội chủ nghĩa, phá bỏ rào cản để cho sản xuất bung ra.", "Thực hiện xây dựng nền kinh tế thị trường định hướng xã hội chủ nghĩa, đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước.", "Chủ trương phát triển kinh tế tư nhân là nhiệm vụ trọng tâm", "Xóa bỏ cơ chế kế hoạch hóa tập trung quan liêu bao cấp."], c: 0 },
+
+            { id: 122, q: "Đổi mới bước đầu trong chính sách của Đảng đối với cơ chế quản lý kinh tế trong lĩnh vực nông nghiệp là:", a: ["Quyết định của Hội đồng Chính phủ (10/1979) về việc tận dụng đất đai trong nông nghiệp để khai hoang, phục hóa…", "Coi nông nghiệp là mặt trận hàng đầu", "Ban Bí thư ban hành Chỉ thị 100-CT/TW 1/1981 về khoán sản phẩm đến nhóm và người lao động trong các hợp tác xã.", "Thực hiện “khoán chui”"], c: 0 },
+
+            { id: 123, q: "Điền từ thích hợp vào chỗ trống, Đại hội V (3/1982) xác định: “Nội dung, bước đi, cách làm thực hiện công nghiệp hoá xã hội chủ nghĩa trong chặng đường đầu tiên là: tập trung sức phát triển mạnh…, coi …. là mặt trận hàng đầu”", a: ["Công nghiệp nặng, công nghiệp", "Công nghiệp, nông nghiệp", "Nông nghiệp, nông nghiệp", "Công nghiệp nặng, nông nghiệp"], c: 2 },
+
+            { id: 124, q: "Hội nghị Trung ương 8 (6/1985) được coi là bước đột phá thứ hai trong quá trình tìm tòi, đổi mới kinh tế của Đảng, tại Hội nghị này, Trung ương Đảng đã chủ trương:", a: ["Chủ trương xóa bỏ nghèo nàn lạc hậu, đưa đất nước phát triển theo cơ chế thị trường định hướng xã hội chủ nghĩa", "Chủ trương phát triển kinh tế tư nhân", "Chủ trương phát triển sản xuất kinh doanh", "Chủ trương xóa bỏ cơ chế tập trung, quan liêu, hành chính, bao cấp"], c: 3 },
+
+            { id: 125, q: "Đại hội đại biểu toàn quốc lần thứ VI (12/1986) diễn ra trong bối cảnh nào?", a: ["Đất nước thoát khỏi tình trạng nghèo nàn lạc hậu, lạm phát được đẩy lùi, đời sống nhân dân tiến bộ", "Vị thế, uy tín của Việt Nam được nâng cao trên trường quốc tế", "Việt Nam bị các nước đế quốc và thù địch bao vây, cấm vận, khủng hoảng kinh tế - xã hội trầm trọng.", "Đất nước mở cửa, hội nhập sâu rộng."], c: 2 },
+
+            { id: 126, q: "Bài học đầu tiên được Đại hội Đảng toàn quốc lần thứ VI (12/1986) rút ra là gì:", a: ["Phải luôn coi nông nghiệp là mặt trận hàng đầu.", "Phải biết nắm bắt thời cơ, tranh thủ thời cơ, tận dụng các cơ hội trong nước và nước ngoài mang lại", "Phải xây dựng Đảng trong sạch vững mạnh", "Trong toàn bộ mọi hoạt động của mình, Đảng phải quán triệt tư tưởng “lấy dân làm gốc”"], c: 3 },
+
+            { id: 127, q: "Hội nghị Trung ương 7 khóa VII (7/1994), Đảng đã đưa ra chủ trương phát triển trong lĩnh vực nào?", a: ["Nông nghiệp, nông thôn, nông dân", "Văn hóa, xã hội", "Công nghiệp hóa, hiện đại hóa", "Quốc phòng, an ninh"], c: 2 },
+
+            { id: 128, q: "Hội nghị đại biểu toàn quốc giữa nhiệm kỳ của Đảng (1/1994) đã nêu lên mấy nguy cơ?", a: ["3", "4", "5", "6"], c: 1 },
+
+            { id: 129, q: "Điền vào chỗ trống: Hội nghị đại biểu toàn quốc giữa nhiệm kỳ của Đảng (1/1994) “lần đầu tiên khẳng định xây dựng Nhà nước pháp quyền Việt Nam …”", a: ["Của nông dân, do công nhân, vì nhân dân", "Của công nhân, do nông dân, vì nhân dân", "Của nhân dân, do nông dân, vì nông dân", "Của nhân dân, do nhân dân, vì nhân dân."], c: 3 },
+
+            { id: 130, q: "Lần đầu tiên Đảng ta đưa ra 6 quan điểm về công nghiệp hóa trong thời kỳ mới tại Đại hội nào?", a: ["Đại hội Đảng lần thứ VII (tháng 6/1991)", "Đại hội Đảng lần thứ VIII (tháng 6/1996)", "Đại hội Đảng lần thứ IX (tháng 4/2001)", "Đại hội Đảng lần thứ X (tháng 4/2006)"], c: 1 },
+
+            { id: 131, q: "Hội nghị Trung ương 5 khóa VIII (7/1998) đã ban hành Nghị quyết về “Xây dựng và phát triển nền văn hóa Việt Nam tiến tiến đậm đà bản sắc dân tộc” gồm mấy quan điểm, nhiệm vụ?", a: ["3 quan điểm, 5 nhiệm vụ", "5 quan điểm, 5 nhiệm vụ", "5 quan điểm, 10 nhiệm vụ", "6 quan điểm, 10 nhiệm vụ"], c: 3 },
+
+            { id: 132, q: "Chủ trương đối ngoại theo phương châm : Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước trong cộng đồng quốc tế, phấn đấu vì hòa bình, độc lập và phát triển” được thông qua tại Đại hội nào?", a: ["Đại hội ĐB toàn quốc lần thứ IX của Đảng (2001)", "Đại hội ĐB toàn quốc lần thứ X của Đảng (2006)", "Đại hội ĐB toàn quốc lần thứ XI của Đảng (2011)", "Đại hội ĐB toàn quốc lần thứ XII của Đảng (2016)"], c: 0 },
+
+            { id: 133, q: "Đại hội Đại biểu toàn quốc lần thứ X (4/2006) của Đảng đã xác định nhiệm vụ then chốt là gì?", a: ["Xây dựng và chỉnh đốn Đảng", "Phát triển văn hóa, giáo dục", "Phát triển kinh tế", "Hội nhập quốc tế"], c: 0 },
+            //Chương5
+            { id: 134, q: "Hoàn thành nội dung trong câu sau: “Thắng lợi của Cách mạng tháng Tám năm 1945, thành lập nhà nước…”", a: ["Cộng hòa xã hội chủ nghĩa Việt Nam", "Xã hội chủ nghĩa", "Việt Nam Dân chủ", "Việt Nam Dân chủ Cộng hòa"], c: 3 },
+
+            { id: 135, q: "Hoàn thành nội dung trong câu sau: “Lần này là lần đầu tiên trong lịch sử cách mạng của các dân tộc thuộc địa và nửa thuộc địa, một Đảng mới … đã lãnh đạo cách mạng thành công, đã nắm chính quyền toàn quốc”.", a: ["30 tuổi", "20 tuổi", "15 tuổi", "90 tuổi"], c: 2 },
+
+            { id: 136, q: "Đảng lãnh đạo cuộc kháng chiến chống thực dân Pháp và can thiệp Mỹ của nhân dân ta diễn ra vào khoảng thời gian nào ?", a: ["1945-1946", "1946-1950", "1945-1954", "1950-1954"], c: 2 },
+
+            { id: 137, q: "Đảng lãnh đạo cuộc kháng chiến chống đế quốc Mỹ xâm lược của nhân dân ta diễn ra vào khoảng thời gian nào ?", a: ["1954-1960", "1954-1973", "1954-1975", "1965-1975"], c: 2 },
+
+            { id: 138, q: "Hoàn thành nội dung trong câu sau: Độc lập dân tộc là … tiên quyết để thực hiện chủ nghĩa xã hội và chủ nghĩa xã hội là … bảo đảm vững chắc cho độc lập dân tộc.", a: ["Vấn đề, yếu tố", "Yếu tố, điều kiện", "Căn bản, yêu cầu", "Điều kiện, cơ sở"], c: 3 },
+
+            { id: 139, q: "Hoàn thành nội dung trong câu sau: Cách mạng là sự nghiệp của quần chúng nhân dân, … là người làm nên lịch sử, là chủ thể của lịch sử, đó là quan điểm cơ bản trong lý luận Mác-Lênin về chủ nghĩa duy vật lịch sử, về cách mạng xã hội.", a: ["Công nhân", "Trí thức", "Doanh nhân", "Nhân dân"], c: 3 },
+
+            { id: 140, q: "Hoàn thành nội dung trong câu sau của Chủ tịch Hồ Chí Minh: “Các đồng chí phải giữ gìn đoàn kết trong Đảng như giữ gìn….”", a: ["Chân tay của mình", "Bộ óc của mình", "Trái tim của mình", "Con ngươi của mắt mình"], c: 3 },
+
+            { id: 141, q: "Trong hai cuộc kháng chiến chống thực dân Pháp và đế quốc Mỹ xâm lược, cách mạng Việt Nam đã tranh thủ sự ủng hộ của:", a: ["Liên Xô, Trung Quốc, các nước xã hội chủ nghĩa và bạn bè quốc tế", "Liên Xô, Trung Quốc, Tưởng giới thạch", "Liên Xô, Trung Quốc, đế quốc Anh", "Liên Xô, Trung Quốc, Mỹ"], c: 0 },
+
+            { id: 142, q: "Hoàn thành nội dung trong câu sau: Đảng lấy chủ nghĩa Mác- Lênin, … làm nền tảng tư tưởng và kim chi nam cho hành động.", a: ["Độc lập dân tộc", "Chủ nghĩa xã hội", "Tư sản dân quyền", "Tư tưởng Hồ Chí Minh"], c: 3 },
+
+            { id: 143, q: "Tổng kết tiến trình hơn 90 năm lãnh đạo cách mạng Việt Nam, Đảng đã rút ra mấy bài học kinh nghiệm?", a: ["4", "5", "6", "7"], c: 1 },
+
+            { id: 144, q: "Hoàn thành câu sau: Nhiệm vụ chiến lược của cách mạng Việt Nam hiện nay là bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ … của Tổ quốc và xây dựng thành công chủ nghĩa xã hội.", a: ["Quốc gia, dân tộc", "Vùng trời, vùng biển", "Biên giới, hải đảo", "Biển, đảo"], c: 3 },
+
+            { id: 145, q: "Trong xây Đảng, vấn đề nào được coi là nội dung cơ bản?", a: ["Tư tưởng cách mạng", "Lối sống cách mạng", "Bản lĩnh cách mạng", "Đạo đức cách mạng"], c: 3 },
+
+            { id: 146, q: "Đảng chủ trương xây dựng các tổ chức Mặt trận, đoàn thể chính trị để làm gì?", a: ["Hoàn thiện hệ thống chính trị", "Đa dạng hoạt động hệ thống chính trị", "Đoàn kết quốc tế", "Đoàn kết toàn dân"], c: 3 },
+
+            { id: 147, q: "Điền từ coàn thiếu vào chỗ trống: Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) đã nêu rõ…., xa rời quần chúng nhân dân sẽ dẫn đến tổn thất khôn lường đối với vận mệnh của đất nước, của chế độ xã hội chủ nghĩa và của Đảng.", a: ["Tự cao, tự đại", "Tư túng, chia rẽ", "Tham ô, hối lộ", "Quan liêu, tham nhũng"], c: 3 },
+
+        ];
+
+
+        let questions = [...rawData];
+
+
+        let selectedParts = new Set();
+        let currentList = [];
+        let userAnswers = {};
+        let wrongQuestions = [];
+        const PARTS = [
+            { name: "Chương 1", count: 10 },
+            { name: "Chương 2", count: 29 },
+            { name: "Chương 3", count: 35 },
+            { name: "Chương 4", count: 59 },
+            { name: "Chương 5", count: 14 }
+        ];
+        let isMultipleParts = false;
+        let quizMode = "submit";
+
+        // Tạo menu
+        const partSelector = document.getElementById('part-selector');
+        document.querySelectorAll('input[name="mode"]').forEach(radio => {
+            radio.addEventListener("change", (e) => {
+                quizMode = e.target.value;
+            });
+        });
+        PARTS.forEach((part, index) => {
+            const btn = document.createElement('button');
+
+            btn.innerText = part.name;
+
+            btn.onclick = () => togglePart(index, btn);
+
+            partSelector.appendChild(btn);
+        });
+        // Nút kết hợp
+        const combineBtn = document.createElement('button');
+        combineBtn.innerText = "KẾT HỢP PHẦN";
+        combineBtn.style.background = "#16a085";
+        combineBtn.onclick = combineSelectedParts;
+        partSelector.appendChild(combineBtn);
+
+        // Nút bỏ chọn
+        const clearBtn = document.createElement('button');
+        clearBtn.innerText = "BỎ CHỌN";
+        clearBtn.style.background = "#e74c3c";
+        clearBtn.onclick = () => {
+            selectedParts.clear();
+            document.querySelectorAll('.menu-buttons button')
+                .forEach(b => b.classList.remove('active'));
+        };
+        partSelector.appendChild(clearBtn);
+
+        // Toggle chọn phần
+        function togglePart(part, btn) {
+            if (selectedParts.has(part)) {
+                selectedParts.delete(part);
+                btn.classList.remove('active');
+            } else {
+                selectedParts.add(part);
+                btn.classList.add('active');
+            }
+        }
+
+        // Gộp câu hỏi
+        function combineSelectedParts() {
+            if (selectedParts.size === 0) {
+                alert("Vui lòng chọn ít nhất 1 phần!");
+                return;
+            }
+
+            isMultipleParts = selectedParts.size >= 2;
+
+            userAnswers = {};
+            wrongQuestions = [];
+
+            document.getElementById('retry-btn').style.display = 'none';
+
+            document.getElementById('score-display').innerHTML = '';
+
+            // 👉 THÊM DÒNG NÀY
+            document.getElementById('result-area').style.display = 'block';
+
+            if (quizMode === "instant") {
+                document.getElementById('submit-btn').style.display = 'none';
+            } else {
+                document.getElementById('submit-btn').style.display = 'inline-block';
+            }
+
+            document.getElementById('controls').style.display = 'block';
+
+            currentList = [];
+
+            selectedParts.forEach(partIndex => {
+
+                let start = 0;
+
+                for (let i = 0; i < partIndex; i++) {
+                    start += PARTS[i].count;
+                }
+
+                const end = start + PARTS[partIndex].count;
+
+                const partQuestions = questions.slice(start, end);
+
+                currentList = currentList.concat(
+                    JSON.parse(JSON.stringify(partQuestions))
+                );
+            });
+
+            renderQuiz();
+            window.scrollTo(0, 0);
+        }
+        // Render câu hỏi
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = currentList.map((item, idx) => `
+        <div class="question-item" id="q-box-${idx}">
+            <div class="question-text">
+    Câu ${idx + 1}: ${item.q}
+</div>
+            <ul class="options">
+                ${item.a.map((opt, oIdx) => `
+                    <li onclick="selectOption(${idx}, ${oIdx})" id="opt-${idx}-${oIdx}">
+                        <strong>${String.fromCharCode(65 + oIdx)}.</strong> ${opt}
+                    </li>
+                `).join('')}
+            </ul>
+        </div>
+    `).join('');
+        }
+
+        // Chọn đáp án
+        function selectOption(qIdx, oIdx) {
+            const item = currentList[qIdx];
+
+            if (document.getElementById(`opt-${qIdx}-0`).classList.contains('locked')) return;
+
+            const parent = document.getElementById(`q-box-${qIdx}`);
+            const options = parent.querySelectorAll('li');
+
+            // reset chọn
+            options.forEach(li => li.classList.remove('selected'));
+
+            // chọn
+            document.getElementById(`opt-${qIdx}-${oIdx}`).classList.add('selected');
+
+            // lưu đáp án
+            userAnswers[qIdx] = oIdx;
+
+            // 👉 CHẾ ĐỘ HIỆN NGAY ĐÚNG SAI
+            if (quizMode === "instant") {
+                options.forEach(li => li.classList.add('locked'));
+
+                const correctIdx = item.c;
+
+                // tô đáp án đúng
+                document.getElementById(`opt-${qIdx}-${correctIdx}`).classList.add('correct');
+
+                // nếu chọn sai
+                if (oIdx !== correctIdx) {
+                    document.getElementById(`opt-${qIdx}-${oIdx}`).classList.add('incorrect');
+                }
+                if (oIdx !== correctIdx) {
+
+                    currentList[qIdx].isWrong = true;
+
+                } else {
+
+                    currentList[qIdx].isWrong = false;
+
+                }
+                collectWrongInstantQuestions();
+
+            }
+        }
+
+        // Đảo câu hỏi
+        function shuffleQuestions() {
+            currentList.sort(() => Math.random() - 0.5);
+            userAnswers = {};
+            renderQuiz();
+        }
+
+        // Đảo đáp án
+        function shuffleAnswers() {
+            currentList.forEach(item => {
+                const correctText = item.a[item.c];
+                item.a.sort(() => Math.random() - 0.5);
+                item.c = item.a.indexOf(correctText);
+            });
+            userAnswers = {};
+            renderQuiz();
+        }
+
+        // Nộp bài
+        function submitQuiz() {
+            let score = 0;
+            wrongQuestions = [];
+
+            currentList.forEach((item, idx) => {
+                const correctIdx = item.c;
+                const selectedIdx = userAnswers[idx];
+
+                const options = document.querySelectorAll(`#q-box-${idx} li`);
+                options.forEach(li => li.classList.add('locked'));
+
+                document.getElementById(`opt-${idx}-${correctIdx}`).classList.add('correct');
+
+                if (selectedIdx !== undefined) {
+
+                    if (selectedIdx === correctIdx) {
+
+                        score++;
+
+                    } else {
+
+                        document.getElementById(`opt-${idx}-${selectedIdx}`)
+                            .classList.add('incorrect');
+
+                        wrongQuestions.push(
+                            JSON.parse(JSON.stringify(item))
+                        );
+                    }
+
+                } else {
+
+                    wrongQuestions.push(
+                        JSON.parse(JSON.stringify(item))
+                    );
+
+                }
+            });
+
+            document.getElementById('score-display').innerText =
+                `Kết quả: ${score} / ${currentList.length} câu đúng`;
+            if (wrongQuestions.length > 0) {
+
+                document.getElementById('retry-btn').style.display = 'inline-block';
+
+            } else {
+
+                document.getElementById('retry-btn').style.display = 'none';
+
+            }
+
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+        function retryWrongQuestions() {
+
+            if (wrongQuestions.length === 0) {
+                alert("Không còn câu sai nào!");
+                return;
+            }
+
+            currentList = JSON.parse(JSON.stringify(wrongQuestions));
+
+            currentList.forEach(q => {
+                q.isWrong = false;
+            });
+
+            userAnswers = {};
+            wrongQuestions = [];
+
+            document.getElementById('score-display').innerHTML =
+                `Đang làm lại ${currentList.length} câu sai`;
+
+            document.getElementById('retry-btn').style.display = 'none';
+
+            renderQuiz();
+
+            window.scrollTo(0, 0);
+        }
+        function collectWrongInstantQuestions() {
+
+            wrongQuestions = currentList.filter(q => q.isWrong);
+
+            if (wrongQuestions.length > 0) {
+
+                document.getElementById('retry-btn').style.display =
+                    'inline-block';
+
+            } else {
+
+                document.getElementById('retry-btn').style.display =
+                    'none';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
