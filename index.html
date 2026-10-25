@@ -1135,6 +1135,9 @@
                         <button class="btn btn-secondary" id="shuffleAnswersBtn" onclick="app.shuffleAnswers()" title="Xáo trộn vị trí các đáp án (giữ nguyên thứ tự câu hỏi)">
                             <i class="fa-solid fa-arrows-rotate"></i> Xáo Trộn Đáp Án
                         </button>
+                        <button class="btn btn-secondary" id="autoFillBtn" onclick="app.autoFillAllAnswers()" title="Tự động chọn toàn bộ đáp án đúng cho danh sách câu hỏi">
+                            <i class="fa-solid fa-circle-check"></i> Hiện Toàn Bộ Đáp Án
+                        </button>
                         <button class="btn btn-primary" id="nextBtn" onclick="app.nextQuestion()">
                             Câu Tiếp Theo <i class="fa-solid fa-arrow-right"></i>
                         </button>
@@ -1713,6 +1716,19 @@
                 this.playFeedbackSound('click');
                 this.render();
                 alert(`Đã xáo trộn thứ tự các đáp án cho toàn bộ ${count} câu hỏi (thứ tự câu hỏi vẫn giữ nguyên)!`);
+            }
+
+            // 3. SHOW / AUTO-FILL ALL CORRECT ANSWERS
+            autoFillAllAnswers() {
+                if (this.questions.length === 0) return;
+                let count = 0;
+                this.questions.forEach(q => {
+                    this.userAnswers[q.id] = q.correctText;
+                    count++;
+                });
+                this.playFeedbackSound('correct');
+                this.render();
+                alert(`Đã tự động chọn đáp án đúng cho toàn bộ ${count} câu hỏi! Bạn có thể lướt qua xem giải thích chi tiết.`);
             }
 
             toggleCurrentBookmark() {
