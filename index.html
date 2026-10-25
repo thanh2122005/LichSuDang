@@ -82,7 +82,6 @@
             position: relative;
         }
 
-        /* Subtle Background Ambient Orbs */
         .ambient-bg {
             position: fixed;
             top: 0;
@@ -129,7 +128,6 @@
             100% { transform: translate(40px, 30px) scale(1.1); }
         }
 
-        /* Navbar Header */
         header {
             position: sticky;
             top: 0;
@@ -212,7 +210,6 @@
             transform: translateY(-2px);
         }
 
-        /* Subject Bar */
         .subject-nav-wrapper {
             background: rgba(0, 0, 0, 0.2);
             border-bottom: 1px solid var(--border-color);
@@ -293,7 +290,6 @@
             box-shadow: var(--shadow-sm);
         }
 
-        /* Main Container */
         main {
             max-width: 1260px;
             width: 100%;
@@ -302,7 +298,6 @@
             flex: 1;
         }
 
-        /* Stats Bar */
         .stats-bar {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -351,7 +346,6 @@
             letter-spacing: 0.04em;
         }
 
-        /* Progress Bar */
         .progress-container {
             margin-bottom: 24px;
             background: var(--bg-card);
@@ -387,7 +381,6 @@
             transition: width 0.4s ease;
         }
 
-        /* Layout Grid */
         .content-grid {
             display: grid;
             grid-template-columns: 1fr 340px;
@@ -400,7 +393,6 @@
             }
         }
 
-        /* Question Box */
         .question-box {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -463,7 +455,6 @@
             margin-bottom: 24px;
         }
 
-        /* Table inside question */
         .q-table-wrapper {
             overflow-x: auto;
             margin: 16px 0 24px 0;
@@ -487,7 +478,6 @@
             color: #818cf8;
         }
 
-        /* Diagram Box for KT Câu 10 */
         .diagram-container {
             background: rgba(0, 0, 0, 0.25);
             border: 1px solid var(--border-color);
@@ -507,7 +497,6 @@
             font-style: italic;
         }
 
-        /* Options */
         .options-list {
             display: flex;
             flex-direction: column;
@@ -533,9 +522,9 @@
             transform: translateX(4px);
         }
         .option-key {
-            width: 32px;
-            height: 32px;
-            min-width: 32px;
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid var(--border-color);
@@ -544,7 +533,7 @@
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-family: 'JetBrains Mono', monospace;
             transition: var(--transition);
         }
@@ -554,10 +543,9 @@
             line-height: 1.5;
             color: var(--text-primary);
             flex: 1;
-            padding-top: 3px;
+            padding-top: 5px;
         }
 
-        /* Option Feedback States */
         .option-item.selected {
             border-color: #6366f1;
             background: rgba(99, 102, 241, 0.12);
@@ -608,7 +596,6 @@
             75% { transform: translateX(6px); }
         }
 
-        /* Explanation Box */
         .explanation-box {
             background: rgba(99, 102, 241, 0.08);
             border-left: 4px solid #6366f1;
@@ -636,7 +623,6 @@
             line-height: 1.6;
         }
 
-        /* Nav Controls */
         .nav-controls {
             display: flex;
             justify-content: space-between;
@@ -645,7 +631,7 @@
             flex-wrap: wrap;
         }
         .btn {
-            padding: 12px 24px;
+            padding: 12px 22px;
             border-radius: var(--radius-lg);
             font-size: 0.92rem;
             font-weight: 600;
@@ -680,7 +666,6 @@
             transform: none !important;
         }
 
-        /* Sidebar: Navigator & Utilities */
         .sidebar-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -743,7 +728,6 @@
             color: #f87171;
         }
 
-        /* Legend */
         .grid-legend {
             display: flex;
             flex-wrap: wrap;
@@ -766,7 +750,6 @@
         .legend-dot.wrong { background: #ef4444; }
         .legend-dot.current { background: #6366f1; }
 
-        /* Timer Box */
         .timer-box {
             display: none;
             background: rgba(239, 68, 68, 0.12);
@@ -784,7 +767,6 @@
             display: inline-flex;
         }
 
-        /* Search Section */
         .search-container {
             margin-bottom: 24px;
         }
@@ -856,7 +838,6 @@
             gap: 10px;
         }
 
-        /* Modal */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -922,13 +903,12 @@
             main { padding: 16px 14px 70px 14px; }
             .question-box { padding: 20px; }
             .question-text { font-size: 1.1rem; }
-            .btn { padding: 10px 18px; font-size: 0.85rem; }
+            .btn { padding: 10px 16px; font-size: 0.85rem; }
             .stats-bar { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
 <body data-theme="dark">
-    <!-- Ambient glowing backgrounds -->
     <div class="ambient-bg">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
@@ -1149,8 +1129,8 @@
                     </button>
 
                     <div style="display: flex; gap: 8px;">
-                        <button class="btn btn-secondary" id="shuffleBtn" onclick="app.shuffleCurrentSubject()" title="Xáo trộn thứ tự câu hỏi">
-                            <i class="fa-solid fa-shuffle"></i> Xáo Trộn
+                        <button class="btn btn-secondary" id="shuffleBtn" onclick="app.shuffleAnswers()" title="Xáo trộn thứ tự các đáp án A, B, C, D (giữ nguyên câu hỏi)">
+                            <i class="fa-solid fa-shuffle"></i> Xáo Trộn Đáp Án
                         </button>
                         <button class="btn btn-primary" id="nextBtn" onclick="app.nextQuestion()">
                             Câu Tiếp Theo <i class="fa-solid fa-arrow-right"></i>
@@ -1185,8 +1165,9 @@
                         <i class="fa-regular fa-keyboard" style="color: var(--text-muted);"></i>
                     </div>
                     <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.8;">
-                        <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">A</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">B</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">C</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">D</kbd>: Chọn phương án</div>
+                        <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">1</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">2</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">3</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">4</kbd>: Chọn đáp án tương ứng (1: A, 2: B, 3: C, 4: D)</div>
                         <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">←</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">→</kbd>: Câu trước / sau</div>
+                        <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">Enter</kbd>: Qua câu tiếp theo</div>
                         <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">S</kbd>: Đánh dấu sao câu hỏi</div>
                     </div>
                 </div>
@@ -1305,8 +1286,8 @@
 
                     if (type === 'correct') {
                         osc.type = 'sine';
-                        osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
-                        osc.frequency.exponentialRampToValueAtTime(783.99, ctx.currentTime + 0.18); // G5
+                        osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+                        osc.frequency.exponentialRampToValueAtTime(783.99, ctx.currentTime + 0.18);
                         gain.gain.setValueAtTime(0.15, ctx.currentTime);
                         gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.25);
                         osc.start();
@@ -1371,6 +1352,8 @@
                     sub.questions.forEach(q => {
                         allMapped.push({
                             ...q,
+                            // Deep copy options so shuffling doesn't permanently overwrite base
+                            options: { ...q.options },
                             subjectTitle: sub.shortName
                         });
                     });
@@ -1382,7 +1365,7 @@
                     this.questions = [...allMapped];
                 } else {
                     const sub = this.data.subjects.find(s => s.id === this.currentSubjectId);
-                    this.questions = sub ? sub.questions.map(q => ({ ...q, subjectTitle: sub.shortName })) : [];
+                    this.questions = sub ? sub.questions.map(q => ({ ...q, options: { ...q.options }, subjectTitle: sub.shortName })) : [];
                 }
             }
 
@@ -1441,7 +1424,7 @@
                 this.questions.forEach(q => delete this.userAnswers[q.id]);
                 this.isExamSubmitted = false;
 
-                this.examTimeLeft = Math.ceil(this.questions.length * 50); // seconds
+                this.examTimeLeft = Math.ceil(this.questions.length * 50);
                 this.startExamTimer();
                 this.setMode('exam');
             }
@@ -1530,15 +1513,17 @@
                     starIcon.className = 'fa-regular fa-star';
                 }
 
-                // Render options
+                // Render options with 1, 2, 3, 4 badges
                 const optsContainer = document.getElementById('optionsList');
                 optsContainer.innerHTML = '';
 
                 const userAns = this.userAnswers[q.id];
                 const isExamMode = this.currentMode === 'exam' && !this.isExamSubmitted;
+                const letterKeys = ['A', 'B', 'C', 'D'];
 
-                ['A', 'B', 'C', 'D'].forEach(key => {
+                letterKeys.forEach((key, idx) => {
                     if (!q.options[key]) return;
+                    const numKey = idx + 1;
                     const optDiv = document.createElement('div');
                     optDiv.className = 'option-item';
                     optDiv.id = `opt_${key}`;
@@ -1557,7 +1542,9 @@
                     }
 
                     optDiv.innerHTML = `
-                        <div class="option-key">${key}</div>
+                        <div class="option-key">
+                            <span>${numKey}</span>
+                        </div>
                         <div class="option-text">${q.options[key]}</div>
                     `;
 
@@ -1569,7 +1556,9 @@
                 const expBox = document.getElementById('explanationBox');
                 const expContent = document.getElementById('explanationText');
                 if (userAns && !isExamMode) {
-                    expContent.innerText = q.explanation || `Đáp án chính xác là phương án ${q.answer}.`;
+                    const correctIdx = letterKeys.indexOf(q.answer) + 1;
+                    expContent.innerHTML = `<div><strong>Đáp án đúng: Phương án ${correctIdx} (${q.answer})</strong> - ${q.options[q.answer] || ''}</div>` +
+                        (q.explanation ? `<div style="margin-top: 6px;">${q.explanation}</div>` : '');
                     expBox.classList.add('show');
                 } else {
                     expBox.classList.remove('show');
@@ -1625,10 +1614,42 @@
                 this.render();
             }
 
-            shuffleCurrentSubject() {
-                this.questions.sort(() => Math.random() - 0.5);
-                this.currentIndex = 0;
+            // SHUFFLE ONLY ANSWERS (OPTIONS A, B, C, D) - KEEP QUESTION ORDER INTACT
+            shuffleAnswers() {
+                // Randomly shuffle options for all questions in the current set
+                let count = 0;
+                this.questions.forEach(q => {
+                    if (!q.options) return;
+                    const correctText = q.options[q.answer];
+                    const keys = Object.keys(q.options);
+                    const values = Object.values(q.options);
+
+                    // Fisher-Yates shuffle on the values
+                    for (let i = values.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [values[i], values[j]] = [values[j], values[i]];
+                    }
+
+                    // Rebuild options map and update correct answer pointer
+                    const newOptions = {};
+                    let newAnswer = q.answer;
+                    keys.forEach((k, idx) => {
+                        newOptions[k] = values[idx];
+                        if (values[idx] === correctText) {
+                            newAnswer = k;
+                        }
+                    });
+
+                    q.options = newOptions;
+                    q.answer = newAnswer;
+                    // Reset user answer for this question so they can practice freshly
+                    delete this.userAnswers[q.id];
+                    count++;
+                });
+
+                this.playFeedbackSound('click');
                 this.render();
+                alert(`Đã xáo trộn thứ tự các đáp án cho ${count} câu hỏi (thứ tự các câu hỏi vẫn giữ nguyên từ 1 đến ${count})!`);
             }
 
             toggleCurrentBookmark() {
@@ -1673,7 +1694,6 @@
                 document.getElementById('progressFillCorrect').style.width = `${correctPct}%`;
                 document.getElementById('progressFillWrong').style.width = `${wrongPct}%`;
 
-                // Update mistake badge
                 const allQs = [];
                 this.data.subjects.forEach(s => allQs.push(...s.questions));
                 let mistakeCount = allQs.filter(q => this.userAnswers[q.id] && this.userAnswers[q.id] !== q.answer).length;
@@ -1790,7 +1810,7 @@
                         <div class="result-q">${q.question}</div>
                         <div class="result-ans">
                             <i class="fa-solid fa-circle-check"></i>
-                            <span><strong>Đáp án ${q.answer}:</strong> ${q.options[q.answer] || ''}</span>
+                            <span><strong>Đáp án đúng:</strong> ${q.options[q.answer] || ''}</span>
                         </div>
                         ${q.explanation ? `<div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.5;"><i class="fa-regular fa-lightbulb" style="color: #fbbf24;"></i> ${q.explanation}</div>` : ''}
                     `;
@@ -1807,18 +1827,33 @@
                 }
             }
 
+            // KEYBOARD SHORTCUTS: 1, 2, 3, 4, ARROWS, ENTER, S
             bindShortcuts() {
                 window.addEventListener('keydown', (e) => {
                     if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
 
-                    const key = e.key.toUpperCase();
-                    if (['A', 'B', 'C', 'D'].includes(key)) {
-                        this.selectOption(key);
+                    const code = e.code;
+                    const key = e.key;
+                    let optKey = null;
+
+                    // Support 1, 2, 3, 4 (both Digit and Numpad)
+                    if (key === '1' || code === 'Digit1' || code === 'Numpad1') optKey = 'A';
+                    else if (key === '2' || code === 'Digit2' || code === 'Numpad2') optKey = 'B';
+                    else if (key === '3' || code === 'Digit3' || code === 'Numpad3') optKey = 'C';
+                    else if (key === '4' || code === 'Digit4' || code === 'Numpad4') optKey = 'D';
+                    // Backward compatible with A, B, C, D
+                    else if (key.toUpperCase() === 'A') optKey = 'A';
+                    else if (key.toUpperCase() === 'B') optKey = 'B';
+                    else if (key.toUpperCase() === 'C') optKey = 'C';
+                    else if (key.toUpperCase() === 'D') optKey = 'D';
+
+                    if (optKey) {
+                        this.selectOption(optKey);
                     } else if (e.key === 'ArrowRight' || e.key === 'Enter') {
                         this.nextQuestion();
                     } else if (e.key === 'ArrowLeft') {
                         this.prevQuestion();
-                    } else if (key === 'S') {
+                    } else if (key.toUpperCase() === 'S') {
                         this.toggleCurrentBookmark();
                     }
                 });
