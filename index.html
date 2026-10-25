@@ -1129,8 +1129,11 @@
                     </button>
 
                     <div style="display: flex; gap: 8px;">
-                        <button class="btn btn-secondary" id="shuffleBtn" onclick="app.shuffleAnswers()" title="Xáo trộn thứ tự các đáp án A, B, C, D (giữ nguyên câu hỏi)">
-                            <i class="fa-solid fa-shuffle"></i> Xáo Trộn Đáp Án
+                        <button class="btn btn-secondary" id="shuffleQuestionsBtn" onclick="app.shuffleQuestions()" title="Xáo trộn ngẫu nhiên thứ tự các câu hỏi">
+                            <i class="fa-solid fa-shuffle"></i> Xáo Trộn Câu Hỏi
+                        </button>
+                        <button class="btn btn-secondary" id="shuffleAnswersBtn" onclick="app.shuffleAnswers()" title="Xáo trộn vị trí các đáp án (giữ nguyên thứ tự câu hỏi)">
+                            <i class="fa-solid fa-arrows-rotate"></i> Xáo Trộn Đáp Án
                         </button>
                         <button class="btn btn-primary" id="nextBtn" onclick="app.nextQuestion()">
                             Câu Tiếp Theo <i class="fa-solid fa-arrow-right"></i>
@@ -1612,6 +1615,15 @@
                 this.currentIndex = index;
                 this.playFeedbackSound('click');
                 this.render();
+            }
+
+            // SHUFFLE QUESTIONS ORDER
+            shuffleQuestions() {
+                this.questions.sort(() => Math.random() - 0.5);
+                this.currentIndex = 0;
+                this.playFeedbackSound('click');
+                this.render();
+                alert('Đã xáo trộn ngẫu nhiên thứ tự các câu hỏi!');
             }
 
             // SHUFFLE ONLY ANSWERS (OPTIONS A, B, C, D) - KEEP QUESTION ORDER INTACT
