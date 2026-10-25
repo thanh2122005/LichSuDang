@@ -127,7 +127,7 @@
         {
           "id": "kt_10",
           "num": 10,
-          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này P S E’ E D’ D Q O",
+          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này?",
           "options": {
             "A": "Giá cả các yếu tố đầu vào tăng",
             "B": "Thời tiết xấu làm cho đường cung dịch chuyển",
@@ -916,15 +916,15 @@
         {
           "id": "mt_27",
           "num": 27,
-          "question": "Điểm giống nhau cơ bản giữa thuế môi trường và côta ô nhiễm là gì? A Đều do người tiêu dùng cuối cùng chi trả B Đều là các khoản đóng góp tự nguyện",
+          "question": "Điểm giống nhau cơ bản giữa thuế môi trường và côta ô nhiễm là gì?",
           "options": {
-            "A": "",
-            "B": "",
+            "A": "Đều do người tiêu dùng cuối cùng chi trả",
+            "B": "Đều là các khoản đóng góp tự nguyện",
             "C": "Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính",
             "D": "Đều chỉ áp dụng cho chất thải rắn"
           },
           "answer": "C",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính)."
+          "explanation": "Cả thuế môi trường và côta ô nhiễm đều là công cụ kinh tế điều tiết hành vi gây ô nhiễm bằng chi phí tài chính."
         },
         {
           "id": "mt_28",
@@ -1359,10 +1359,15 @@
           "id": "btcn_kt_16",
           "section": "btcn_kt",
           "num": 16,
-          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua: a. Tăng cung b. Chính phủ tăng giá c. Giảm lượng cầu d. Giảm giá ✓ ĐÁP ÁN ĐÚNG",
-          "options": {},
+          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua:",
+          "options": {
+            "A": "Tăng cung",
+            "B": "Chính phủ tăng giá",
+            "C": "Giảm lượng cầu",
+            "D": "Giảm giá"
+          },
           "answer": "D",
-          "explanation": "Dư thừa xảy ra khi giá cao làm Qs>Qd. Giảm giá làm Qd tăng và Qs giảm, thu hẹp phần dư thừa.",
+          "explanation": "Khi dư thừa hàng hóa (cung > cầu), việc giảm giá sẽ làm tăng lượng cầu và giảm lượng cung, đưa thị trường về điểm cân bằng.",
           "table": null
         },
         {
@@ -1894,10 +1899,15 @@
           "id": "btcn_kt_52",
           "section": "btcn_kt",
           "num": 52,
-          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm? Tỷ lệ thất nghiệp tăng Lực lượng lao động tăng Tỷ lệ thất nghiệp giảm ✓ ĐÁP ÁN ĐÚNG Sản lượng tiềm năng tăng",
-          "options": {},
+          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm?",
+          "options": {
+            "A": "Tỷ lệ thất nghiệp tăng",
+            "B": "Lực lượng lao động tăng",
+            "C": "Tỷ lệ thất nghiệp giảm",
+            "D": "Sản lượng tiềm năng tăng"
+          },
           "answer": "C",
-          "explanation": "Người ngừng tìm việc không còn được tính trong lực lượng lao động và cũng không còn được tính là thất nghiệp, nên tỷ lệ thất nghiệp đo lường có thể giảm.",
+          "explanation": "Khi ngừng tìm kiếm việc làm, họ không còn được tính vào lực lượng lao động (lao động nản chí), khiến số người thất nghiệp tính toán giảm, tỷ lệ thất nghiệp giảm.",
           "table": null
         },
         {
@@ -2114,15 +2124,15 @@
           "id": "btcn_kt_67",
           "section": "btcn_kt",
           "num": 67,
-          "question": "Cho phương trình đường cầu và phương trình đường cung . Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
+          "question": "Cho phương trình đường cầu P = 120 - Q và phương trình đường cung P = 10 + Q. Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "P = 70; Q = 60",
+            "B": "P = 80; Q = 70",
+            "C": "P = 75; Q = 65",
+            "D": "P = 65; Q = 75"
           },
           "answer": "C",
-          "explanation": "Cầu mới: Qd=140-P, hay P=140-Q. Cân bằng với P=10+Q cho Q=65 và P=75.",
+          "explanation": "Cầu mới: Qd = 140 - P, hay P = 140 - Q. Cân bằng với P = 10 + Q => Q = 65 và P = 75.",
           "table": null
         },
         {
@@ -2187,15 +2197,15 @@
           "id": "btcn_kt_70",
           "section": "btcn_kt",
           "num": 70,
-          "question": "Cho hàm cầu và hàm cung . Nếu chính phủ đánh thuế 1 nd/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
+          "question": "Cho hàm cầu P = 18,5 - 0,5Q và hàm cung P = 2 + 0,5Q. Nếu chính phủ đánh thuế 1 đv/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "P = 10,75; Q = 15,5",
+            "B": "P = 11,25; Q = 14,5",
+            "C": "P = 10,25; Q = 16,5",
+            "D": "P = 9,75; Q = 17,5"
           },
           "answer": "A",
-          "explanation": "Thuế 1 làm đường cung theo giá người mua thành P=3+0,5Q. Giải 18,5-0,5Q=3+0,5Q => Q=15,5; giá người mua P=10,75.",
+          "explanation": "Thuế 1 đv làm đường cung theo giá người mua thành P = 3 + 0,5Q. Giải 18,5 - 0,5Q = 3 + 0,5Q => Q = 15,5; giá người mua P = 10,75.",
           "table": null
         },
         {
@@ -2288,7 +2298,7 @@
           "id": "btcn_kt_73",
           "section": "btcn_kt",
           "num": 73,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơm vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: Ps = 10 + Qs và Pd = 100 - Qd. Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -2303,7 +2313,7 @@
           "id": "btcn_kt_74",
           "section": "btcn_kt",
           "num": 74,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: Ps = 10 + Qs và Pd = 100 - Qd. Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -2318,30 +2328,30 @@
           "id": "btcn_kt_75",
           "section": "btcn_kt",
           "num": 75,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: Ps = 10 + Qs và Pd = 100 - Qd. Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "P = 60; Q = 40",
+            "B": "P = 50; Q = 40",
+            "C": "P = 55; Q = 45",
+            "D": "P = 65; Q = 35"
           },
           "answer": "A",
-          "explanation": "Sau thuế Q=40; giá người mua Pd=100-40=60 (người bán nhận 50). Theo cách ghi PE là giá người mua, điểm cân bằng mới là P=60, Q=40.",
+          "explanation": "Sau thuế Q = 40; giá người mua Pd = 100 - 40 = 60 (người bán nhận 50). Điểm cân bằng mới là P = 60, Q = 40.",
           "table": null
         },
         {
           "id": "btcn_kt_76",
           "section": "btcn_kt",
           "num": 76,
-          "question": "Cho đường cung và đường cầu . Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
+          "question": "Cho đường cung P = 0,5Q + 1,5 và đường cầu P = 27 - Q. Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "155,25 nghìn đồng",
+            "B": "162,5 nghìn đồng",
+            "C": "172,5 nghìn đồng",
+            "D": "178,25 nghìn đồng"
           },
           "answer": "D",
-          "explanation": "Ở P=11,5, lượng cầu Qd=27-11,5=15,5. Lượng bán thực tế theo cầu là 15,5; TR=11,5×15,5=178,25.",
+          "explanation": "Ở P = 11,5, lượng cầu Qd = 27 - 11,5 = 15,5. Lượng bán thực tế theo cầu là 15,5; TR = 11,5 × 15,5 = 178,25 nghìn đồng.",
           "table": null
         },
         {
@@ -3681,7 +3691,8 @@
           "options": {
             "A": "Thiếu nhân sự có chuyên môn về phát triển bền vững",
             "B": "Cách hiểu khác nhau về mục tiêu phát triển bền vững giữa các địa phương",
-            "C": "Thiếu định hướng dẫn cụ thể và công cụ đo lường phù hợp"
+            "C": "Thiếu định hướng dẫn cụ thể và công cụ đo lường phù hợp",
+            "D": "Tất cả các phương án trên đều sai"
           },
           "answer": "C",
           "explanation": "Muốn lồng ghép SDGs vào kế hoạch cấp tỉnh cần hướng dẫn cụ thể, bộ chỉ tiêu và công cụ đo lường; thiếu các công cụ này là trở ngại lớn.",
@@ -3861,7 +3872,7 @@
         {
           "id": "kt_10",
           "num": 10,
-          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này P S E’ E D’ D Q O",
+          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này?",
           "options": {
             "A": "Giá cả các yếu tố đầu vào tăng",
             "B": "Thời tiết xấu làm cho đường cung dịch chuyển",
@@ -4641,15 +4652,15 @@
         {
           "id": "mt_27",
           "num": 27,
-          "question": "Điểm giống nhau cơ bản giữa thuế môi trường và côta ô nhiễm là gì? A Đều do người tiêu dùng cuối cùng chi trả B Đều là các khoản đóng góp tự nguyện",
+          "question": "Điểm giống nhau cơ bản giữa thuế môi trường và côta ô nhiễm là gì?",
           "options": {
-            "A": "",
-            "B": "",
+            "A": "Đều do người tiêu dùng cuối cùng chi trả",
+            "B": "Đều là các khoản đóng góp tự nguyện",
             "C": "Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính",
             "D": "Đều chỉ áp dụng cho chất thải rắn"
           },
           "answer": "C",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính)."
+          "explanation": "Cả thuế môi trường và côta ô nhiễm đều là công cụ kinh tế điều tiết hành vi gây ô nhiễm bằng chi phí tài chính."
         },
         {
           "id": "mt_28",
@@ -5075,10 +5086,15 @@
           "id": "btcn_kt_16",
           "section": "btcn_kt",
           "num": 16,
-          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua: a. Tăng cung b. Chính phủ tăng giá c. Giảm lượng cầu d. Giảm giá ✓ ĐÁP ÁN ĐÚNG",
-          "options": {},
+          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua:",
+          "options": {
+            "A": "Tăng cung",
+            "B": "Chính phủ tăng giá",
+            "C": "Giảm lượng cầu",
+            "D": "Giảm giá"
+          },
           "answer": "D",
-          "explanation": "Dư thừa xảy ra khi giá cao làm Qs>Qd. Giảm giá làm Qd tăng và Qs giảm, thu hẹp phần dư thừa.",
+          "explanation": "Khi dư thừa hàng hóa (cung > cầu), việc giảm giá sẽ làm tăng lượng cầu và giảm lượng cung, đưa thị trường về điểm cân bằng.",
           "table": null
         },
         {
@@ -5610,10 +5626,15 @@
           "id": "btcn_kt_52",
           "section": "btcn_kt",
           "num": 52,
-          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm? Tỷ lệ thất nghiệp tăng Lực lượng lao động tăng Tỷ lệ thất nghiệp giảm ✓ ĐÁP ÁN ĐÚNG Sản lượng tiềm năng tăng",
-          "options": {},
+          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm?",
+          "options": {
+            "A": "Tỷ lệ thất nghiệp tăng",
+            "B": "Lực lượng lao động tăng",
+            "C": "Tỷ lệ thất nghiệp giảm",
+            "D": "Sản lượng tiềm năng tăng"
+          },
           "answer": "C",
-          "explanation": "Người ngừng tìm việc không còn được tính trong lực lượng lao động và cũng không còn được tính là thất nghiệp, nên tỷ lệ thất nghiệp đo lường có thể giảm.",
+          "explanation": "Khi ngừng tìm kiếm việc làm, họ không còn được tính vào lực lượng lao động (lao động nản chí), khiến số người thất nghiệp tính toán giảm, tỷ lệ thất nghiệp giảm.",
           "table": null
         },
         {
@@ -5830,15 +5851,15 @@
           "id": "btcn_kt_67",
           "section": "btcn_kt",
           "num": 67,
-          "question": "Cho phương trình đường cầu và phương trình đường cung . Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
+          "question": "Cho phương trình đường cầu P = 120 - Q và phương trình đường cung P = 10 + Q. Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "P = 70; Q = 60",
+            "B": "P = 80; Q = 70",
+            "C": "P = 75; Q = 65",
+            "D": "P = 65; Q = 75"
           },
           "answer": "C",
-          "explanation": "Cầu mới: Qd=140-P, hay P=140-Q. Cân bằng với P=10+Q cho Q=65 và P=75.",
+          "explanation": "Cầu mới: Qd = 140 - P, hay P = 140 - Q. Cân bằng với P = 10 + Q => Q = 65 và P = 75.",
           "table": null
         },
         {
@@ -5903,15 +5924,15 @@
           "id": "btcn_kt_70",
           "section": "btcn_kt",
           "num": 70,
-          "question": "Cho hàm cầu và hàm cung . Nếu chính phủ đánh thuế 1 nd/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
+          "question": "Cho hàm cầu P = 18,5 - 0,5Q và hàm cung P = 2 + 0,5Q. Nếu chính phủ đánh thuế 1 đv/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "P = 10,75; Q = 15,5",
+            "B": "P = 11,25; Q = 14,5",
+            "C": "P = 10,25; Q = 16,5",
+            "D": "P = 9,75; Q = 17,5"
           },
           "answer": "A",
-          "explanation": "Thuế 1 làm đường cung theo giá người mua thành P=3+0,5Q. Giải 18,5-0,5Q=3+0,5Q => Q=15,5; giá người mua P=10,75.",
+          "explanation": "Thuế 1 đv làm đường cung theo giá người mua thành P = 3 + 0,5Q. Giải 18,5 - 0,5Q = 3 + 0,5Q => Q = 15,5; giá người mua P = 10,75.",
           "table": null
         },
         {
@@ -6004,7 +6025,7 @@
           "id": "btcn_kt_73",
           "section": "btcn_kt",
           "num": 73,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơm vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: Ps = 10 + Qs và Pd = 100 - Qd. Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -6019,7 +6040,7 @@
           "id": "btcn_kt_74",
           "section": "btcn_kt",
           "num": 74,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: Ps = 10 + Qs và Pd = 100 - Qd. Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -6034,30 +6055,30 @@
           "id": "btcn_kt_75",
           "section": "btcn_kt",
           "num": 75,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: Ps = 10 + Qs và Pd = 100 - Qd. Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "P = 60; Q = 40",
+            "B": "P = 50; Q = 40",
+            "C": "P = 55; Q = 45",
+            "D": "P = 65; Q = 35"
           },
           "answer": "A",
-          "explanation": "Sau thuế Q=40; giá người mua Pd=100-40=60 (người bán nhận 50). Theo cách ghi PE là giá người mua, điểm cân bằng mới là P=60, Q=40.",
+          "explanation": "Sau thuế Q = 40; giá người mua Pd = 100 - 40 = 60 (người bán nhận 50). Điểm cân bằng mới là P = 60, Q = 40.",
           "table": null
         },
         {
           "id": "btcn_kt_76",
           "section": "btcn_kt",
           "num": 76,
-          "question": "Cho đường cung và đường cầu . Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
+          "question": "Cho đường cung P = 0,5Q + 1,5 và đường cầu P = 27 - Q. Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
           "options": {
-            "A": "",
-            "B": "",
-            "C": "",
-            "D": ""
+            "A": "155,25 nghìn đồng",
+            "B": "162,5 nghìn đồng",
+            "C": "172,5 nghìn đồng",
+            "D": "178,25 nghìn đồng"
           },
           "answer": "D",
-          "explanation": "Ở P=11,5, lượng cầu Qd=27-11,5=15,5. Lượng bán thực tế theo cầu là 15,5; TR=11,5×15,5=178,25.",
+          "explanation": "Ở P = 11,5, lượng cầu Qd = 27 - 11,5 = 15,5. Lượng bán thực tế theo cầu là 15,5; TR = 11,5 × 15,5 = 178,25 nghìn đồng.",
           "table": null
         },
         {
@@ -7388,7 +7409,8 @@
           "options": {
             "A": "Thiếu nhân sự có chuyên môn về phát triển bền vững",
             "B": "Cách hiểu khác nhau về mục tiêu phát triển bền vững giữa các địa phương",
-            "C": "Thiếu định hướng dẫn cụ thể và công cụ đo lường phù hợp"
+            "C": "Thiếu định hướng dẫn cụ thể và công cụ đo lường phù hợp",
+            "D": "Tất cả các phương án trên đều sai"
           },
           "answer": "C",
           "explanation": "Muốn lồng ghép SDGs vào kế hoạch cấp tỉnh cần hướng dẫn cụ thể, bộ chỉ tiêu và công cụ đo lường; thiếu các công cụ này là trở ngại lớn.",
