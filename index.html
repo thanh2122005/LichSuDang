@@ -1,856 +1,1809 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ôn Tập Trắc Nghiệm CNXHKH - 150 Câu</title>
+    <title>Ôn Thi Trắc Nghiệm - Kinh Tế & Môi Trường</title>
+    <meta name="description" content="Hệ thống ôn thi trắc nghiệm Đại Cương Về Kinh Tế và Đại Cương Về Môi Trường với 85 câu hỏi chuẩn có đáp án và giải thích chi tiết.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        /* CSS STYLE */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --success-color: #2ecc71;
-            --error-color: #e74c3c;
-            --bg-color: #f4f7f6;
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.75);
+            --bg-card-hover: rgba(31, 41, 55, 0.85);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-focus: #6366f1;
+            --text-primary: #f9fafb;
+            --text-secondary: #9ca3af;
+            --text-muted: #6b7280;
+            --accent-primary: #4f46e5;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+            --accent-emerald: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --accent-amber: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --correct-bg: rgba(16, 185, 129, 0.15);
+            --correct-border: #10b981;
+            --correct-text: #34d399;
+            --wrong-bg: rgba(239, 68, 68, 0.15);
+            --wrong-border: #ef4444;
+            --wrong-text: #f87171;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --radius-xl: 24px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+            --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.25);
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f3f4f6;
+            --bg-secondary: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.85);
+            --bg-card-hover: rgba(243, 244, 246, 0.95);
+            --border-color: rgba(0, 0, 0, 0.08);
+            --border-focus: #4f46e5;
+            --text-primary: #111827;
+            --text-secondary: #4b5563;
+            --text-muted: #9ca3af;
+            --correct-bg: rgba(16, 185, 129, 0.12);
+            --correct-border: #059669;
+            --correct-text: #065f46;
+            --wrong-bg: rgba(239, 68, 68, 0.12);
+            --wrong-border: #dc2626;
+            --wrong-text: #991b1b;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+            --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 20px;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 900px;
-            width: 100%;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .menu-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-bottom: 25px;
-            padding: 15px;
-            background: #eee;
-            border-radius: 8px;
-            overflow: visible;
-            /* thêm dòng này */
-            min-height: 50px;
-            /* thêm dòng này */
-        }
-
-        button {
-            padding: 10px 18px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            background: var(--secondary-color);
-            color: white;
-        }
-
-        button:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-        }
-
-        button.active {
-            background: var(--primary-color);
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .control-buttons {
-            display: none;
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-bottom: 2px solid #f0f0f0;
-        }
-
-        .btn-shuffle {
-            background: #9b59b6;
-        }
-
-        .btn-total {
-            background: #e67e22 !important;
-        }
-
-        .question-item {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .question-text {
-            font-size: 1.1em;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        .options {
-            list-style: none;
-            padding: 0;
-        }
-
-        .options li {
-            margin: 10px 0;
-            padding: 12px 15px;
-            border: 2px solid #edf2f7;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.2s;
+            flex-direction: column;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
             position: relative;
         }
 
-        .options li:hover:not(.locked) {
-            background: #f8fafc;
-            border-color: var(--secondary-color);
+        /* Subtle Background Ambient Orbs */
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.25;
+            animation: orbFloat 20s infinite alternate ease-in-out;
+        }
+        .orb-1 {
+            width: 450px;
+            height: 450px;
+            background: #6366f1;
+            top: -100px;
+            left: -100px;
+        }
+        .orb-2 {
+            width: 500px;
+            height: 500px;
+            background: #10b981;
+            bottom: -150px;
+            right: -100px;
+            animation-duration: 25s;
+        }
+        .orb-3 {
+            width: 350px;
+            height: 350px;
+            background: #ec4899;
+            top: 40%;
+            left: 45%;
+            animation-duration: 18s;
+            opacity: 0.15;
+        }
+        @keyframes orbFloat {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, 30px) scale(1.1); }
         }
 
-        .options li.selected {
-            background: #ebf8ff;
-            border-color: var(--secondary-color);
+        /* Navbar Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        .navbar {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-md);
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+        }
+        .brand-text h1 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #d1d5db 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        [data-theme="light"] .brand-text h1 {
+            background: linear-gradient(135deg, #111827 0%, #4f46e5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .brand-text p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 500;
         }
 
-        /* Trạng thái kết quả */
-        .options li.correct {
-            background-color: #d4edda !important;
-            border-color: #28a745 !important;
-            color: #155724;
-            font-weight: bold;
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .icon-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            color: var(--text-primary);
+            transform: translateY(-2px);
         }
 
-        .options li.incorrect {
-            background-color: #f8d7da !important;
-            border-color: #dc3545 !important;
-            color: #721c24;
+        /* Subject Bar */
+        .subject-nav-wrapper {
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid var(--border-color);
+            padding: 8px 20px;
+        }
+        .subject-nav {
+            max-width: 1240px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .subject-pills {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .subject-pill {
+            padding: 8px 16px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .subject-pill:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+        }
+        .subject-pill.active {
+            background: var(--accent-gradient);
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+        }
+        .subject-pill .badge {
+            font-size: 0.72rem;
+            padding: 2px 7px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            font-family: 'JetBrains Mono', monospace;
         }
 
-        .result-area {
-            display: none;
+        .mode-pills {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border-color);
+        }
+        .mode-pill {
+            padding: 6px 14px;
+            border-radius: 18px;
+            border: none;
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .mode-pill.active {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Main Container */
+        main {
+            max-width: 1240px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 24px 20px 80px 20px;
+            flex: 1;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            padding: 16px 20px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+        .stat-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .stat-icon.blue { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+        .stat-icon.green { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .stat-icon.red { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+        .stat-icon.amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+        .stat-info .stat-num {
+            font-size: 1.35rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .stat-info .stat-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin-bottom: 24px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 14px 20px;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(12px);
+        }
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .progress-track {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+        }
+        .progress-fill-correct {
+            height: 100%;
+            background: #10b981;
+            transition: width 0.4s ease;
+        }
+        .progress-fill-wrong {
+            height: 100%;
+            background: #ef4444;
+            transition: width 0.4s ease;
+        }
+
+        /* Layout Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 24px;
+            align-items: start;
+        }
+        @media (max-width: 960px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Question Box */
+        .question-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 28px;
+            backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            transition: var(--transition);
+        }
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .q-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+        .q-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .star-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .star-btn.starred {
+            color: #fbbf24;
+            border-color: #fbbf24;
+            background: rgba(245, 158, 11, 0.15);
+        }
+
+        .question-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.55;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+
+        /* Diagram Box for KT Câu 10 */
+        .diagram-container {
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            margin-bottom: 24px;
             text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #eee;
+        }
+        .diagram-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .diagram-caption {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-style: italic;
         }
 
-        #submit-btn {
-            background: var(--success-color);
-            font-size: 1.2em;
-            padding: 15px 40px;
+        /* Options */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        .option-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            user-select: none;
+        }
+        .option-item:hover:not(.locked) {
+            background: var(--bg-card-hover);
+            border-color: var(--border-focus);
+            transform: translateX(4px);
+        }
+        .option-key {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            font-family: 'JetBrains Mono', monospace;
+            transition: var(--transition);
+        }
+        .option-text {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: var(--text-primary);
+            flex: 1;
+            padding-top: 3px;
         }
 
-        #score-display {
-            margin-top: 20px;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: var(--primary-color);
+        /* Option Feedback States */
+        .option-item.selected {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.12);
+        }
+        .option-item.selected .option-key {
+            background: #6366f1;
+            color: white;
+            border-color: #6366f1;
         }
 
-        /* Tối ưu cho điện thoại */
-        @media (max-width: 768px) {
+        .option-item.correct {
+            background: var(--correct-bg) !important;
+            border-color: var(--correct-border) !important;
+            animation: pulseCorrect 0.4s ease;
+        }
+        .option-item.correct .option-key {
+            background: #10b981 !important;
+            color: white !important;
+            border-color: #10b981 !important;
+        }
+        .option-item.correct .option-text {
+            color: var(--correct-text) !important;
+            font-weight: 600;
+        }
 
-            body {
-                padding: 8px;
+        .option-item.wrong {
+            background: var(--wrong-bg) !important;
+            border-color: var(--wrong-border) !important;
+            animation: shakeWrong 0.4s ease;
+        }
+        .option-item.wrong .option-key {
+            background: #ef4444 !important;
+            color: white !important;
+            border-color: #ef4444 !important;
+        }
+        .option-item.wrong .option-text {
+            color: var(--wrong-text) !important;
+        }
+
+        @keyframes pulseCorrect {
+            0% { transform: scale(0.99); }
+            50% { transform: scale(1.015); }
+            100% { transform: scale(1); }
+        }
+        @keyframes shakeWrong {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-6px); }
+            75% { transform: translateX(6px); }
+        }
+
+        /* Explanation Box */
+        .explanation-box {
+            background: rgba(99, 102, 241, 0.08);
+            border-left: 4px solid #6366f1;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .explanation-box.show {
+            display: block;
+        }
+        .explanation-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #818cf8;
+            margin-bottom: 6px;
+        }
+        .explanation-content {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Nav Footer Buttons */
+        .nav-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border-radius: var(--radius-lg);
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+        }
+        .btn-secondary:hover:not(:disabled) {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: white;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+        }
+        .btn-primary:hover:not(:disabled) {
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+            transform: translateY(-2px);
+        }
+        .btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Sidebar: Navigator & Utilities */
+        .sidebar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            backdrop-filter: blur(14px);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 20px;
+        }
+        .sidebar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+            max-height: 380px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .grid-btn {
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text-secondary);
+            font-size: 0.82rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        .grid-btn:hover {
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--text-primary);
+        }
+        .grid-btn.current {
+            border-color: #6366f1;
+            background: #6366f1;
+            color: white;
+            box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+        }
+        .grid-btn.correct {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: #10b981;
+            color: #34d399;
+        }
+        .grid-btn.wrong {
+            background: rgba(239, 68, 68, 0.25);
+            border-color: #ef4444;
+            color: #f87171;
+        }
+
+        /* Legend */
+        .grid-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .legend-dot.correct { background: #10b981; }
+        .legend-dot.wrong { background: #ef4444; }
+        .legend-dot.current { background: #6366f1; }
+
+        /* Exam Mode Specifics */
+        .timer-box {
+            display: none;
+            background: rgba(239, 68, 68, 0.12);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            align-items: center;
+            gap: 8px;
+        }
+        .timer-box.active {
+            display: inline-flex;
+        }
+
+        /* Search / Flashcard Mode View */
+        .search-container {
+            margin-bottom: 24px;
+        }
+        .search-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .search-input-wrapper i {
+            position: absolute;
+            left: 18px;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+        .search-input {
+            width: 100%;
+            background: var(--bg-card);
+            border: 1.5px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            padding: 16px 20px 16px 50px;
+            font-size: 1rem;
+            color: var(--text-primary);
+            outline: none;
+            transition: var(--transition);
+        }
+        .search-input:focus {
+            border-color: #6366f1;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .search-results-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .result-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            transition: var(--transition);
+        }
+        .result-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-2px);
+        }
+        .result-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .result-q {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: var(--text-primary);
+        }
+        .result-ans {
+            background: var(--correct-bg);
+            border: 1px solid var(--correct-border);
+            padding: 10px 16px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            color: var(--correct-text);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Modal Dialog */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            animation: fadeIn 0.25s ease;
+        }
+        .modal-overlay.open {
+            display: flex;
+        }
+        .modal-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-xl);
+            max-width: 520px;
+            width: 100%;
+            padding: 32px;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            position: relative;
+        }
+        .modal-score {
+            font-size: 3.5rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 12px 0;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 640px) {
+            .navbar {
+                padding: 12px 16px;
             }
-
-            .container {
-                padding: 12px;
+            .subject-nav-wrapper {
+                padding: 8px 16px;
             }
-
-            h1 {
-                font-size: 20px;
+            main {
+                padding: 16px 14px 70px 14px;
             }
-
-            .menu-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 6px;
-                padding: 10px;
-                overflow-x: auto;
+            .question-box {
+                padding: 20px;
             }
-
-            .menu-buttons button {
-                min-width: 80px;
-                font-size: 14px;
-                padding: 10px 12px;
-            }
-
-            .control-buttons button {
-                width: 100%;
-                margin-bottom: 8px;
-            }
-
             .question-text {
-                font-size: 16px;
+                font-size: 1.1rem;
             }
-
-            .options li {
-                font-size: 14px;
-                padding: 10px;
+            .btn {
+                padding: 10px 18px;
+                font-size: 0.85rem;
             }
-
-            #submit-btn {
-                width: 100%;
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
 </head>
+<body data-theme="dark">
+    <!-- Ambient glowing backgrounds -->
+    <div class="ambient-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
 
-<body>
+    <!-- Header Navigation -->
+    <header>
+        <div class="navbar">
+            <div class="brand" onclick="app.setMode('practice')">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>Ôn Thi Trắc Nghiệm 2026</h1>
+                    <p>Kinh Tế Vi/Vĩ Mô & Môi Trường Bền Vững</p>
+                </div>
+            </div>
 
-    <div class="container">
-        <h1>THI TRẮC NGHIỆM CNXHKH</h1>
+            <div class="nav-actions">
+                <div id="examTimer" class="timer-box">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="timerText">20:00</span>
+                </div>
 
-        <div id="part-selector" class="menu-buttons">
+                <button class="icon-btn" id="soundToggleBtn" onclick="app.toggleSound()" title="Bật/Tắt âm thanh">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+                <button class="icon-btn" id="themeToggleBtn" onclick="app.toggleTheme()" title="Chuyển chế độ Sáng/Tối">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="icon-btn" onclick="app.confirmReset()" title="Làm lại từ đầu (Reset)">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </button>
+            </div>
         </div>
-        <div style="text-align:center; margin-bottom:15px;">
-            <label>
-                <input type="radio" name="mode" value="submit" checked>
-                Làm xong rồi nộp
-            </label>
-            &nbsp;&nbsp;
-            <label>
-                <input type="radio" name="mode" value="instant">
-                Chọn là biết đúng sai
-            </label>
+
+        <!-- Subject & Mode Switcher Bar -->
+        <div class="subject-nav-wrapper">
+            <div class="subject-nav">
+                <div class="subject-pills">
+                    <button class="subject-pill active" id="subKinhTeBtn" onclick="app.selectSubject('kinh_te')">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Đại Cương Kinh Tế</span>
+                        <span class="badge" id="badgeKt">43</span>
+                    </button>
+                    <button class="subject-pill" id="subMoiTruongBtn" onclick="app.selectSubject('moi_truong')">
+                        <i class="fa-solid fa-seedling"></i>
+                        <span>Đại Cương Môi Trường</span>
+                        <span class="badge" id="badgeMt">42</span>
+                    </button>
+                    <button class="subject-pill" id="subAllBtn" onclick="app.selectSubject('all')">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Tổng Hợp 2 Môn</span>
+                        <span class="badge" id="badgeAll">85</span>
+                    </button>
+                </div>
+
+                <div class="mode-pills">
+                    <button class="mode-pill active" id="modePracticeBtn" onclick="app.setMode('practice')">
+                        <i class="fa-solid fa-bullseye"></i> Luyện Tập
+                    </button>
+                    <button class="mode-pill" id="modeExamBtn" onclick="app.openExamSetup()">
+                        <i class="fa-solid fa-stopwatch"></i> Thi Thử
+                    </button>
+                    <button class="mode-pill" id="modeMistakesBtn" onclick="app.setMode('mistakes')">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Câu Sai (<span id="mistakeCountBadge">0</span>)
+                    </button>
+                    <button class="mode-pill" id="modeSearchBtn" onclick="app.setMode('search')">
+                        <i class="fa-solid fa-book-open"></i> Tra Cứu
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Real-time Dashboard / Stats -->
+        <section class="stats-bar" id="statsBar">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-num" id="statCompleted">0 / 43</div>
+                    <div class="stat-label">Tiến Độ Làm Bài</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-num" id="statCorrect">0</div>
+                    <div class="stat-label">Trả Lời Đúng</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon red">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-num" id="statWrong">0</div>
+                    <div class="stat-label">Trả Lời Sai</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon amber">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="stat-info">
+                    <div class="stat-num" id="statAccuracy">0%</div>
+                    <div class="stat-label">Tỷ Lệ Chính Xác</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Track -->
+        <div class="progress-container" id="progressContainer">
+            <div class="progress-header">
+                <span id="progressSubjectText">Tiến độ ôn tập môn: Đại Cương Kinh Tế</span>
+                <span id="progressPercentText" style="font-family: 'JetBrains Mono', monospace; color: #818cf8;">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill-correct" id="progressFillCorrect" style="width: 0%;"></div>
+                <div class="progress-fill-wrong" id="progressFillWrong" style="width: 0%;"></div>
+            </div>
         </div>
 
-        <div class="control-buttons" id="controls">
-            <button class="btn-shuffle" onclick="shuffleQuestions()">Đảo câu hỏi</button>
-            <button class="btn-shuffle" onclick="shuffleAnswers()">Đảo đáp án</button>
+        <!-- PRACTICE & EXAM VIEW -->
+        <div class="content-grid" id="quizViewSection">
+            <!-- Left: Question Card -->
+            <div class="question-box" id="questionCard">
+                <div class="question-header">
+                    <div class="q-badge" id="questionBadge">
+                        <i class="fa-solid fa-tag"></i>
+                        <span id="questionSubjectBadge">Kinh Tế</span> • Câu <span id="currentQIndexDisplay">1</span>/<span id="totalQDisplay">43</span>
+                    </div>
+
+                    <div class="q-actions">
+                        <button class="star-btn" id="starQuestionBtn" onclick="app.toggleCurrentBookmark()" title="Đánh dấu câu hỏi cần xem lại">
+                            <i class="fa-regular fa-star" id="starIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="question-text" id="questionText">
+                    Đang tải câu hỏi...
+                </div>
+
+                <!-- SVG Diagram for KT Câu 10 -->
+                <div class="diagram-container" id="diagramContainer" style="display: none;">
+                    <svg viewBox="0 0 500 320" xmlns="http://www.w3.org/2000/svg" style="background: rgba(15, 23, 42, 0.6); border-radius: 12px;">
+                        <!-- Grid lines -->
+                        <defs>
+                            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                <path d="M 0 1 L 10 5 L 0 9 z" fill="#94a3b8" />
+                            </marker>
+                        </defs>
+                        <!-- Axes -->
+                        <line x1="60" y1="270" x2="460" y2="270" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)" />
+                        <line x1="60" y1="270" x2="60" y2="30" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrow)" />
+                        <text x="465" y="275" fill="#f8fafc" font-size="14" font-weight="700">Q (Lượng)</text>
+                        <text x="45" y="25" fill="#f8fafc" font-size="14" font-weight="700">P (Giá)</text>
+                        <text x="40" y="285" fill="#94a3b8" font-size="14" font-weight="700">O</text>
+
+                        <!-- Supply curve S -->
+                        <line x1="90" y1="250" x2="390" y2="70" stroke="#38bdf8" stroke-width="3" />
+                        <text x="395" y="70" fill="#38bdf8" font-size="15" font-weight="800">S (Đường cung)</text>
+
+                        <!-- Demand curve D -->
+                        <line x1="90" y1="70" x2="350" y2="250" stroke="#fb7185" stroke-width="3" stroke-dasharray="4" />
+                        <text x="355" y="255" fill="#fb7185" font-size="15" font-weight="800">D (Cầu ban đầu)</text>
+
+                        <!-- Shifted Demand curve D' -->
+                        <line x1="160" y1="70" x2="420" y2="250" stroke="#f43f5e" stroke-width="3.5" />
+                        <text x="425" y="255" fill="#f43f5e" font-size="15" font-weight="800">D' (Cầu mới dịch phải)</text>
+
+                        <!-- Equilibrium point E (intersection of S and D) -->
+                        <circle cx="218" cy="167" r="6" fill="#fbbf24" stroke="#ffffff" stroke-width="2" />
+                        <text x="195" y="165" fill="#fbbf24" font-size="15" font-weight="800">E</text>
+
+                        <!-- Equilibrium point E' (intersection of S and D') -->
+                        <circle cx="272" cy="142" r="6" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+                        <text x="280" y="140" fill="#10b981" font-size="15" font-weight="800">E'</text>
+
+                        <!-- Shift vector arrow -->
+                        <path d="M 235 155 L 255 147" stroke="#ffffff" stroke-width="2.5" marker-end="url(#arrow)" />
+                    </svg>
+                    <div class="diagram-caption">Mô phỏng cân bằng thị trường: Cầu dịch chuyển sang phải (D ➔ D') làm điểm cân bằng dịch từ E sang E' (Giá P tăng, Sản lượng Q tăng).</div>
+                </div>
+
+                <div class="options-list" id="optionsList">
+                    <!-- Populated dynamically -->
+                </div>
+
+                <!-- Explanation Box -->
+                <div class="explanation-box" id="explanationBox">
+                    <div class="explanation-title">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>Giải thích đáp án chi tiết</span>
+                    </div>
+                    <div class="explanation-content" id="explanationText"></div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="nav-controls">
+                    <button class="btn btn-secondary" id="prevBtn" onclick="app.prevQuestion()">
+                        <i class="fa-solid fa-arrow-left"></i> Câu Trước
+                    </button>
+
+                    <div style="display: flex; gap: 8px;">
+                        <button class="btn btn-secondary" id="shuffleBtn" onclick="app.shuffleCurrentSubject()" title="Xáo trộn thứ tự câu hỏi">
+                            <i class="fa-solid fa-shuffle"></i> Xáo Trộn
+                        </button>
+                        <button class="btn btn-primary" id="nextBtn" onclick="app.nextQuestion()">
+                            Câu Tiếp Theo <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-primary" id="submitExamBtn" onclick="app.submitExam()" style="display: none; background: var(--accent-emerald);">
+                            <i class="fa-solid fa-paper-plane"></i> Nộp Bài Thi
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Question Matrix & Navigation -->
+            <div class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-title">
+                        <span>Danh Sách Câu Hỏi</span>
+                        <span id="sidebarProgress" style="font-size: 0.8rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">1/43</span>
+                    </div>
+                    <div class="question-grid" id="questionGrid">
+                        <!-- Populated dynamically -->
+                    </div>
+                    <div class="grid-legend">
+                        <div class="legend-item"><div class="legend-dot current"></div> Đang làm</div>
+                        <div class="legend-item"><div class="legend-dot correct"></div> Đúng</div>
+                        <div class="legend-item"><div class="legend-dot wrong"></div> Sai</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sidebar-title">
+                        <span>Phím Tắt Tiện Lợi</span>
+                        <i class="fa-regular fa-keyboard" style="color: var(--text-muted);"></i>
+                    </div>
+                    <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.8;">
+                        <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">A</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">B</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">C</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">D</kbd>: Chọn phương án</div>
+                        <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">←</kbd> <kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">→</kbd>: Câu trước / sau</div>
+                        <div><kbd style="background: rgba(255,255,255,0.1); padding: 2px 6px; border-radius: 4px; font-family: monospace;">S</kbd>: Đánh dấu sao câu hỏi</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="quiz-container">
-            <p style="text-align:center; color:#666;">Vui lòng chọn một phần để bắt đầu làm bài.</p>
+        <!-- SEARCH / FLASHCARD LIST VIEW -->
+        <div id="searchViewSection" style="display: none;">
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm nhanh câu hỏi theo từ khóa (Ví dụ: GDP, lạm phát, CFC, dioxin, thất nghiệp...)" oninput="app.handleSearch()">
+                </div>
+            </div>
+
+            <div class="search-results-list" id="searchResultsList">
+                <!-- Dynamically populated -->
+            </div>
         </div>
+    </main>
 
-        <div id="result-area" class="result-area">
-            <button onclick="submitQuiz()" id="submit-btn">
-                Nộp bài & Xem kết quả
-            </button>
+    <!-- EXAM RESULT MODAL -->
+    <div class="modal-overlay" id="examResultModal">
+        <div class="modal-card">
+            <div style="font-size: 3rem; margin-bottom: 8px;" id="modalEmoji">🎉</div>
+            <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 4px;" id="modalTitle">Hoàn Thành Bài Thi!</h2>
+            <p style="color: var(--text-secondary); font-size: 0.92rem;" id="modalSubtitle">Dưới đây là kết quả kiểm tra năng lực của bạn</p>
 
-            <button onclick="retryWrongQuestions()" id="retry-btn"
-                style="display:none;background:#e67e22;margin-left:10px;">
-                Làm lại câu sai
-            </button>
+            <div class="modal-score" id="modalScoreText">8.5</div>
 
-            <div id="score-display"></div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; text-align: left;">
+                <div style="background: rgba(16, 185, 129, 0.12); padding: 12px; border-radius: 12px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                    <div style="font-size: 0.78rem; color: #34d399; font-weight: 700;">SỐ CÂU ĐÚNG</div>
+                    <div style="font-size: 1.4rem; font-weight: 800; color: #10b981;" id="modalCorrectCount">17 / 20</div>
+                </div>
+                <div style="background: rgba(239, 68, 68, 0.12); padding: 12px; border-radius: 12px; border: 1px solid rgba(239, 68, 68, 0.3);">
+                    <div style="font-size: 0.78rem; color: #f87171; font-weight: 700;">SỐ CÂU SAI</div>
+                    <div style="font-size: 1.4rem; font-weight: 800; color: #ef4444;" id="modalWrongCount">3 / 20</div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button class="btn btn-secondary" onclick="app.closeModal()">Đóng</button>
+                <button class="btn btn-primary" onclick="app.reviewExamMistakes()">
+                    <i class="fa-solid fa-list-check"></i> Xem Lại Câu Sai
+                </button>
+            </div>
         </div>
     </div>
 
+    <!-- EMBEDDED QUIZ DATA & APPLICATION LOGIC -->
     <script>
-        /* DATA & LOGIC */
-        // Dữ liệu được trích xuất từ file của bạn (Ví dụ mẫu 30 câu đầu, bạn có thể copy thêm đủ 150 câu vào mảng này)
-        const rawData = [
-
-            //Chương 1
-            { id: 1, q: "Đối tượng nghiên cứu của môn học Lịch sử Đảng Cộng sản Việt Nam là:", a: ["Các sự kiện Lịch sử Đảng", "Cương lĩnh, đường lối, chủ trương, chính sách lớn của Đảng", "Quá trình lãnh đạo, chỉ đạo, tổ chức thực hiện của Đảng trong tiến trình cách mạng", "Tất cả các phương án A, B, C đều đúng"], c: 3 },
-
-            { id: 2, q: "Môn học Lịch sử Đảng Cộng sản Việt Nam có chức năng gì?", a: ["Chức năng nhận thức, tuyên truyền và giáo dục", "Chức năng nhận thức, chức năng giáo dục, chức năng dự báo và phê phán", "Chức năng dự báo và phê bình", "Chức năng giáo dục và phê bình"], c: 1 },
-
-            { id: 3, q: "Môn học Lịch sử Đảng Cộng sản Việt Nam có những nhiệm vụ gì?", a: ["Trình bày hệ thống cương lĩnh, đường lối của Đảng", "Tái hiện tiến trình lịch sử sự lãnh đạo, đấu tranh của Đảng", "Tổng kết lịch sử Đảng, và làm rõ vai trò sức chiến đấu của hệ thống tổ chức Đảng", "Cả A, B, C đều đúng"], c: 3 },
-
-            { id: 4, q: "Học tập môn học Lịch sử Đảng Cộng sản Việt Nam có ý nghĩa gì đối với sinh viên:", a: ["Để tham gia vào lãnh đạo đất nước", "Để học tập các môn học hiệu quả hơn", "Giáo dục lý tưởng, truyền thống đấu tranh cách mạng của Đảng và dân tộc, củng cố, bồi đắp niềm tin đối với sự lãnh đạo của Đảng", "Để cải cách đất nước tiến nhanh, tiến mạnh, tiến vững chắc"], c: 2 },
-
-            { id: 5, q: "Một trong chức năng giáo dục của khoa học Lịch sử Đảng là:", a: ["Sự lãnh đạo của Đảng là nhân tố hàng đầu quyết định thắng lợi của cách mạng", "Tăng cường sự lãnh đạo, nâng cao sức chiến đấu của Đảng, tự phê bình và phê bình là quy luật phát triển của Đảng", "Lý tưởng cách mạng với mục tiêu chiến lược là độc lập dân tộc và chủ nghĩa xã hội", "Từ những gì diễn ra trong quá khứ để hiểu rõ hiện tại và dự báo tương lai"], c: 2 },
-
-            { id: 6, q: "Tại sao khi nghiên cứu, học tập Lịch sử Đảng Cộng sản Việt Nam lại cần phải nhận thức và vận dụng chủ nghĩa duy vật lịch sử?", a: ["Để thấy được sự ưu việt của Đảng Cộng sản Việt Nam so với các đảng phái ở phương Tây", "Để hiểu được sứ mệnh lịch sử của giai cấp công nhân", "Để nhận thức tiến trình cách mạng do Đảng Cộng sản Việt Nam lãnh đạo", "Để hiểu con đường cách mạng giải phóng dân tộc"], c: 2 },
-
-            { id: 7, q: "Trong nghiên cứu Lịch sử Đảng Cộng sản Việt Nam, khi xem xét, đối chiếu các hiện tượng lịch sử trong hình thức tổng quát nhằm mục đích vạch ra bản chất, quy luật, khuynh hướng chung trong sự vận động của sự vật thì đó là cách nghiên cứu dựa trên phương pháp nào?", a: ["Phương pháp logic", "Phương pháp lịch sử", "Phương pháp tổng hợp", "Phương pháp so sánh"], c: 0 },
-
-            { id: 8, q: "Câu nói: “Lịch sử Đảng Cộng sản Việt Nam là cả một pho lịch sử bằng vàng” là của ai?", a: ["Hồ Chí Minh", "Trường Chinh", "Lê Duẩn", "Nguyễn Phú Trọng"], c: 0 },
-
-            { id: 9, q: "Điền từ còn thiếu vào chỗ chấm: “Đảng Cộng sản Việt Nam là đội tiên phong của giai cấp công nhân, đồng thời là đội tiên phong của nhân dân lao động và của dân tộc Việt Nam; đại biểu trung thành lợi ích của giai cấp công nhân, nhân dân lao động và của dân tộc. Đảng lấy chủ nghĩa Mác - Lenin và tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động, lấy…. làm nguyên tắc tổ chức cơ bản”", a: ["Phê bình và tự phê bình", "Đoàn kết thống nhất trong Đảng", "Kỷ luật nghiêm minh tự giác", "Tập trung dân chủ"], c: 3 },
-
-            { id: 10, q: "Một trong chức năng giáo dục của khoa học lịch sử Đảng là:", a: ["Sự lãnh đạo của Đảng là nhân tố hàng đầu quyết định thắng lợi của cách mạng Việt Nam", "Tăng cường sự lãnh đạo, nâng cao sức chiến đấu của Đảng", "Lý tưởng cách mạng với mục tiêu chiến lược là độc lập dân tộc và chủ nghĩa xã hội", "Từ những gì diễn ra trong quá khứ để hiểu rõ hiện tại và dự báo tương lai"], c: 2 },
-            //Chương2
-            { id: 11, q: "Thực dân Pháp nổ súng xâm lược nước ta vào ngày tháng năm nào?", a: ["1/9/1858", "1/8/1858", "1/9/1859", "1/8/1859"], c: 0 },
-
-            { id: 12, q: "Thời gian thực dân Pháp tiến hành khai thác thuộc địa lần thứ nhất ở Việt Nam khi nào?", a: ["1858-1884", "1884-1899", "1914-1918", "1897-1914"], c: 3 },
-
-            { id: 13, q: "Trước khi thực dân Pháp xâm lược Việt Nam (1858), xã hội Việt Nam có mấy giai cấp? Đó là giai cấp nào?", a: ["2 giai cấp (Nông dân, Công nhân)", "4 giai cấp (Công nhân, Nông dân, Tư sản, Tiểu tư sản)", "3 giai cấp (Địa chủ phong kiến, Công nhân, Nông dân)", "2 giai cấp (Địa chủ phong kiến, Nông dân)"], c: 3 },
-
-            { id: 14, q: "Trong cuộc khai thác thuộc địa lần thứ nhất của thực dân Pháp ở nước ta có giai cấp mới nào được hình thành?", a: ["Giai cấp tiểu tư sản", "Giai cấp địa chủ", "Giai cấp nông dân và công nhân", "Giai cấp công nhân"], c: 3 },
-
-            { id: 15, q: "Mâu thuẫn chủ yếu và gay gắt nhất ở Việt Nam vào đầu thế kỷ XX là mâu thuẫn nào?", a: ["Mâu thuẫn giữa giai cấp nông dân với đại chủ phong kiến", "Mâu thuẫn giữa giai cấp công nhân với giai cấp tư sản", "Mâu thuẫn giữa giai cấp nông dân, giai cấp công nhân với địa chủ phong kiến", "Mâu thuẫn giữa toàn thể dân tộc Việt Nam với thực dân Pháp và phong kiến phản động"], c: 3 },
-
-            { id: 16, q: "Giai cấp công nhân Việt Nam ra đời có những đặc điểm nào sau đây?", a: ["Chủ yếu xuất thân từ nông dân", "Ra đời trước giai cấp tư sản Việt Nam", "Chịu sự áp bức bóc lột của thực dân Pháp, tư sản và phong kiến", "Cả A, B, C đều đúng"], c: 3 },
-
-            { id: 17, q: "Phong trào Cần Vương (1885-1896) do ai khởi xướng?", a: ["Phan Đình Phùng", "Vua Hàm Nghi và Tôn Thất Thuyết", "Hoàng Hoa Thám", "Nguyễn Thiện Thuật"], c: 1 },
-
-            { id: 18, q: "Hoàng Hoa Thám đã lãnh đạo phong trào yêu nước nào ?", a: ["Bãi Sậy", "Nông dân Yên Thế", "Ba Đình", "Hương Khê"], c: 1 },
-
-            { id: 19, q: "Phong trào Đông Du theo khuynh hướng dân chủ tư sản đầu thế kỷ XX do ai khởi xướng và lãnh đạo?", a: ["Phan Bội Châu", "Phan Châu Trinh", "Huỳnh Thúc Kháng", "Phan Đình Phùng"], c: 0 },
-
-            { id: 20, q: "Tổ chức Cộng sản nào ra đời đầu tiên ở Việt Nam?", a: ["Hội Việt Nam cách mạng thanh niên", "Đông Dương Cộng sản Đảng", "An Nam Cộng sản Đảng", "Đông Dương Cộng sản liên đoàn"], c: 1 },
-
-            { id: 21, q: "Tháng 6 năm 1929 tổ chức Cộng sản nào đã ra đời ở Việt Nam?", a: ["Hội Việt Nam cách mạng thanh niên", "An Nam Cộng sản Đảng", "Đông Dương Cộng sản Đảng", "Đông Dương Cộng sản liên đoàn"], c: 2 },
-
-            { id: 22, q: "Tổ chức An Nam Cộng sản Đảng được thành lập vào thời gian nào?", a: ["Tháng 6/1927", "Tháng 6/1928", "Tháng 6/1929", "Tháng 11/1929"], c: 3 },
-
-            { id: 23, q: "Tổ chức Đông Dương Cộng sản Đảng liên đoàn được thành lập vào thời gian nào?", a: ["Tháng 1/1930", "Tháng 9/1929", "Tháng 2/1930", "Tháng 6/1929"], c: 1 },
-
-            { id: 24, q: "Hội nghị hợp nhất các Tổ chức Cộng sản Đảng diễn ra trong khoảng thời gian nào sau đây?", a: ["7/1/1930- 7/2/1930", "7/2/1930- 8/2/1930", "6/2/1930-8/2/1930", "6/1/1930-7/2/1930"], c: 3 },
-
-            { id: 25, q: "Tại Hội nghị thành lập Đảng Cộng sản Việt Nam, văn kiện nào của Nguyễn Ái Quốc đã được Hội nghị thông qua?", a: ["Chính cương vắn tắt", "Sách lược vắn tắt", "Chương trình tóm tắt và điều lệ vắn tắt", "Cả A, B và C"], c: 3 },
-
-            { id: 26, q: "Chương trình hành động của Đảng Cộng sản Đông Dương tháng 6 năm 1932 do ai soạn thảo?", a: ["Trần Phú", "Hà Huy Tập", "Nguyễn Văn Cừ", "Lê Hồng Phong"], c: 3 },
-
-            { id: 27, q: "Động lực chính của cách mạng Đông Dương được xác định trong Luận cương chính trị tháng 10/1930 là?", a: ["Địa chủ và nông dân", "Toàn thể dân tộc Việt Nam", "Tư sản, tiểu tư sản", "Vô sản và nông dân"], c: 3 },
-
-            { id: 28, q: "Văn kiện nào khẳng định: “Vấn đề thổ địa là cái cốt của cách mạng tư sản dân quyền”?", a: ["Chương trình hành động của Đảng Cộng sản Đông Dương (6/1932)", "Luận cương chính trị (10/1930)", "Chính cương vắn tắt, sách lược vắn tắt (3/2/1930)", "Chung quanh vấn đề chính sách mới của Đảng (10/1936)"], c: 1 },
-
-            { id: 29, q: "Đại hội VII Quốc tế Cộng sản (7/1935) xác định kẻ thù nguy hiểm trước mắt của nhân dân thế giới là gì?", a: ["Chủ nghĩa đế quốc", "Chủ nghĩa thực dân cũ", "Chủ nghĩa sô vanh", "Chủ nghĩa phát xít"], c: 3 },
-
-            { id: 30, q: "Nhiệm vụ trước mắt của cao trào cách mạng 1936-1939 là:", a: ["Đòi những quyền dân chủ đơn sơ (tự do, dân chủ, cơm áo, hòa bình)", "Ruộng đất cho dân cày", "Độc lập dân tộc", "Tiến lên chủ nghĩa xã hội"], c: 0 },
-
-            { id: 31, q: "Đại hội lần thứ mấy của Đảng Cộng sản Việt Nam quyết định lấy ngày 3/2 làm ngày kỉ niệm thành lập Đảng?", a: ["Đại hội I (3/1935)", "Đại Hội II (2/1951)", "Đại hội IV (12/1976)", "Đại hội III (9/1960)"], c: 3 },
-
-            { id: 32, q: "Trong Cương lĩnh chính trị đầu tiên của Đảng (2/1930) nhiệm vụ nào được đặt lên hàng đầu?", a: ["Đánh đổ địa chủ phong kiến giành ruộng đất cho dân cày", "Đánh đổ đế quốc chủ nghĩa Pháp làm cho nước Nam được hoàn toàn độc lập", "Đánh đổ chủ nghĩa Pháp và bọn phong kiến", "Độc lập dân tộc và chủ nghĩa xã hội"], c: 1 },
-
-            { id: 33, q: "Lực lượng cách mạng được Nguyễn Ái Quốc xác định trong bản Cương lĩnh chính trị đầu tiên của Đảng (2/1930) là?", a: ["Nông dân, Công nhân", "Bao gồm toàn dân những người yêu nước (Công nhân, nông dân, tư sản, tiểu tư sản, phú nông, trung nông, địa chủ có tinh thần yêu nước)", "Địa chủ tiến bộ yêu nước", "Tư sản, tiểu tư sản"], c: 1 },
-
-            { id: 34, q: "Đảng Cộng sản Việt Nam ra đời là sự kết hợp của những yếu tố nào sau đây:", a: ["Chủ nghĩa Mác - Lênin, Phong trào công nhân và Phong trào yêu nước", "Chủ nghĩa Mác - Lênin và phong trào công nhân", "Chủ nghĩa Mác - Lênin và phong trào yêu nước", "Phong trào công nhân và phong trào yêu nước"], c: 0 },
-
-            { id: 35, q: "Câu nói: “Đảng muốn vững thì phải có chủ nghĩa làm cốt, trong Đảng ai cũng phải hiểu, ai cũng phải theo chủ nghĩa ấy. Đảng mà không có chủ nghĩa giống như người không có trí khôn, tàu không có bàn chỉ nam” của Nguyễn Ái Quốc trích trong:", a: ["Tác phẩm Đường cách mệnh", "Tạp chí Cộng sản", "Báo Người cùng khổ", "Báo Nhân đạo"], c: 0 },
-
-            { id: 36, q: "Hội nghị nào sau đây có sự chủ trì của Nguyễn Ái Quốc?", a: ["Hội nghị Ban Chấp hành TW Đảng lần thứ 6 (11/1939)", "Hội nghị Ban Chấp hành TW Đảng lần thứ 7 (11/1940)", "Hội nghị Ban Chấp hành TW Đảng lần thứ 8 (5/1941)", "Hội nghị Ban thường vụ TW Đảng (3/1945)"], c: 2 },
-
-            { id: 37, q: "Vua Bảo Đại thoái vị, giao nộp ấn, kiếm cho Chính phủ lâm thời nước Việt Nam dân chủ cộng hòa ngày tháng năm nào?", a: ["25/8/1945", "19/8/1945", "30/8/1945", "23/8/1945"], c: 2 },
-
-            { id: 38, q: "Khẩu hiệu đấu tranh được Đảng xác định tại Hội nghị toàn quốc của Đảng Cộng sản Đông Dương họp ở Tân Trào – Tuyên Quang là:", a: ["Đánh đuổi phát xít Nhật", "Đánh đuổi thực dân Pháp xâm lược giành độc lập dân tộc", "Đánh đổ phong kiến dành ruộng đất dân cày", "Phản đối xâm lược! Hoàn toàn độc lập! Chính quyền nhân dân!"], c: 3 },
-
-            { id: 39, q: "Quân đội Phát xít Nhật nhảy vào xâm lược nước ta năm nào?", a: ["9/1940", "9/1939", "5/1941", "11/1940"], c: 0 },
-            //Chương 3
-            { id: 40, q: "Tình hình nước Việt Nam Dân chủ Cộng hòa sau Cách mạng tháng Tám năm 1945 được ví như:", a: ["Nước sôi lửa nóng", "Nước sôi lửa bỏng", "Trứng nước", "Ngàn cân treo sợi tóc"], c: 3 },
-
-            { id: 41, q: "Những khó khăn, thách thức đối với nước Việt Nam Dân chủ Cộng hòa sau Cách mạng tháng Tám năm 1945:", a: ["Trên 90% dân số mù chữ", "Kinh tế kiệt quệ, ngân khố quốc gia trống rỗng, nạn đói", "Nạn thù trong giặc ngoài", "Cả A,B,C đều đúng"], c: 3 },
-
-            { id: 42, q: "Những thuận lợi cơ bản của nước Việt Nam Dân chủ Cộng hòa sau Cách mạng tháng Tám năm 1945:", a: ["Việt Nam trở thành quốc gia độc lập tự do", "Hệ thống chính quyền được thiết lập từ Trung ương xuống địa phương", "Phong trào cách mạng thế giới phát triển mạnh mẽ", "Cả A,B,C đều đúng"], c: 3 },
-
-            { id: 43, q: "Chỉ thị Kháng chiến kiến quốc của BCHTW Đảng ra đời ngày tháng năm nào?", a: ["24/12/1945", "25/12/1945", "24/11/1945", "25/11/1945"], c: 3 },
-
-            { id: 44, q: "Kẻ thù chính của Cách mạng Việt Nam được xác định trong Chỉ thị Kháng chiến kiến quốc ngày 25/11/1945 là:", a: ["Tưởng giới thạch và tay sai", "Phát xít Nhật", "Thực dân Anh xâm lược", "Thực dân Pháp xâm lược"], c: 3 },
-
-            { id: 45, q: "Hiệp định Sơ bộ được Hồ Chí Minh ký với J Xanhtơny vào thời gian nào?", a: ["19/12/1946", "6/3/1946", "3/6/1946", "20/12/1946"], c: 1 },
-
-            { id: 46, q: "Chủ tịch Hồ Chí Minh viết Lời kêu gọi toàn quốc kháng chiến vào thời điểm nào?", a: ["Ngày 18/12/1946", "Ngày 21/12/1946", "Ngày 20/12/1946", "Ngày 19/12/1946"], c: 3 },
-
-            { id: 47, q: "Tại Đại hội đại biểu toàn quốc lần thứ II (2/1951). Đảng ta quyết định đổi tên thành:", a: ["Đảng Cộng sản Việt Nam", "Đảng Dân chủ Việt Nam", "Hội nghiên cứu Chủ nghĩa Mác-Lênin", "Đảng Lao động Việt Nam"], c: 3 },
-
-            { id: 48, q: "Phương châm “Đánh chắc, tiến chắc, đánh chắc thắng” xuất hiện trong chiến dịch nào sau đây:", a: ["Chiến dịch Hồ Chí Minh (1975)", "Chiến dịch Biên giới (1950)", "Chiến dịch Việt Bắc (1947)", "Chiến dịch Điện Biên Phủ (1954)"], c: 3 },
-
-            { id: 49, q: "Ai đã được cử làm Tư lệnh kiêm Bí thư Đảng ủy chiến dịch Điện Biên Phủ?", a: ["Phạm Văn Đồng", "Nguyễn Chí Thanh", "Văn Tiến Dũng", "Võ Nguyên Giáp"], c: 3 },
-
-            { id: 50, q: "Những nhiệm vụ trước mắt được Đảng xác định trong bản Chỉ thị kháng chiến kiến quốc ngày 25/11/1945 là:", a: ["Mở lớp học các cấp", "Đánh đuổi quân Tưởng", "Hòa hoãn với thực dân Pháp", "Củng cố chính quyền, chống thực dân Pháp, bài trừ nội phản, cải thiện đời sống của nhân dân"], c: 3 },
-
-            { id: 51, q: "Chủ trương và sách lược của Trung ương Đảng trong việc đối phó với các lực lượng đế quốc sau cách mạng tháng Tám năm 1945", a: ["Thêm bạn bớt thù", "Hoa - Việt thân thiện", "Độc lập về kinh tế, nhân nhượng về chính trị với Pháp", "Cả A, B, C đều đúng"], c: 3 },
-
-            { id: 52, q: "Đâu là phương châm tiến hành cuộc kháng chiến chống thực dân Pháp?", a: ["Kháng chiến toàn dân", "Kháng chiến toàn diện", "Kháng chiến lâu dài và dựa vào sức mình là chính", "Cả A,B,C đều đúng"], c: 3 },
-
-            { id: 53, q: "Nhân dân Nam Bộ đứng lên kháng chiến chống thực dân Pháp xâm lược và bảo vệ chính quyền cách mạng vào thời gian nào?", a: ["6/1/1946", "19/12/1946", "20/12/1946", "23/9/1945"], c: 3 },
-
-            { id: 54, q: "Quốc hội đầu tiên của nước Việt Nam Dân chủ Cộng hòa được bầu vào thời gian nào?", a: ["4/1/1946", "5/1/1946", "7/1/1945", "6/1/1946"], c: 3 },
-
-            { id: 55, q: "Cuộc chiến đấu mở đầu cho cuộc kháng chiến chống Pháp của quân và dân ta tại Hà Nội diễn ra trong bao nhiêu ngày?", a: ["12 ngày đêm", "30 ngày đêm", "90 ngày đêm", "60 ngày đêm"], c: 3 },
-
-            { id: 56, q: "Đại hội đại biểu toàn toàn quốc lần thứ II (2/1951), đã thông qua bản Chính cương của Đảng Lao động Việt Nam do ai soạn thảo:", a: ["Chủ tịch Hồ Chí Minh", "Lê Duẩn", "Võ Nguyên Giáp", "Trường Chinh"], c: 3 },
-
-            { id: 57, q: "Chiến dịch nào đã căn bản đánh bại âm mưu đánh nhanh, thắng nhanh của thực dân Pháp?", a: ["Chiến dịch Biên Giới (1950)", "Chiến dịch Hòa Bình (1951)", "Chiến dịch Việt Bắc (1947)", "Chiến dịch Điện Biên Phủ (1954)"], c: 2 },
-
-            { id: 58, q: "Chiến dịch nào đã đưa cuộc kháng chiến chống thực dân Pháp sang giai đoạn phát triển cao hơn", a: ["Chiến dịch Điện Biên Phủ (1954)", "Chiến dịch Việt Bắc (1947)", "Chiến dịch Hòa Bình (1951)", "Chiến dịch Biên Giới (1950)"], c: 3 },
-
-            { id: 59, q: "Chiến dịch Điện Biên Phủ kết thúc thắng lợi vào thời gian nào?", a: ["21/7/1954", "10/5/1954", "8/5/19565", "7/5/1954"], c: 3 },
-
-            { id: 60, q: "Nghị quyết về đường lối cách mạng miền Nam được thông qua tại Hội nghị nào?", a: ["Hội nghị BCH Trung ương 12 - khóa II (3/1957)", "Hội nghị BCH Trung ương 13 - khóa II (12/1957)", "Hội nghị BCH Trung ương 15 - khóa II (1/1959)", "Hội nghị BCH Trung ương 14 - khóa II (11/1958)"], c: 2 },
-
-            { id: 61, q: "Đường lối cách mạng xã hội chủ nghĩa ở miền Bắc được thông qua tại Đại hội nào?", a: ["Đại hội đại biểu toàn quốc lần thứ II (2/1951)", "Đại hội đại biểu toàn quốc lần thứ V (3/1982)", "Đại hội đại biểu toàn quốc lần thứ IV (12/1976)", "Đại hội đại biểu toàn quốc lần thứ III (9/1960)"], c: 3 },
-
-            { id: 62, q: "Mặt trận dân tộc giải phóng miền Nam Việt Nam ra đời vào thời gian nào?", a: ["21/12/1961", "20/12/1961", "21/12/1960", "20/12/1960"], c: 3 },
-
-            { id: 63, q: "Sự kiện “Vịnh Bắc Bộ” ngày 5/8/1964 của đế quốc Mỹ nhằm mục đích gì?", a: ["Đánh phá phong trào cách mạng ở miền Nam Việt Nam", "Đánh vào bệnh viện Bạch Mai", "Đánh phá các trường học", "Lấy cớ dùng hải quân và không quân đánh phá miền Bắc Việt Nam, thực hiện chiến tranh phá hoại lần thứ nhất"], c: 3 },
-
-            { id: 64, q: "Bản Hiến pháp đầu tiên của nước Việt Nam Dân chủ Cộng hòa được thông qua vào thời gian nào?", a: ["Tháng 1/1946", "Tháng 9/1945", "Tháng 12/1946", "Tháng 11/1946"], c: 3 },
-
-            { id: 65, q: "Để tránh các mũi nhọn tấn công đối phó với kẻ thù, Đảng ta đã tuyên bố tự giải tán lấy tên là gì? Vào ngày tháng năm nào?", a: ["2/9/1945 - Đảng Cộng sản Việt Nam", "3/2/1946 - Đảng Lao động Việt Nam", "11/11/1945 - Hội nghiên cứu Chủ nghĩa Mác ở Đông Dương", "25/11/1945 - Đảng Cộng sản Đông Dương"], c: 2 },
-
-            { id: 66, q: "Nội dung thỏa thuận của Hiệp ước Trùng Khánh (Hiệp ước Hoa – Pháp) ký ngày 28/2/1946 là gì?", a: ["Quân Tưởng cho 20.000 quân vào giải giáp quân đội Nhật từ vĩ tuyến 16 trở vào Nam", "Quân Tưởng và quân Pháp cùng thực hiện nhiệm vụ giải giáp quân đội Nhật", "Quân Pháp đưa quân đội ra miền Bắc và rút dần về nước trong vòng 10 năm", "Quân Pháp đưa quân đội ra Bắc vĩ tuyến 16 thay thế cho quân Tưởng làm nhiệm vụ giải giáp quân đội Nhật"], c: 3 },
-
-            { id: 67, q: "Chính cương của Đảng Lao động Việt Nam được thông qua tại Đại hội II (2/1951) đã xác định xã hội Việt Nam gồm 3 tính chất, đó là:", a: ["Phong kiến, dân tộc, dân chủ", "Thuộc địa, dân chủ, xã hội chủ nghĩa", "Dân tộc, dân chủ, xã hội chủ nghĩa", "Dân chủ nhân dân, một phần thuộc địa và nửa phong kiến"], c: 3 },
-
-            { id: 68, q: "Chính cương của Đảng Lao động Việt Nam được thông qua tại Đại hội II (2/1951) đã xác định động lực của cách mạng gồm:", a: ["Công nhân, nông dân, trí thức, địa chủ phong kiến", "Nông dân, tư sản, tiểu tư sản, địa chủ phong kiến", "Công nhân, trí thức, địa chủ phong kiến, tư sản", "Công nhân, nông dân, tiểu tư sản, tư sản dân tộc (ngoài ra còn có thân sĩ yêu nước)"], c: 3 },
-
-            { id: 69, q: "Nội dung chủ yếu của kế hoạch Nava của Pháp và Mỹ trên chiến trường Đông Dương là gì?", a: ["Tăng cường tập trung binh lực, hình thành những quả đấm thép để quyết chiến với chủ lực của Việt Minh", "Phân tán lực lượng ra các chiến trường", "Có quân đội Mỹ viện trợ", "Lập khu tự trị ở vùng Tây Bắc"], c: 0 },
-
-            { id: 70, q: "Hiệp định Giơnevơ về chấm dứt chiến tranh, lập lại hòa bình ở Đông Dương đã quy định:", a: ["Pháp và các nước tham dự Hội nghị cam kết tôn trọng các quyền cơ bản của Việt Nam, Lào và Campuchia là độc lập, chủ quyền và toàn vẹn lãnh thổ, không can thiệp vào nội bộ của các nước đó.", "Pháp phải công nhận Việt Nam là nước tự do", "Đế quốc Mỹ thay chân Pháp ở miền Nam Việt Nam", "Pháp và các nước tham dự Hội nghị phải tôn trọng các quyền cơ bản của Việt Nam là độc lập, chủ quyền, thống nhất và toàn vẹn lãnh thổ."], c: 0 },
-
-            { id: 71, q: "Đại hội đại biểu toàn quốc lần thứ III (9/1960) của Đảng đã đưa ra đường lối chiến lược chung của cách mạng Việt Nam trong giai đoạn mới. Đường lối đó là:", a: ["Tiến hành ba cuộc cách mạng: Cách mạng về quan hệ sản xuất, cách mạng khoa học kỹ thuật và cách mạng về tư tưởng văn hóa.", "Cách mạng tư sản dân quyền và thổ địa cách mạng, đưa cả nước đi lên xây dựng chủ nghĩa xã hội.", "Cách mạng dân tộc dân chủ nhân dân, đánh đuổi đế quốc Mỹ xâm lược, giải phóng miền Nam, thống nhất đất nước.", "Tiến hành đồng thời và kết hợp chặt chẽ hai chiến lược cách mạng: Cách mạng xã hội chủ nghĩa ở miền Bắc và cách mạng dân tộc dân chủ nhân dân ở miền Nam."], c: 3 },
-
-            { id: 72, q: "Nghị quyết Trung ương lần thứ 15 (tháng 1/1959) của BCHTW Đảng khóa II đã xác định phương pháp của cách mạng miền Nam là:", a: ["Kết hợp đấu tranh chính trị và đấu tranh quân sự", "Đấu tranh vũ trang", "Đấu tranh ngoại giao", "Đấu tranh chính trị"], c: 0 },
-
-            { id: 73, q: "Khẩu hiệu “Thóc không thiếu một cân, quân không thiếu một người” dùng để chỉ hoạt động nào sau đây:", a: ["Sự chi viện của nhân dân miền Bắc đối với tiền tuyến lớn miền Nam trong thời kỳ kháng chiến chống Pháp", "Sự gian khổ của miền Bắc khi chống lại chiến tranh phá hoại của đế quốc Mỹ", "Sự chi viện của miền Nam cho miền Bắc chống chiến tranh phá hoại của đế quốc Mỹ", "Sự chi viện của hậu phương miền Bắc đối với tiền tuyến miền Nam trong những năm kháng chiến chống Mỹ"], c: 3 },
-
-            { id: 74, q: "Vì sao nói thắng lợi của phong trào “Đồng khởi” (1960) là bước nhảy vọt có ý nghĩa lịch sử của cách mạng miền Nam?", a: ["Vì đã đánh bại âm mưu xâm lược của đế quốc Mỹ", "Vì đã làm lung lay tận gốc chính quyền của Việt Nam Cộng hòa", "Vì đã đánh dấu sự thất bại hoàn toàn của đế quốc Mỹ ở miền Nam Việt Nam", "Vì đã chuyển cách mạng miền Nam từ thế giữ gìn lực lượng sang thế tiến công."], c: 3 },
-            //Chương4
-            { id: 75, q: "Hoàn cảnh nổi bật của nước ta sau năm 1975 là gì?", a: ["Đất nước tạm thời bị chia cắt làm hai miền, miền Bắc được hoàn toàn giải phóng", "Đất nước bước vào thời kỳ đổi mới", "Đất nước đang bước vào thời kỳ đẩy mạnh Công nghiệp hóa, hiện đại hóa", "Đất nước hòa bình, độc lập, thống nhất, cả nước quá độ lên chủ nghĩa xã hội."], c: 3 },
-
-            { id: 76, q: "Ban Chấp hành Trung ương Đảng đã đề ra chủ trương hoàn thành thống nhất nước nhà, đưa cả nước tiến nhanh, tiến mạnh, tiến vững chắc lên chủ nghĩa xã hội tại Hội nghị nào?", a: ["Hội nghị BCH Trung ương lần thứ 24 khóa III (8/1975)", "Hội nghị BCH Trung ương lần thứ 6 khóa IV (8/1979)", "Hội nghị BCH Trung ương lần thứ 6 khóa V (7/1984)", "Hội nghị BCH Trung ương lần thứ 7 khóa V (12/1984)"], c: 0 },
-
-            { id: 77, q: "Cuộc Tổng tuyển cử bầu Quốc hội chung của nước Việt Nam thống nhất được tiến hành vào thời gian nào?", a: ["25/4/1976", "15/4/1976", "15/4/1975", "25/4/1975"], c: 0 },
-
-            { id: 78, q: "Sau năm 1975 nhiệm vụ cấp bách đầu tiên của nước ta là gì?", a: ["Hoàn thành cải cách ruộng đất", "Hoàn thành cải tạo xã hội chủ nghĩa", "Hoàn thành cách mạng dân tộc dân chủ nhân dân", "Hoàn thành thống nhất nước nhà về mặt nhà nước"], c: 3 },
-
-            { id: 79, q: "Quốc hội nước Việt Nam thống nhất đã quyết định đặt tên nước ta là nước Cộng hòa xã hội chủ nghĩa Việt Nam vào năm nào?", a: ["Năm 1974", "Năm 1975", "Năm 1977", "Năm 1976"], c: 3 },
-
-            { id: 80, q: "Kỳ hỌp thứ nhất (1976) Quốc hội nước Việt Nam thống nhất đã đặt tên nước ta là:", a: ["Nước Việt Nam Dân chủ cộng hòa", "Nước Việt Nam dân chủ cộng hòa", "Nước Việt Nam thống nhất", "Nước Cộng hòa xã hội chủ nghĩa Việt Nam"], c: 3 },
-
-            { id: 81, q: "Tại Đại hội Đảng toàn quốc lần thứ IV(12/1976), đã quyết định đổi tên Đảng Lao động Việt Nam thành:", a: ["Đảng Cộng sản Đông Dương", "Đảng nhân dân cách mạng Việt Nam", "Đảng xã hội Việt Nam", "Đảng Cộng sản Việt Nam"], c: 3 },
-
-            { id: 82, q: "Hội nghị nào của Ban chấp hành Trung ương Đảng khóa IV đã đánh dấu “bước đột phá đầu tiên” trong quá trình đổi mới tư duy về kinh tế của Đảng?", a: ["Hội nghị BCH Trung ương lần thứ 5 (12/1978)", "Hội nghị BCH Trung ương lần thứ 8 (9/1980)", "Hội nghị BCH Trung ương lần thứ 7 (3/1980)", "Hội nghị BCH Trung ương lần thứ 6 (8/1979)"], c: 3 },
-
-            { id: 83, q: "Sau năm 1975, Việt Nam phải đối mặt với các cuộc chiến tranh nào?", a: ["Chiến tranh biên giới phía Bắc", "Chiến tranh biên giới Tây nam", "Hai cuộc chiến tranh biên giới phía Bắc và Tây Nam", "Chiến tranh lạnh"], c: 2 },
-
-            { id: 84, q: "Cuộc chiến tranh bảo vệ biên giới Tây Nam của nhân dân Việt Nam những năm 1978-1979 để chống lại:", a: ["Tập đoàn Pônpốt (quân Khơmer đỏ - Camphuchia)", "Quân Trung Quốc", "Lực lượng phản động trong nước", "Tổ chức FULRO"], c: 0 },
-
-            { id: 85, q: "Chiến tranh biên giới phía Bắc để bảo vệ Tổ quốc diễn ra vào năm nào?", a: ["1980", "1976", "1979", "1978"], c: 2 },
-
-            { id: 86, q: "Đại hội Đại biểu toàn quốc của Đảng lần thứ V diễn ra vào năm nào?", a: ["1980", "1981", "1983", "1982"], c: 3 },
-
-            { id: 87, q: "Hội nghị nào của Ban Chấp hành Trung ương Đảng khóa V được coi là “bước đột phá thứ hai” trong quá trình đổi mới tư duy về kinh tế của Đảng?", a: ["Hội nghị BCH Trung ương 6 (7/1984)", "Hội nghị BCH Trung ương 7 (12/1984)", "Hội nghị Bộ chính trị (8/1986)", "Hội nghị BCH Trung ương 8 (6/1985)"], c: 3 },
-
-            { id: 88, q: "Hội nghị nào của Ban Chấp hành Trung ương Đảng khóa V được coi là “bước đột phá thứ ba” trong quá trình đổi mới tư duy về kinh tế của Đảng?", a: ["Hội nghị BCH Trung ương 6 (7/1984)", "Hội nghị BCH Trung ương 7 (12/1984)", "Hội nghị Bộ chính trị (8/1986)", "Hội nghị BCH Trung ương 8 (6/1985)"], c: 2 },
-
-            { id: 89, q: "Đại hội đại biểu toàn quốc lần thứ VI của Đảng diễn ra vào năm nào?", a: ["1983", "1984", "1986", "1985"], c: 2 },
-
-            { id: 90, q: "Đường lối đổi mới toàn diện đất nước được thông qua tại Đại hội nào?", a: ["Đại hội XIX (4/2001)", "Đại hội VII (6/1991)", "Đại hội VIII (7/1996)", "Đại hội VI (12/1986)"], c: 3 },
-
-            { id: 91, q: "Tại kỳ hỌp thứ nhất Quốc hội nước Việt Nam thống nhất đã bầu ai là chủ tịch nước Cộng hòa xã hội chủ nghĩa Việt Nam?", a: ["Tôn Đức Thắng", "Trường Chinh", "Phạm Văn Đồng", "Nguyễn Hữu Thọ"], c: 0 },
-
-            { id: 92, q: "Hoàn thành nội dung trong câu sau: “Hoàn thành… là một trong những thành tự nổi bật, có ý nghĩa to lớn, là cơ sở để thống nhất trên các lĩnh vực khác, nhanh chóng tạo ra sức mạnh toàn diện của đất nước”.", a: ["Phát triển văn hóa giáo dục", "Xây dựng phát triển kinh tế", "Cải cách ruộng đất", "Thống nhất nước nhà về mặt nhà nước"], c: 3 },
-
-            { id: 93, q: "Nhiệm vụ trung tâm trong đường lối phát triển kinh tế thông qua Đại hội IV(12/1976) là gì ?", a: ["Coi nông nghiệp là mặt trận hàng đầu, đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "Phát triển ngành công nghiệp nhẹ", "Xây dựng cơ cấu công nông nghiệp hiện đại", "Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa bằng ưu tiên phát triển công nghiệp nặng một cách hợp lý"], c: 3 },
-
-            { id: 94, q: "Hiện tượng “Khoán chui” ở một số địa phương được thực hiện trong lĩnh vực nào?", a: ["Công nghiệp", "Công nghiệp nặng", "Công nghiệp nhẹ", "Nông nghiệp"], c: 3 },
-            { id: 95, q: "Đại hội đại biểu toàn quốc lần thứ V (3/1982) đã đề ra phương hướng, nội dung của công nghiệp hóa trong chặng đường đầu tiên của thời kỳ quá độ là gì?", a: ["Ưu tiên phát triển công nghiệp nặng", "Coi công nghiệp là mặt trận hàng đầu", "Đẩy mạnh quá trình công nghiệp hóa, hiện đại hóa", "Tập trung phát triển mạnh nông nghiệp, coi nông nghiệp là mặt trận hàng đầu."], c: 3 },
-
-            { id: 96, q: "Tổng kết 10 năm 1975-1986, Đảng ta đã khẳng định những thành tựu nổi bật nào?", a: ["Hoàn thành cách mạng dân tộc dân chủ nhân dân, thực hiện cải cách ruộng đất, bước đầu xây dựng chủ nghĩa xã hội.", "Hoàn thành cách mạng dân tộc dân chủ nhân dân, thực hiện nghĩa vụ quốc tế với 2 nước bạn Lào và Campuchia", "Xây dựng thành công chủ nghĩa xã hội, kinh tế, chính trị ổn định.", "Hoàn thành thống nhất nước nhà về mặt nhà nước, đạt được một số thành tựu trong xây dựng chủ nghĩa xã hội, giành thắng lợi trong sự nghiệp bảo vệ Tổ quốc và làm nghĩa vụ quốc tế."], c: 3 },
-
-            { id: 97, q: "Nguyên nhân chủ quan dẫn đến khủng hoảng kinh tế - xã hội giai đoạn 1975-1986 là gì?", a: ["Duy trì quá lâu cơ chế kế hoạch hóa, tập trung, quan lieu, bao cấp", "Chiến tranh tàn phá", "Viện trợ nước ngoài giảm mạnh", "Xuất phát điểm thấp"], c: 0 },
-
-            { id: 98, q: "Tại sao Đảng chủ trương tiến hành công cuộc đổi mới đất nước?", a: ["Các nước Xã hội chủ nghĩa đã tiến hành đổi mới.", "Để khắc phục những sai lầm khuyết điểm và đưa đất nước thoát ra khỏi khủng hoảng.", "Đất nước đang trên đà phát triển và được quốc tế ủng hộ.", "Nắm bắt thời cơ, tranh thủ sự đồng tình ủng hộ của quốc tế."], c: 1 },
-
-            { id: 99, q: "Đại hội Đảng toàn quốc lần thứ VI (12/1986) đã đưa ra nhiệm vụ bao trùm, mục tiêu tổng quát trong đó chú trọng ba chương trình kinh tế đó là:", a: ["Công nghiệp nhẹ, nông nghiệp, thương nghiệp", "Công nghiệp, nông nghiệp, thương nghiệp", "Công nghiệp nặng, nông nghiệp, dịch vụ", "Lương thực - thực phẩm, hàng tiêu dùng và hàng xuất khẩu"], c: 3 },
-
-            { id: 100, q: "Nghị quyết số 10 ngày 5/4/1988 của Bộ chính trị (gọi tắt là khoán 10) về vấn đề gì?", a: ["Luật đầu tư nước ngoài vào Việt Nam", "Quyền tự chủ của các doanh nghiệp", "Quy định xuất - nhập khẩu", "Đổi mới quản lý trong nông nghiệp"], c: 3 },
-
-            { id: 101, q: "Đại hội Đảng toàn quốc lần thứ VI (12/1986) đã bầu ai làm Tổng Bí thư của Đảng?", a: ["Lê Duẩn", "Lê Khả Phiêu", "Đỗ Mười", "Nguyễn Văn Linh"], c: 3 },
-
-            { id: 102, q: "Đại hội Đảng toàn quốc lần thứ VII (6/1991) đã bầu ai làm Tổng Bí thư của Đảng?", a: ["Lê Duẩn", "Nguyễn Văn Linh", "Lê Khả Phiêu", "Đỗ Mười"], c: 3 },
-
-            { id: 103, q: "Lần đầu tiên Đảng giương cao ngọn cờ tư tưởng Hồ Chí Minh và khẳng định: �Đảng Cộng sản Việt Nam lấy chủ nghĩa Mác-Lênin và Tư tưởng Hồ Chí Minh làm nền tảng tư tưởng, kim chỉ nam cho hành động� tại Đại hội nào?", a: ["Đại hội V (3/1982)", "Đại hội VI (12/1986)", "Đại hội VIII (7/1996)", "Đại hội VII (6/1991)"], c: 3 },
-
-            { id: 104, q: "Việt Nam và Trung Quốc bình thường hóa quan hệ vào năm nào?", a: ["1990", "1993", "1992", "1991"], c: 3 },
-
-            { id: 105, q: "Việt Nam ra nhập Hiệp hội các quốc gia Đông Nam Á (ASEAN) vào thời gian nào?", a: ["28/7/1998", "28/7/1996", "28/7/1997", "28/7/1995"], c: 3 },
-
-            { id: 106, q: "Việt Nam và Hoa Kỳ bình thường hóa quan hệ vào năm nào?", a: ["1995", "1994", "1993", "1996"], c: 0 },
-
-            { id: 107, q: "Đại hội nào đã khẳng định nước ta đã ra khỏi khủng hoảng kinh tế - xã hội cho phép chuyển sang thời kỳ đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước?", a: ["Đại hội đại biểu toàn quốc của Đảng lần thứ VI (12/1986)", "Đại hội đại biểu toàn quốc của Đảng lần thứ VII (6/1991)", "Đại hội đại biểu toàn quốc của Đảng lần thứ VIII (7/1996)", "Đại hội đại biểu toàn quốc của Đảng lần thứ IX (4/2001)"], c: 2 },
-
-            { id: 108, q: "Chiến lược Bảo vệ Tổ quốc trong tình hình mới được thông qua tại hội nghị nào sau đây:", a: ["Hội nghị BCH Trung ương 5 khóa IX (3/2002)", "Hội nghị BCH Trung ương 7 khóa IX (3/2003)", "Hội nghị BCH Trung ương 8 khóa IX (7/2003)", "Hội nghị BCH Trung ương 3 khóa IX (9/2001)"], c: 2 },
-
-            { id: 109, q: "Đại hội Đảng toàn quốc lần thứ IX (4/2001) đã bầu ai làm Tổng Bí thư của Đảng?", a: ["Lê Khả Phiêu", "Nguyễn Văn Linh", "Đỗ Mười", "Nông Đức Mạnh"], c: 3 },
-
-            { id: 110, q: "Đại hội nào đã cho phép đảng viên làm kinh tế tư nhân?", a: ["Đại hội đại biểu toàn quốc của Đảng lần VII (6/1991)", "Đại hội đại biểu toàn quốc của Đảng lần VIII (7/1996)", "Đại hội đại biểu toàn quốc của Đảng lần IX (4/2001)", "Đại hội đại biểu toàn quốc của Đảng lần X (4/2006)"], c: 3 },
-
-            { id: 111, q: "Hội nghị Trung ương 4 khóa X Đảng ta ban hành Nghị quyết 09-NQ/TW ngày 9/2/2007 về vấn đề gì?", a: ["Chiến lược phát triển kinh tế đến năm 2020", "Chiến lược biển Việt Nam đến năm 2020", "Chiến lược Bảo vệ Tổ quốc trong tình hình mới", "Chiến lược phát triển văn hóa xã hội đến năm 2020"], c: 1 },
-
-            { id: 112, q: "Việt Nam ra nhập Tổ chức thương mại thế giới WTO vào năm nào?", a: ["2005", "2004", "2007", "2006"], c: 3 },
-
-            { id: 113, q: "Đại hội đại biểu toàn quốc lần thứ XI của Đảng đã bầu ai làm Tổng bí thư?", a: ["Nông Đức Mạnh", "Lê Khả Phiêu", "Nguyễn Phú Trọng", "Đỗ Mười"], c: 2 },
-
-            { id: 114, q: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) được thông qua tại Đại hội nào?", a: ["Đại hội đại biểu toàn quốc của Đảng lần VIII (7/1996)", "Đại hội đại biểu toàn quốc của Đảng lần IX (4/2001)", "Đại hội đại biểu toàn quốc của Đảng lần XI (1/2011)", "Đại hội đại biểu toàn quốc của Đảng lần X (4/2006)"], c: 2 },
-
-            { id: 115, q: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) được thông qua tại Đại hội Đảng lần thứ XI (2011) đã bổ sung đặc trưng nào?", a: ["Dân giàu, nước mạnh, dân chủ, công bằng, văn minh.", "Có Nhà nước pháp quyền xã hội chủ nghĩa của nhân dân, do nhân dân, vì nhân dân do Đảng Cộng sản lãnh đạo.", "Có nền văn hóa tiên tiến, đậm đà bản sắc dân tộc.", "Cả A,B đều đúng"], c: 3 },
-
-            { id: 116, q: "Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) thông qua tại Đại hội Đảng lần thứ XI (2011) đã đưa ra bao nhiêu phương hướng xây dựng chủ nghĩa xã hội?", a: ["5 phương hướng", "8 phương hướng", "7 phương hướng", "6 phương hướng"], c: 1 },
-
-            { id: 117, q: "Hội nghị lần thứ 24 Ban Chấp hành Trung ương Đảng khóa III (8/1975) đã đưa ra chủ trương gì?", a: ["Đẩy mạnh cuộc kháng chiến chống Mỹ cứu nước giải phóng hoàn toàn miền Nam, thống nhất đất nước", "Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "Hoàn thành thống nhất nước nhà, đưa cả nước tiến nhanh, tiến mạnh, tiến vững chắc lên chủ nghĩa xã hội.", "Phát triển nền kinh tế hàng hóa nhiều thành phần định hướng xã hội chủ nghĩa."], c: 2 },
-
-            { id: 118, q: "Đặc điểm lớn nhất của cách mạng Việt Nam trong giai đoạn mới được Đại hội Đảng toàn quốc lần thứ IV (1976) xác định là:", a: ["Nước ta đang ở trong quá trình từ một xã hội mà nền kinh tế còn phổ biến là sản xuất nhỏ tiến thẳng lên chủ nghĩa xã hội, bỏ qua giai đoạn phát triển tư bản chủ nghĩa.", "Nước ta thoát khỏi tình trạng bị bao vây cô lập, cấm vận", "Nước ta chuyển sang thời kỳ đẩy mạnh công nghiệp hóa xã hội chủ nghĩa", "Nước ta đã đạt được một số thành tựu quan trọng trong công cuộc xây dựng chủ nghĩa xã hội."], c: 0 },
-
-            { id: 119, q: "Đại hôi IV (tháng 12/1976) đã xác định đường lối xây dựng, phát triển kinh tế, trong đó nổi bật là:", a: ["Đẩy mạnh công nghiệp hóa xã hội chủ nghĩa bằng ưu tiên phát triển công nghiệp nặng một cách hợp lý trên cơ sở phát triển nông nghiệp và công nghiệp nhẹ.", "Lấy nông nghiệp là mặt trận hàng đầu, ra sức phát triển công nghiệp nhẹ", "Phát triển công nghiệp nặng phải có lựa chọn cả về quy mô, nhịp độ, chú trọng quy mô vừa và nhỏ", "Tạo ra một cơ cấu kinh tế hợp lý, trong đó đặc biệt chú trọng 3 chương trình kinh tế lớn: lương thực – thực phẩm, hàng tiêu dùng, hàng xuất khẩu."], c: 0 },
-
-            { id: 120, q: "Điền từ còn thiếu vào chỗ trống trong đường lối chung của cách mạng xã hội chủ nghĩa được Đảng ta xác định tại Đại hội IV: “Nắm vững chuyên chính vô sản, phát huy quyền làm chủ tập thể của nhân dân lao động, tiến hành đồng thời ba cuộc cách mạng: cách mạng về quan hệ sản xuất, cách mạng khoa học-kỹ thuật, cách mạng tư tưởng và văn hoá, trong đó cách mạng... là then chốt.”", a: ["Khoa học - kỹ thuật", "Quan hệ sản xuất", "Tư tưởng văn hóa", "Khoa học – công nghệ"], c: 0 },
-
-            { id: 121, q: "Hội nghị Trung ương 6 (8/1979) được coi là “bước đột phá đầu tiên” trong tư duy đổi mới kinh tế của Đảng đã đưa ra chủ trương gì:", a: ["Khắc phục những sai lầm, khuyết điểm trong quản lý kinh tế, trong cải tạo xã hội chủ nghĩa, phá bỏ rào cản để cho sản xuất bung ra.", "Thực hiện xây dựng nền kinh tế thị trường định hướng xã hội chủ nghĩa, đẩy mạnh công nghiệp hóa, hiện đại hóa đất nước.", "Chủ trương phát triển kinh tế tư nhân là nhiệm vụ trọng tâm", "Xóa bỏ cơ chế kế hoạch hóa tập trung quan liêu bao cấp."], c: 0 },
-
-            { id: 122, q: "Đổi mới bước đầu trong chính sách của Đảng đối với cơ chế quản lý kinh tế trong lĩnh vực nông nghiệp là:", a: ["Quyết định của Hội đồng Chính phủ (10/1979) về việc tận dụng đất đai trong nông nghiệp để khai hoang, phục hóa…", "Coi nông nghiệp là mặt trận hàng đầu", "Ban Bí thư ban hành Chỉ thị 100-CT/TW 1/1981 về khoán sản phẩm đến nhóm và người lao động trong các hợp tác xã.", "Thực hiện “khoán chui”"], c: 2 },
-
-            { id: 123, q: "Điền từ thích hợp vào chỗ trống, Đại hội V (3/1982) xác định: “Nội dung, bước đi, cách làm thực hiện công nghiệp hoá xã hội chủ nghĩa trong chặng đường đầu tiên là: tập trung sức phát triển mạnh…, coi …. là mặt trận hàng đầu”", a: ["Công nghiệp nặng, công nghiệp", "Công nghiệp, nông nghiệp", "Nông nghiệp, nông nghiệp", "Công nghiệp nặng, nông nghiệp"], c: 2 },
-
-            { id: 124, q: "Hội nghị Trung ương 8 (6/1985) được coi là bước đột phá thứ hai trong quá trình tìm tòi, đổi mới kinh tế của Đảng, tại Hội nghị này, Trung ương Đảng đã chủ trương:", a: ["Chủ trương xóa bỏ nghèo nàn lạc hậu, đưa đất nước phát triển theo cơ chế thị trường định hướng xã hội chủ nghĩa", "Chủ trương phát triển kinh tế tư nhân", "Chủ trương phát triển sản xuất kinh doanh", "Chủ trương xóa bỏ cơ chế tập trung, quan liêu, hành chính, bao cấp"], c: 3 },
-
-            { id: 125, q: "Đại hội đại biểu toàn quốc lần thứ VI (12/1986) diễn ra trong bối cảnh nào?", a: ["Đất nước thoát khỏi tình trạng nghèo nàn lạc hậu, lạm phát được đẩy lùi, đời sống nhân dân tiến bộ", "Vị thế, uy tín của Việt Nam được nâng cao trên trường quốc tế", "Việt Nam bị các nước đế quốc và thù địch bao vây, cấm vận, khủng hoảng kinh tế - xã hội trầm trọng.", "Đất nước mở cửa, hội nhập sâu rộng."], c: 2 },
-
-            { id: 126, q: "Bài học đầu tiên được Đại hội Đảng toàn quốc lần thứ VI (12/1986) rút ra là gì:", a: ["Phải luôn coi nông nghiệp là mặt trận hàng đầu.", "Phải biết nắm bắt thời cơ, tranh thủ thời cơ, tận dụng các cơ hội trong nước và nước ngoài mang lại", "Phải xây dựng Đảng trong sạch vững mạnh", "Trong toàn bộ mọi hoạt động của mình, Đảng phải quán triệt tư tưởng “lấy dân làm gốc”"], c: 3 },
-
-            { id: 127, q: "Hội nghị Trung ương 7 khóa VII (7/1994), Đảng đã đưa ra chủ trương phát triển trong lĩnh vực nào?", a: ["Nông nghiệp, nông thôn, nông dân", "Văn hóa, xã hội", "Công nghiệp hóa, hiện đại hóa", "Quốc phòng, an ninh"], c: 2 },
-
-            { id: 128, q: "Hội nghị đại biểu toàn quốc giữa nhiệm kỳ của Đảng (1/1994) đã nêu lên mấy nguy cơ?", a: ["3", "4", "5", "6"], c: 1 },
-
-            { id: 129, q: "Điền vào chỗ trống: Hội nghị đại biểu toàn quốc giữa nhiệm kỳ của Đảng (1/1994) “lần đầu tiên khẳng định xây dựng Nhà nước pháp quyền Việt Nam …”", a: ["Của nông dân, do công nhân, vì nhân dân", "Của công nhân, do nông dân, vì nhân dân", "Của nhân dân, do nông dân, vì nông dân", "Của nhân dân, do nhân dân, vì nhân dân."], c: 3 },
-
-            { id: 130, q: "Lần đầu tiên Đảng ta đưa ra 6 quan điểm về công nghiệp hóa trong thời kỳ mới tại Đại hội nào?", a: ["Đại hội Đảng lần thứ VII (tháng 6/1991)", "Đại hội Đảng lần thứ VIII (tháng 6/1996)", "Đại hội Đảng lần thứ IX (tháng 4/2001)", "Đại hội Đảng lần thứ X (tháng 4/2006)"], c: 1 },
-
-            { id: 131, q: "Hội nghị Trung ương 5 khóa VIII (7/1998) đã ban hành Nghị quyết về “Xây dựng và phát triển nền văn hóa Việt Nam tiến tiến đậm đà bản sắc dân tộc” gồm mấy quan điểm, nhiệm vụ?", a: ["3 quan điểm, 5 nhiệm vụ", "5 quan điểm, 5 nhiệm vụ", "5 quan điểm, 10 nhiệm vụ", "6 quan điểm, 10 nhiệm vụ"], c: 3 },
-
-            { id: 132, q: "Chủ trương đối ngoại theo phương châm : Việt Nam sẵn sàng là bạn, là đối tác tin cậy của các nước trong cộng đồng quốc tế, phấn đấu vì hòa bình, độc lập và phát triển” được thông qua tại Đại hội nào?", a: ["Đại hội ĐB toàn quốc lần thứ IX của Đảng (2001)", "Đại hội ĐB toàn quốc lần thứ X của Đảng (2006)", "Đại hội ĐB toàn quốc lần thứ XI của Đảng (2011)", "Đại hội ĐB toàn quốc lần thứ XII của Đảng (2016)"], c: 0 },
-
-            { id: 133, q: "Đại hội Đại biểu toàn quốc lần thứ X (4/2006) của Đảng đã xác định nhiệm vụ then chốt là gì?", a: ["Xây dựng và chỉnh đốn Đảng", "Phát triển văn hóa, giáo dục", "Phát triển kinh tế", "Hội nhập quốc tế"], c: 0 },
-            //Chương5
-            { id: 134, q: "Hoàn thành nội dung trong câu sau: “Thắng lợi của Cách mạng tháng Tám năm 1945, thành lập nhà nước…”", a: ["Cộng hòa xã hội chủ nghĩa Việt Nam", "Xã hội chủ nghĩa", "Việt Nam Dân chủ", "Việt Nam Dân chủ Cộng hòa"], c: 3 },
-
-            { id: 135, q: "Hoàn thành nội dung trong câu sau: “Lần này là lần đầu tiên trong lịch sử cách mạng của các dân tộc thuộc địa và nửa thuộc địa, một Đảng mới … đã lãnh đạo cách mạng thành công, đã nắm chính quyền toàn quốc”.", a: ["30 tuổi", "20 tuổi", "15 tuổi", "90 tuổi"], c: 2 },
-
-            { id: 136, q: "Đảng lãnh đạo cuộc kháng chiến chống thực dân Pháp và can thiệp Mỹ của nhân dân ta diễn ra vào khoảng thời gian nào ?", a: ["1945-1946", "1946-1950", "1945-1954", "1950-1954"], c: 2 },
-
-            { id: 137, q: "Đảng lãnh đạo cuộc kháng chiến chống đế quốc Mỹ xâm lược của nhân dân ta diễn ra vào khoảng thời gian nào ?", a: ["1954-1960", "1954-1973", "1954-1975", "1965-1975"], c: 2 },
-
-            { id: 138, q: "Hoàn thành nội dung trong câu sau: Độc lập dân tộc là … tiên quyết để thực hiện chủ nghĩa xã hội và chủ nghĩa xã hội là … bảo đảm vững chắc cho độc lập dân tộc.", a: ["Vấn đề, yếu tố", "Yếu tố, điều kiện", "Căn bản, yêu cầu", "Điều kiện, cơ sở"], c: 3 },
-
-            { id: 139, q: "Hoàn thành nội dung trong câu sau: Cách mạng là sự nghiệp của quần chúng nhân dân, … là người làm nên lịch sử, là chủ thể của lịch sử, đó là quan điểm cơ bản trong lý luận Mác-Lênin về chủ nghĩa duy vật lịch sử, về cách mạng xã hội.", a: ["Công nhân", "Trí thức", "Doanh nhân", "Nhân dân"], c: 3 },
-
-            { id: 140, q: "Hoàn thành nội dung trong câu sau của Chủ tịch Hồ Chí Minh: “Các đồng chí phải giữ gìn đoàn kết trong Đảng như giữ gìn….”", a: ["Chân tay của mình", "Bộ óc của mình", "Trái tim của mình", "Con ngươi của mắt mình"], c: 3 },
-
-            { id: 141, q: "Trong hai cuộc kháng chiến chống thực dân Pháp và đế quốc Mỹ xâm lược, cách mạng Việt Nam đã tranh thủ sự ủng hộ của:", a: ["Liên Xô, Trung Quốc, các nước xã hội chủ nghĩa và bạn bè quốc tế", "Liên Xô, Trung Quốc, Tưởng giới thạch", "Liên Xô, Trung Quốc, đế quốc Anh", "Liên Xô, Trung Quốc, Mỹ"], c: 0 },
-
-            { id: 142, q: "Hoàn thành nội dung trong câu sau: Đảng lấy chủ nghĩa Mác- Lênin, … làm nền tảng tư tưởng và kim chi nam cho hành động.", a: ["Độc lập dân tộc", "Chủ nghĩa xã hội", "Tư sản dân quyền", "Tư tưởng Hồ Chí Minh"], c: 3 },
-
-            { id: 143, q: "Tổng kết tiến trình hơn 90 năm lãnh đạo cách mạng Việt Nam, Đảng đã rút ra mấy bài học kinh nghiệm?", a: ["4", "5", "6", "7"], c: 1 },
-
-            { id: 144, q: "Hoàn thành câu sau: Nhiệm vụ chiến lược của cách mạng Việt Nam hiện nay là bảo vệ vững chắc độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ … của Tổ quốc và xây dựng thành công chủ nghĩa xã hội.", a: ["Quốc gia, dân tộc", "Vùng trời, vùng biển", "Biên giới, hải đảo", "Biển, đảo"], c: 3 },
-
-            { id: 145, q: "Trong xây Đảng, vấn đề nào được coi là nội dung cơ bản?", a: ["Tư tưởng cách mạng", "Lối sống cách mạng", "Bản lĩnh cách mạng", "Đạo đức cách mạng"], c: 3 },
-
-            { id: 146, q: "Đảng chủ trương xây dựng các tổ chức Mặt trận, đoàn thể chính trị để làm gì?", a: ["Hoàn thiện hệ thống chính trị", "Đa dạng hoạt động hệ thống chính trị", "Đoàn kết quốc tế", "Đoàn kết toàn dân"], c: 3 },
-
-            { id: 147, q: "Điền từ coàn thiếu vào chỗ trống: Cương lĩnh xây dựng đất nước trong thời kỳ quá độ lên chủ nghĩa xã hội (bổ sung, phát triển năm 2011) đã nêu rõ…., xa rời quần chúng nhân dân sẽ dẫn đến tổn thất khôn lường đối với vận mệnh của đất nước, của chế độ xã hội chủ nghĩa và của Đảng.", a: ["Tự cao, tự đại", "Tư túng, chia rẽ", "Tham ô, hối lộ", "Quan liêu, tham nhũng"], c: 3 },
-
-        ];
-
-
-        let questions = [...rawData];
-
-
-        let selectedParts = new Set();
-        let currentList = [];
-        let userAnswers = {};
-        let wrongQuestions = [];
-        const PARTS = [
-            { name: "Chương 1", count: 10 },
-            { name: "Chương 2", count: 29 },
-            { name: "Chương 3", count: 35 },
-            { name: "Chương 4", count: 59 },
-            { name: "Chương 5", count: 14 }
-        ];
-        let isMultipleParts = false;
-        let quizMode = "submit";
-
-        // Tạo menu
-        const partSelector = document.getElementById('part-selector');
-        document.querySelectorAll('input[name="mode"]').forEach(radio => {
-            radio.addEventListener("change", (e) => {
-                quizMode = e.target.value;
-            });
-        });
-        PARTS.forEach((part, index) => {
-            const btn = document.createElement('button');
-
-            btn.innerText = part.name;
-
-            btn.onclick = () => togglePart(index, btn);
-
-            partSelector.appendChild(btn);
-        });
-        // Nút kết hợp
-        const combineBtn = document.createElement('button');
-        combineBtn.innerText = "KẾT HỢP PHẦN";
-        combineBtn.style.background = "#16a085";
-        combineBtn.onclick = combineSelectedParts;
-        partSelector.appendChild(combineBtn);
-
-        // Nút bỏ chọn
-        const clearBtn = document.createElement('button');
-        clearBtn.innerText = "BỎ CHỌN";
-        clearBtn.style.background = "#e74c3c";
-        clearBtn.onclick = () => {
-            selectedParts.clear();
-            document.querySelectorAll('.menu-buttons button')
-                .forEach(b => b.classList.remove('active'));
-        };
-        partSelector.appendChild(clearBtn);
-
-        // Toggle chọn phần
-        function togglePart(part, btn) {
-            if (selectedParts.has(part)) {
-                selectedParts.delete(part);
-                btn.classList.remove('active');
-            } else {
-                selectedParts.add(part);
-                btn.classList.add('active');
-            }
-        }
-
-        // Gộp câu hỏi
-        function combineSelectedParts() {
-            if (selectedParts.size === 0) {
-                alert("Vui lòng chọn ít nhất 1 phần!");
-                return;
+        const RAW_DATA = {"subjects": [{"id": "kinh_te", "name": "Đại Cương Về Kinh Tế", "shortName": "Kinh Tế", "icon": "trending-up", "totalQuestions": 43, "questions": [{"id": "kt_1", "num": 1, "question": "Câu nào sau đây thuộc về kinh tế vi mô:", "options": {"A": "Các hoạt động diễn ra trong toàn bộ nền kinh tế.", "B": "Hành vi ứng xử của các tế bào kinh tế.", "C": "Mức giá chung của các hàng hoá, dịch vụ.", "D": "Tỷ lệ thất nghiệp."}, "answer": "B", "explanation": "Kinh tế vi mô nghiên cứu hành vi ứng xử và các quyết định của từng tế bào kinh tế (hộ gia đình, doanh nghiệp, người tiêu dùng)."}, {"id": "kt_2", "num": 2, "question": "Kinh tế học vi mô tiếp cận với những nghiên cứu kinh tế dưới góc độ:", "options": {"A": "Toàn bộ nền kinh tế", "B": "Chính phủ", "C": "Sự hoạt động của các thị trường riêng lẻ", "D": "Hoạt động của hệ thống ngân hàng"}, "answer": "C", "explanation": "Kinh tế học vi mô tiếp cận các hoạt động kinh tế dưới góc độ hành vi của các chủ thể và thị trường riêng lẻ."}, {"id": "kt_3", "num": 3, "question": "Khan hiếm là vấn đề:", "options": {"A": "Hiệu quả sản xuất không còn nữa", "B": "Không tồn tại trong các nền kinh tế giàu có", "C": "Số lượng các nguồn lực xác định còn nhu cầu con người là vô hạn", "D": "Nảy sinh khi năng suất tăng chậm lại"}, "answer": "C", "explanation": "Quy luật khan hiếm: Nguồn lực là hữu hạn (xác định) trong khi nhu cầu của con người là vô hạn."}, {"id": "kt_4", "num": 4, "question": "Các nguồn lực kinh tế là khan hiếm cho nên:", "options": {"A": "Phải lựa chọn mục tiêu khi sản xuất", "B": "Chính phủ phải điều tiết nền kinh tế", "C": "Phải mở cửa nền kinh tế", "D": "Sự chênh lệch giàu – nghèo là không tránh khỏi"}, "answer": "A", "explanation": "Do nguồn lực khan hiếm, xã hội và các doanh nghiệp buộc phải đánh đổi và lựa chọn mục tiêu sản xuất tối ưu."}, {"id": "kt_5", "num": 5, "question": "Đường giới hạn khả năng sản xuất (PPF) mô tả:", "options": {"A": "Sự kết hợp hàng hóa, dịch vụ được sản xuất khi giá thay đổi", "B": "Khối lượng tối đa của nguồn lực được sử dụng khi tiền lương thay đổi", "C": "Sự kết hợp về hàng hóa và dịch vụ được cầu khi giá thay đổi", "D": "Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật cho trước."}, "answer": "D", "explanation": "Đường giới hạn khả năng sản xuất thể hiện sản lượng tối đa các kết hợp hàng hóa/dịch vụ có thể sản xuất với nguồn lực và công nghệ nhất định."}, {"id": "kt_6", "num": 6, "question": "Vấn đề nào dưới đây không thuộc vấn đề của kinh tế vĩ mô:", "options": {"A": "Các nguyên nhân làm giá cam tăng", "B": "Các chính sách hạn chế thất nghiệp", "C": "Mối quan hệ giữa lạm phát và thất nghiệp", "D": "Các nguyên nhân làm suy thoái kinh tế"}, "answer": "A", "explanation": "Giá cam trên một thị trường cụ thể là vấn đề thuộc kinh tế vi mô, không phải kinh tế vĩ mô."}, {"id": "kt_7", "num": 7, "question": "Nhân tố nào dưới đây làm dịch chuyển đường cung hàng hóa X sang trái?", "options": {"A": "Giá hàng hóa X giảm", "B": "Giá máy móc sản xuất ra hàng hóa X tăng", "C": "Thu nhập của người tiêu dùng giảm", "D": "Số lượng người sản xuất hàng hóa X tăng lên"}, "answer": "B", "explanation": "Giá máy móc (chi phí yếu tố đầu vào) tăng làm chi phí sản xuất tăng, dẫn đến cung hàng hóa X giảm (đường cung dịch sang trái)."}, {"id": "kt_8", "num": 8, "question": "Lượng cầu tăng có nghĩa là:", "options": {"A": "Đường cầu dịch chuyển sang phải", "B": "Dịch chuyển đường cầu sang trái", "C": "Sự dịch chuyển dọc theo đường cầu xuống dưới", "D": "Sự dịch chuyển dọc theo đường cầu lên trên"}, "answer": "C", "explanation": "Lượng cầu (quantity demanded) tăng do giá giảm ứng với sự vận động/di chuyển dọc theo đường cầu xuống dưới (xuống phía mức giá thấp hơn, lượng nhiều hơn). Trong tài liệu đề đánh dấu C."}, {"id": "kt_9", "num": 9, "question": "Có thể hạn chế dư thừa hàng hóa trên thị trường thông qua:", "options": {"A": "Tăng cung", "B": "Chính phủ tăng giá", "C": "Giảm lượng cầu", "D": "Giảm giá"}, "answer": "D", "explanation": "Khi dư thừa hàng hóa (cung > cầu), việc giảm giá sẽ làm tăng lượng cầu và giảm lượng cung, đưa thị trường về điểm cân bằng."}, {"id": "kt_10", "num": 10, "question": "Cho đồ thị cân bằng thị trường lương thực: điểm E là điểm cân bằng ban đầu (giao của S và D), điểm E’ là điểm cân bằng mới do đường cầu dịch chuyển sang phải từ D sang D' (giá P tăng, lượng Q tăng). Yếu tố nào sau đây có thể gây ra sự thay đổi này?", "options": {"A": "Giá cả các yếu tố đầu vào tăng", "B": "Thời tiết xấu làm cho đường cung dịch chuyển", "C": "Thu nhập của người tiêu dùng tăng làm cho đường cầu dịch chuyển", "D": "Cả cung và cầu đều dịch chuyển"}, "answer": "C", "explanation": "Trên đồ thị, đường cầu dịch sang phải (D -> D') khiến điểm cân bằng dịch từ E sang E'. Đối với hàng hóa thông thường, thu nhập người tiêu dùng tăng sẽ làm đường cầu dịch sang phải."}, {"id": "kt_11", "num": 11, "question": "Hiện tượng thiếu hụt hàng hóa trên thị trường có nghĩa là:", "options": {"A": "Cầu tăng khi giá tăng", "B": "Lượng cầu lớn hơn lượng cung", "C": "Lượng cung lớn hơn lượng cầu", "D": "Giá thực tế cao hơn giá cân bằng"}, "answer": "B", "explanation": "Thiếu hụt hàng hóa (shortage) xảy ra khi tại mức giá hiện tại, lượng cầu lớn hơn lượng cung (Qd > Qs)."}, {"id": "kt_12", "num": 12, "question": "Hiện tượng dư thừa hàng hóa trên thị trường có nghĩa là:", "options": {"A": "Tồn tại nếu giá cao hơn giá cân bằng", "B": "Lượng cầu lớn hơn lượng cung", "C": "Tồn tại nếu giá thấp hơn giá cân bằng", "D": "Cung tăng khi giá giảm"}, "answer": "A", "explanation": "Dư thừa hàng hóa (surplus) xảy ra khi giá thị trường cao hơn giá cân bằng, khiến lượng cung vượt quá lượng cầu (Qs > Qd)."}, {"id": "kt_13", "num": 13, "question": "Công nghệ sản xuất điện thoại di động tiên tiến hơn sẽ làm cho:", "options": {"A": "Đường cầu dịch chuyển sang phải", "B": "Đường cầu dịch chuyển sang trái", "C": "Đường cung dịch chuyển sang trái", "D": "Đường cung dịch chuyển sang phải."}, "answer": "D", "explanation": "Cải tiến công nghệ làm tăng năng suất, giảm chi phí sản xuất, dẫn đến cung tăng (đường cung dịch chuyển sang phải)."}, {"id": "kt_14", "num": 14, "question": "Chi phí đầu vào để sản xuất ra bánh của công ty A giảm xuống sẽ làm cho:", "options": {"A": "Đường cầu dịch chuyển lên trên", "B": "Đường cung dịch chuyển lên trên", "C": "Cả đường cung và cầu đều dịch chuyển lên trên", "D": "Đường cung dịch chuyển xuống dưới (bên phải)"}, "answer": "D", "explanation": "Chi phí đầu vào giảm làm tăng cung, đường cung dịch sang phải (xuống dưới theo trục tung)."}, {"id": "kt_15", "num": 15, "question": "Khi cung hàng hóa trên thị trường tăng và cầu hàng hóa trên thị trường giảm thì:", "options": {"A": "Giá cân bằng chắc chắn giảm", "B": "Giá cân bằng chắc chắn tăng", "C": "Giá cân bằng không thay đổi", "D": "Sản lượng cân bằng chắc chắn tăng"}, "answer": "A", "explanation": "Cung tăng tạo áp lực giảm giá, cầu giảm cũng tạo áp lực giảm giá. Do đó giá cân bằng chắc chắn giảm."}, {"id": "kt_16", "num": 16, "question": "Khi thu nhập của người tiêu dùng tăng mạnh thì:", "options": {"A": "Cầu về hàng hóa cao cấp tăng", "B": "Cầu về hàng hóa cao cấp giảm", "C": "Cầu về mọi hàng hóa đều tăng", "D": "Cầu về mọi hàng hóa đều giảm"}, "answer": "A", "explanation": "Khi thu nhập tăng mạnh, người tiêu dùng có xu hướng gia tăng tiêu dùng các mặt hàng cao cấp, xa xỉ."}, {"id": "kt_17", "num": 17, "question": "Cơn bão số 3 năm 2024 tại Việt Nam làm mất rất nhiều diện tích nuôi trồng thủy sản. Hiện tượng này:", "options": {"A": "Làm cho đường cung thủy sản Việt Nam dịch chuyển xuống dưới", "B": "Làm cho đường cung thủy sản Việt Nam dịch chuyển sang phải", "C": "Làm cho đường cầu thủy sản Việt Nam dịch chuyển lên trên", "D": "Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên (sang trái)"}, "answer": "D", "explanation": "Thiên tai làm tổn thất sản lượng nuôi trồng, khiến cung giảm, đường cung dịch chuyển sang trái (lên trên)."}, {"id": "kt_18", "num": 18, "question": "Khi giá hàng hoá Y là PY = 2 thì lượng cầu hàng hoá X là QX = 15; khi PY = 4 thì QX = 20. Ta kết luận hai hàng hoá X và Y là:", "options": {"A": "Thay thế cho nhau.", "B": "Độc lập với nhau.", "C": "Bổ sung cho nhau.", "D": "Thứ cấp."}, "answer": "A", "explanation": "Độ co giãn chéo: Giá Y tăng làm lượng cầu X tăng (cùng chiều), nghĩa là người tiêu dùng chuyển sang dùng X thay thế Y. X và Y là hàng hóa thay thế."}, {"id": "kt_19", "num": 19, "question": "Cầu hàng hoá X (X là hàng hoá thông thường) tăng khi:", "options": {"A": "Giá hàng hoá thay thế cho hàng hoá X giảm.", "B": "Giá hàng hoá X giảm.", "C": "Thu nhập người tiêu dùng tăng.", "D": "Giá hàng hoá bổ sung cho hàng hoá X tăng."}, "answer": "C", "explanation": "Đối với hàng hóa thông thường (normal goods), thu nhập người tiêu dùng tăng sẽ làm cầu tăng (đường cầu dịch sang phải)."}, {"id": "kt_20", "num": 20, "question": "Hạn hán sẽ:", "options": {"A": "Làm cho đường cầu lúa gạo dịch chuyển sang phải.", "B": "Làm cho đường cầu lúa gạo dịch chuyển sang trái.", "C": "Làm cho đường cung lúa gạo dịch chuyển xuống dưới, sang phải.", "D": "Làm cho đường cung lúa gạo dịch chuyển lên trên, sang trái."}, "answer": "D", "explanation": "Hạn hán làm giảm sản lượng thu hoạch, giảm cung lúa gạo -> đường cung dịch chuyển sang trái (lên trên)."}, {"id": "kt_21", "num": 21, "question": "Một hãng không thể ảnh hưởng đến giá sản phẩm mà mình bán ra gọi là:", "options": {"A": "Người định giá.", "B": "Người chấp nhận giá.", "C": "Người độc quyền.", "D": "Người độc quyền nhóm."}, "answer": "B", "explanation": "Trong thị trường cạnh tranh hoàn hảo, từng doanh nghiệp có quy mô rất nhỏ nên là người chấp nhận giá (price taker)."}, {"id": "kt_22", "num": 22, "question": "Cung về máy fax phụ thuộc vào nhiều yếu tố, nhân tố nào sau đây không làm dịch chuyển đường cung máy fax?", "options": {"A": "Thuế đánh vào các công ty sản xuất máy fax tăng.", "B": "Giá máy fax tăng.", "C": "Kỹ thuật sản xuất máy fax tiến bộ hơn.", "D": "Tiền lương của công nhân sản xuất máy fax tăng."}, "answer": "B", "explanation": "Giá của chính bản thân hàng hóa thay đổi chỉ gây ra sự di chuyển dọc (movement along) trên đường cung, chứ không làm dịch chuyển (shift) đường cung."}, {"id": "kt_23", "num": 23, "question": "Yếu tố nào sau đây không phải là yếu tố ảnh hưởng đến cầu hàng hoá dịch vụ?", "options": {"A": "Số lượng người tiêu dùng", "B": "Các yếu tố đầu vào sản xuất", "C": "Thu nhập của người tiêu dùng", "D": "Giá của hàng hoá liên quan"}, "answer": "B", "explanation": "Chi phí các yếu tố đầu vào sản xuất là yếu tố ảnh hưởng đến CUNG, không phải cầu."}, {"id": "kt_24", "num": 24, "question": "Khoản mục nào sau đây không được tính một cách trực tiếp trong GDP của nước ta theo cách tiếp cận chi tiêu?", "options": {"A": "Dịch vụ cắt tóc gội đầu.", "B": "Mua máy móc thiết bị mới của một doanh nghiệp.", "C": "Sợi bông mà công ty dệt 8-3 mua và dệt thành vải để bán.", "D": "Dịch vụ khám chữa bệnh tại các bệnh viện tư nhân."}, "answer": "C", "explanation": "Sợi bông là hàng hóa trung gian được dùng để dệt thành vải. GDP chỉ tính giá trị hàng hóa và dịch vụ cuối cùng để tránh tính trùng lặp."}, {"id": "kt_25", "num": 25, "question": "Khoản mục nào sau đây được tính một cách trực tiếp trong GDP theo cách tiếp cận chi tiêu?", "options": {"A": "Bột mì mà nhà máy Kinh Đô mua để sản xuất bánh quy.", "B": "Dịch vụ của người giúp việc trong gia đình.", "C": "Gỗ mà xưởng mộc mua để đóng bàn ghế bán.", "D": "Dịch vụ tư vấn pháp lý cho doanh nghiệp."}, "answer": "D", "explanation": "Dịch vụ tư vấn pháp lý được mua trực tiếp tính vào chi tiêu dịch vụ cuối cùng của nền kinh tế."}, {"id": "kt_26", "num": 26, "question": "Những khoản mục nào sau đây sẽ được tính vào GDP của năm nay?", "options": {"A": "Một chiếc ô tô cũ được bán lại trong năm nay.", "B": "Máy tính mới sản xuất ra trong năm nay được một trường học mua.", "C": "Cổ phiếu Vinamilk được mua bán trên thị trường chứng khoán năm nay.", "D": "Tiền trợ cấp xã hội của chính phủ dành cho người già."}, "answer": "B", "explanation": "Máy tính mới sản xuất trong năm nay được trường học mua tính vào chi tiêu đầu tư/tiêu dùng công năm nay. Ô tô cũ, cổ phiếu và trợ cấp không tính vào GDP."}, {"id": "kt_27", "num": 27, "question": "Câu bình luận về GDP nào sau đây là sai?", "options": {"A": "GDP có thể được tính bằng cách sử dụng giá cả hiện hành hoặc giá cả của năm gốc.", "B": "GDP thực tế phản ánh sự thay đổi của sản lượng không bao gồm ảnh hưởng của sự thay đổi giá cả.", "C": "GDP danh nghĩa phản ánh sự thay đổi của cả sản lượng và giá cả.", "D": "GDP là thước đo hoàn hảo về phúc lợi kinh tế của một quốc gia."}, "answer": "D", "explanation": "GDP không phải là thước đo hoàn hảo vì không đo lường ô nhiễm môi trường, sự công bằng phân phối thu nhập, hoạt động phi chính thức, hay thời gian nhàn rỗi. Trong tài liệu đáp án là D (tài liệu gạch chân câu đúng/sai, ở đây phát biểu sai là D)."}, {"id": "kt_28", "num": 28, "question": "Câu nào dưới đây phản ánh sự khác nhau giữa GDP danh nghĩa và GDP thực tế?", "options": {"A": "GDP danh nghĩa được tính theo giá cố định của năm gốc, còn GDP thực tế tính theo giá hiện hành.", "B": "GDP thực tế được tính theo giá cố định của năm gốc, còn GDP danh nghĩa tính theo giá hiện hành.", "C": "GDP thực tế luôn lớn hơn GDP danh nghĩa.", "D": "GDP danh nghĩa đã được điều chỉnh theo lạm phát, còn GDP thực tế thì chưa."}, "answer": "B", "explanation": "GDP thực tế tính theo giá năm gốc (đã loại bỏ lạm phát), còn GDP danh nghĩa tính theo giá thị trường hiện hành."}, {"id": "kt_29", "num": 29, "question": "Nếu tốc độ tăng trưởng của cung tiền cao hơn tốc độ tăng trưởng của sản lượng thực tế thì:", "options": {"A": "Lạm phát có xu hướng tăng.", "B": "Lạm phát có xu hướng giảm.", "C": "Tỷ lệ thất nghiệp chắc chắn tăng.", "D": "Nền kinh tế rơi vào giảm phát."}, "answer": "A", "explanation": "Theo phương trình số lượng tiền tệ (MV = PY), khi cung tiền tăng nhanh hơn sản lượng thực tế thì mức giá chung sẽ tăng (lạm phát tăng)."}, {"id": "kt_30", "num": 30, "question": "Nếu lạm phát cao hơn kỳ vọng, nhóm nào dưới đây có khả năng được lợi nhất?", "options": {"A": "Người cho vay tiền với lãi suất cố định.", "B": "Người vay tiền dài hạn với lãi suất cố định.", "C": "Người có thu nhập cố định.", "D": "Người giữ nhiều tiền mặt."}, "answer": "B", "explanation": "Người đi vay với lãi suất cố định được lợi vì họ trả nợ bằng đồng tiền có giá trị thực tế thấp hơn so với khi vay."}, {"id": "kt_31", "num": 31, "question": "Điều nào sau đây không phải là nguyên nhân gây ra lạm phát chi phí đẩy?", "options": {"A": "Giá dầu mỏ trên thị trường thế giới tăng mạnh.", "B": "Tiền lương danh nghĩa của người lao động tăng nhanh hơn năng suất.", "C": "Thuế đánh vào các yếu tố đầu vào nhập khẩu tăng.", "D": "Tổng cầu tăng mạnh."}, "answer": "D", "explanation": "Tổng cầu tăng mạnh là nguyên nhân gây ra 'lạm phát cầu kéo' (demand-pull), không phải lạm phát chi phí đẩy (cost-push)."}, {"id": "kt_32", "num": 32, "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm?", "options": {"A": "Tỷ lệ thất nghiệp tăng.", "B": "Lực lượng lao động tăng.", "C": "Tỷ lệ thất nghiệp giảm.", "D": "Tỷ lệ tham gia lực lượng lao động tăng."}, "answer": "C", "explanation": "Khi ngừng tìm kiếm việc làm, họ không còn được tính vào lực lượng lao động (lao động chán nản), khiến số người thất nghiệp giảm và tỷ lệ thất nghiệp tính toán giảm."}, {"id": "kt_33", "num": 33, "question": "Một sinh viên mới tốt nghiệp đang tích cực tìm việc nhưng chưa có việc làm thuộc loại thất nghiệp nào?", "options": {"A": "Thất nghiệp cơ cấu (structural).", "B": "Thất nghiệp tạm thời (frictional).", "C": "Thất nghiệp chu kỳ (cyclical).", "D": "Thất nghiệp tự nhiên."}, "answer": "B", "explanation": "Thất nghiệp tạm thời (cọ xát) phát sinh trong quá trình người lao động di chuyển giữa các công việc hoặc người mới gia nhập thị trường lao động đang tìm việc phù hợp."}, {"id": "kt_34", "num": 34, "question": "Xuất khẩu ròng (NX) âm khi nào?", "options": {"A": "Xuất khẩu lớn hơn nhập khẩu.", "B": "Xuất khẩu bằng nhập khẩu.", "C": "Xuất khẩu nhỏ hơn so với nhập khẩu.", "D": "Tổng thu nhập quốc gia lớn hơn tổng chi tiêu."}, "answer": "C", "explanation": "NX = X (Xuất khẩu) - IM (Nhập khẩu). NX < 0 khi xuất khẩu nhỏ hơn nhập khẩu (thâm hụt cán cân thương mại)."}, {"id": "kt_35", "num": 35, "question": "Những khoản mục nào sau đây sẽ được tính vào GDP năm nay?", "options": {"A": "Máy tính mới sản xuất ra trong năm nay được một trường học mua.", "B": "Một ngôi nhà cũ được bán lại thông qua môi giới bất động sản.", "C": "Tiền học bổng của chính phủ cấp cho sinh viên đại học.", "D": "Vải được nhà máy may mua để may quần áo xuất khẩu."}, "answer": "A", "explanation": "Máy tính mới sản xuất trong năm nay được trường học mua là hàng hóa cuối cùng được tính vào GDP."}, {"id": "kt_36", "num": 36, "question": "GDP thực khác với GDP danh nghĩa ở điểm nào?", "options": {"A": "GDP thực tính theo giá hiện hành.", "B": "GDP thực đã điều chỉnh theo lạm phát.", "C": "GDP thực bao gồm các khoản trợ cấp chính phủ.", "D": "GDP thực không tính giá trị hàng hóa nhập khẩu."}, "answer": "B", "explanation": "GDP thực tế được tính theo giá cố định (năm gốc) nên đã loại bỏ yếu tố biến động giá cả (lạm phát)."}, {"id": "kt_37", "num": 37, "question": "Khoản mục nào sau đây được tính một cách trực tiếp trong GDP theo cách tiếp cận chi tiêu?", "options": {"A": "Thép cuộn mà công ty Hòa Phát bán cho công ty đóng tàu.", "B": "Gạo mà nhà máy chế biến mua để làm bánh tráng xuất khẩu.", "C": "Xi măng mà nhà máy sản xuất bán cho đại lý phân phối.", "D": "Dịch vụ tư vấn tài chính cho một cá nhân."}, "answer": "D", "explanation": "Dịch vụ tư vấn tài chính cho cá nhân là dịch vụ tiêu dùng cuối cùng (C), được tính trực tiếp vào GDP."}, {"id": "kt_38", "num": 38, "question": "Nguyên nhân nào sau đây không phải là nguyên nhân trực tiếp gây ra thất nghiệp?", "options": {"A": "Sự thay đổi về cơ cấu ngành kinh tế.", "B": "Khủng hoảng kinh tế.", "C": "Thiếu hụt nguồn lao động.", "D": "Tiền lương thực tế cao hơn mức lương cân bằng thị trường."}, "answer": "C", "explanation": "Thiếu hụt nguồn lao động gây ra tình trạng khan hiếm lao động/thừa việc làm, không phải nguyên nhân gây thất nghiệp."}, {"id": "kt_39", "num": 39, "question": "Khi nền kinh tế lâm vào tình trạng suy thoái, dạng thất nghiệp phổ biến nhất là:", "options": {"A": "Thất nghiệp tạm thời.", "B": "Thất nghiệp cơ cấu.", "C": "Thất nghiệp chu kỳ.", "D": "Thất nghiệp mùa vụ."}, "answer": "C", "explanation": "Thất nghiệp chu kỳ (cyclical unemployment) là loại thất nghiệp gắn liền với các giai đoạn suy thoái của chu kỳ kinh doanh do tổng cầu giảm."}, {"id": "kt_40", "num": 40, "question": "Thất nghiệp ảnh hưởng tiêu cực đến xã hội như thế nào?", "options": {"A": "Làm tăng thu nhập bình quân đầu người.", "B": "Giúp người lao động nâng cao trình độ tay nghề.", "C": "Gây bất ổn xã hội và giảm mức sống.", "D": "Tăng nguồn thu ngân sách từ thuế thu nhập cá nhân."}, "answer": "C", "explanation": "Thất nghiệp kéo theo mất thu nhập, giảm mức sống, gia tăng nghèo đói và các tệ nạn, gây bất ổn xã hội."}, {"id": "kt_41", "num": 41, "question": "Nguyên nhân chủ yếu gây ra lạm phát tiền tệ là:", "options": {"A": "Giá xăng dầu thế giới tăng đột biến.", "B": "Năng suất lao động tăng cao.", "C": "Tăng cung tiền quá mức.", "D": "Tăng nhập khẩu nhiên liệu."}, "answer": "C", "explanation": "Theo lý thuyết tiền tệ của Milton Friedman, lạm phát ở đâu và lúc nào cũng là một hiện tượng tiền tệ, do ngân hàng trung ương bơm/tăng cung tiền quá mức."}, {"id": "kt_42", "num": 42, "question": "Lạm phát chi phí đẩy xảy ra khi:", "options": {"A": "Cầu hàng hoá tăng nhanh hơn cung.", "B": "Ngân hàng Trung ương bơm tiền vào nền kinh tế.", "C": "Chi phí sản xuất tăng làm cho giá thành sản xuất tăng.", "D": "Đồng tiền mất giá do chính sách tỷ giá."}, "answer": "C", "explanation": "Lạm phát chi phí đẩy phát sinh do chi phí các yếu tố sản xuất đầu vào (tiền lương, giá nguyên nhiên vật liệu) tăng vọt đẩy giá bán tăng lên."}, {"id": "kt_43", "num": 43, "question": "GDP đo lường:", "options": {"A": "Tổng giá trị hàng hóa xuất khẩu của một quốc gia trong một năm.", "B": "Tổng giá trị tài sản cố định của một quốc gia.", "C": "Tổng giá trị hàng hóa và dịch vụ cuối cùng được sản xuất trong lãnh thổ một quốc gia trong một thời kỳ nhất định.", "D": "Tổng thu nhập của người dân trong một quốc gia."}, "answer": "C", "explanation": "Định nghĩa GDP: Tổng sản phẩm quốc nội là toàn bộ giá trị thị trường của tất cả hàng hóa và dịch vụ cuối cùng được sản xuất ra trong phạm vi lãnh thổ quốc gia trong một thời kỳ nhất định (thường là một năm)."}]}, {"id": "moi_truong", "name": "Đại Cương Về Môi Trường", "shortName": "Môi Trường", "icon": "leaf", "totalQuestions": 42, "questions": [{"id": "mt_1", "num": 1, "question": "Biến đổi khí hậu có thể làm:", "options": {"A": "Giảm nhiệt độ trung bình toàn cầu", "B": "Dâng mực nước biển", "C": "Tăng độ ẩm không khí", "D": "Giảm phát thải khí nhà kính"}, "answer": "B", "explanation": "Nhiệt độ toàn cầu tăng làm tan băng ở hai cực và các sông băng, dẫn đến hiện tượng dâng mực nước biển."}, {"id": "mt_2", "num": 2, "question": "Biến đổi khí hậu dẫn đến sự thay đổi nào của hệ sinh thái trên trái đất:", "options": {"A": "Làm gia tăng sinh khối của hệ sinh thái rừng", "B": "Ổn định khí hậu tại 2 cực của trái đất", "C": "Dịch chuyển các đới khí hậu trên trái đất", "D": "Phân phối tài nguyên"}, "answer": "C", "explanation": "Biến đổi khí hậu làm thay đổi quy luật hoàn lưu khí quyển, làm dịch chuyển các đới khí hậu về phía các cực hoặc vùng núi cao."}, {"id": "mt_3", "num": 3, "question": "Cơ quan quốc tế quản lý môi trường của Liên Hợp Quốc là:", "options": {"A": "WHO", "B": "FAO", "C": "UNEP", "D": "ILO"}, "answer": "C", "explanation": "UNEP (United Nations Environment Programme) là Chương trình Môi trường Liên Hợp Quốc."}, {"id": "mt_4", "num": 4, "question": "Tác hại của rác thải nhựa đến sinh vật biển:", "options": {"A": "Làm tăng số lượng", "B": "Tạo môi trường sống", "C": "Gây chết do mắc nghẹn hoặc ngộ độc", "D": "Không ảnh hưởng"}, "answer": "C", "explanation": "Sinh vật biển thường nhầm lẫn rác thải nhựa là thức ăn, dẫn đến mắc nghẹn, tắc nghẽn đường tiêu hóa và ngộ độc hóa chất."}, {"id": "mt_5", "num": 5, "question": "Sinh quyển KHÔNG bao gồm:", "options": {"A": "Động vật", "B": "Hệ sinh thái", "C": "Nhà máy nhiệt điện", "D": "Vi khuẩn"}, "answer": "C", "explanation": "Sinh quyển là quyển của sự sống trên Trái Đất gồm sinh vật sống và môi trường sinh sống tự nhiên. Nhà máy nhiệt điện là công trình nhân tạo (trí quyển / kỹ quyển)."}, {"id": "mt_6", "num": 6, "question": "Tác động từ hoạt động sản xuất kinh tế:", "options": {"A": "Tăng đa dạng sinh học", "B": "Phát thải chất thải vào môi trường", "C": "Tăng băng tuyết", "D": "Giảm dân số"}, "answer": "B", "explanation": "Mọi quá trình sản xuất kinh tế đều tiêu thụ tài nguyên thiên nhiên và xả thải các loại chất thải rắn, lỏng, khí vào môi trường."}, {"id": "mt_7", "num": 7, "question": "Nguồn nước ngọt bị khủng hoảng do:", "options": {"A": "Tăng mưa", "B": "Tăng băng tuyết", "C": "Sử dụng quá mức và ô nhiễm", "D": "Trồng nhiều cây xanh"}, "answer": "C", "explanation": "Khai thác quá mức cho nông nghiệp, công nghiệp, sinh hoạt cùng với việc xả thải gây ô nhiễm là nguyên nhân chính gây khủng hoảng nước ngọt."}, {"id": "mt_8", "num": 8, "question": "Giai đoạn tuyệt chủng sinh học đang diễn ra nhanh hơn do:", "options": {"A": "Sự thích nghi của các loài sinh vật", "B": "Chu kỳ tự nhiên của vỏ trái đất", "C": "Khai thác và phát triển của con người", "D": "Gia tăng diện tích các khu bảo tồn thiên nhiên"}, "answer": "C", "explanation": "Các hoạt động tàn phá sinh cảnh, săn bắn và ô nhiễm do con người đẩy tốc độ tuyệt chủng nhanh gấp hàng trăm lần tốc độ tự nhiên."}, {"id": "mt_9", "num": 9, "question": "Chất ô nhiễm nào thường xuất hiện từ rác thải điện tử?", "options": {"A": "O3", "B": "Kim loại nặng", "C": "Nước muối", "D": "O2"}, "answer": "B", "explanation": "Rác thải điện tử (e-waste) chứa nhiều kim loại nặng độc hại như chì, thủy ngân, cadmium, asen trong vi mạch và linh kiện."}, {"id": "mt_10", "num": 10, "question": "Tài nguyên thủy sản toàn cầu hiện nay:", "options": {"A": "Ổn định", "B": "Gia tăng", "C": "Suy giảm mạnh", "D": "Không thay đổi"}, "answer": "C", "explanation": "Đánh bắt tận diệt và quá mức cùng biến đổi khí hậu đã làm trữ lượng thủy sản toàn cầu suy giảm nghiêm trọng."}, {"id": "mt_11", "num": 11, "question": "Diện tích rừng thế giới mất đi chủ yếu do:", "options": {"A": "Tăng độ ẩm", "B": "Khai thác củi và làm nông nghiệp", "C": "Phun thuốc trừ sâu", "D": "Gió mạnh"}, "answer": "B", "explanation": "Phá rừng lấy đất canh tác nông nghiệp, chăn nuôi và khai thác gỗ củi là nguyên nhân hàng đầu làm suy thoái diện tích rừng."}, {"id": "mt_12", "num": 12, "question": "Tầng ozon bị đe dọa chủ yếu do:", "options": {"A": "CO2", "B": "CFC", "C": "O2", "D": "Nước"}, "answer": "B", "explanation": "Các chất Chlorofluorocarbons (CFCs) được sử dụng trong môi chất làm lạnh khi bay lên tầng bình lưu sẽ phá hủy các phân tử ozon (O3)."}, {"id": "mt_13", "num": 13, "question": "Vai trò của khí quyển trong bảo vệ sự sống là:", "options": {"A": "Tạo ánh sáng", "B": "Cản tia tử ngoại và điều hòa nhiệt độ", "C": "Phát ra CO2", "D": "Hấp thụ bụi"}, "answer": "B", "explanation": "Khí quyển (đặc biệt tầng ozon) ngăn chặn bức xạ tử ngoại (UV) có hại và tạo hiệu ứng nhà kính tự nhiên giúp duy trì nhiệt độ thích hợp cho sự sống."}, {"id": "mt_14", "num": 14, "question": "Hít phải khí SO2 với nồng độ cao có thể gây ra hiện tượng gì?", "options": {"A": "Suy tim", "B": "Tổn thương gan", "C": "Co thắt phế quản", "D": "Tổn thương thận"}, "answer": "C", "explanation": "SO2 là chất khí kích ứng mạnh đường hô hấp, gây bỏng niêm mạc, co thắt cơ trơn phế quản và khó thở cấp tính."}, {"id": "mt_15", "num": 15, "question": "Các chất gây ô nhiễm trong luyện kim bao gồm:", "options": {"A": "Hơi nước và khí CO2", "B": "CO và khí amoniac", "C": "SO2, NOx, bụi, hơi kim loại độc hại", "D": "Oxy và khí nitơ"}, "answer": "C", "explanation": "Quá trình nung luyện quặng kim loại thải ra lượng lớn khí SO2, NOx, bụi mịn và hơi oxit kim loại độc hại (Pb, As, Cd...)."}, {"id": "mt_16", "num": 16, "question": "Trong nông nghiệp, khí thải CH4 và H2S phát sinh chủ yếu từ hoạt động nào?", "options": {"A": "Phân hủy phân động vật", "B": "Phun thuốc trừ sâu", "C": "Tưới tiêu bằng nước giếng", "D": "Bón phân hóa học"}, "answer": "A", "explanation": "Phân động vật và chất thải hữu cơ trong điều kiện kỵ khí (yếm khí) bị vi sinh vật phân hủy sinh ra khí mê-tan (CH4) và hydrosunfua (H2S)."}, {"id": "mt_17", "num": 17, "question": "Tác hại của chì (Pb) đối với trẻ em là:", "options": {"A": "Gây ra tình trạng suy tim", "B": "Gây rối loạn tiêu hóa", "C": "Gây nhiễm độc thần kinh, chậm phát triển trí tuệ", "D": "Gây ra tình trạng suy hô hấp"}, "answer": "C", "explanation": "Chì là chất độc thần kinh nguy hiểm, ở trẻ nhỏ hấp thụ chì dẫn đến tổn thương não vĩnh viễn, giảm IQ và rối loạn hành vi."}, {"id": "mt_18", "num": 18, "question": "Nước thải y tế nguy hiểm vì chứa:", "options": {"A": "Nhiều muối khoáng", "B": "Chất hoạt động bề mặt", "C": "Vi sinh vật gây bệnh, hóa chất và phóng xạ", "D": "Dư lượng dầu mỡ"}, "answer": "C", "explanation": "Nước thải y tế từ bệnh viện, phòng thí nghiệm chứa nhiều mầm bệnh lây nhiễm (vi khuẩn, virus), tàn dư dược phẩm, hóa chất và đồng vị phóng xạ."}, {"id": "mt_19", "num": 19, "question": "Ô nhiễm đất do chiến tranh là do:", "options": {"A": "Sử dụng nhiều bom mìn", "B": "Mảnh kim loại", "C": "Tồn lưu hóa chất diệt cỏ chứa Dioxin và kim loại nặng", "D": "Tro bụi từ hỏa hoạn"}, "answer": "C", "explanation": "Chất độc màu da cam chứa Dioxin và các chất độc hóa học quân sự tồn lưu lâu bền trong đất và trầm tích suốt nhiều thập kỷ."}, {"id": "mt_20", "num": 20, "question": "Biện pháp hiệu quả để hạn chế ô nhiễm đất do rác thải là:", "options": {"A": "Đốt rác tại các bãi hở", "B": "Chôn lấp không phân loại", "C": "Phân loại, tái chế và xử lý hợp vệ sinh", "D": "Thải trực tiếp ra nguồn tiếp nhận"}, "answer": "C", "explanation": "Phân loại rác tại nguồn, tái chế tối đa và xử lý bằng các công nghệ chôn lấp hợp vệ sinh/thiêu đốt hiện đại là biện pháp bảo vệ tài nguyên đất hiệu quả."}, {"id": "mt_21", "num": 21, "question": "Hậu quả chung của ô nhiễm nước là:", "options": {"A": "Làm mất mỹ quan khu dân cư", "B": "Gây bệnh, đột biến gen và suy thoái hệ sinh thái", "C": "Gây thiếu nước cục bộ", "D": "Làm giảm nhiệt độ nguồn nước"}, "answer": "B", "explanation": "Ô nhiễm nguồn nước gây ra các dịch bệnh đường tiêu hóa, tích lũy độc chất gây ung thư, đột biến gen và hủy diệt chuỗi thức ăn thủy sinh."}, {"id": "mt_22", "num": 22, "question": "Lượng nước thải sinh hoạt của mỗi người trong ngày phụ thuộc chủ yếu vào:", "options": {"A": "Thời gian làm việc", "B": "Nhiệt độ môi trường", "C": "Mức sống và lối sống", "D": "Áp lực nguồn cung cấp nước"}, "answer": "C", "explanation": "Mức sống cao hơn với các thiết bị tiện nghi (máy giặt, bồn tắm, vòi sen) và thói quen sinh hoạt quyết định trực tiếp định mức tiêu thụ nước sinh hoạt và lượng nước thải ra."}, {"id": "mt_23", "num": 23, "question": "Một trong những đặc điểm nguy hiểm của chất dioxin là:", "options": {"A": "Dễ bị hòa tan và rửa trôi nhanh trong nước", "B": "Làm ô nhiễm không khí", "C": "Có thể tồn tại lâu dài và tích lũy sinh học trong chuỗi thức ăn", "D": "Dễ dàng bị phân hủy bởi ánh sáng mặt trời"}, "answer": "C", "explanation": "Dioxin là hợp chất hữu cơ khó phân hủy (POP), tan tốt trong mô mỡ, có tính tích lũy sinh học cao qua các bậc dinh dưỡng trong chuỗi thức ăn."}, {"id": "mt_24", "num": 24, "question": "Chất hữu cơ dễ phân hủy sinh học trong nước thải chủ yếu là:", "options": {"A": "Thuốc trừ sâu và hóa chất", "B": "Protein, carbohydrate, lipid", "C": "Chất bảo quản thực phẩm", "D": "Hợp chất clo hữu cơ"}, "answer": "B", "explanation": "Chất hữu cơ trong chất thải sinh hoạt và công nghiệp chế biến thực phẩm chủ yếu gồm protein, đường/tinh bột (carbohydrate) và chất béo (lipid), dễ bị vi sinh vật phân hủy hiếu khí hoặc kỵ khí."}, {"id": "mt_25", "num": 25, "question": "Tác động phức hợp của nước ô nhiễm lên môi trường thể hiện rõ nhất qua:", "options": {"A": "Sự đổi màu của nguồn nước mặt", "B": "Sự thay đổi hệ sinh thái toàn vùng", "C": "Mùi hôi bốc lên từ dòng sông", "D": "Làm giảm lưu lượng dòng chảy"}, "answer": "B", "explanation": "Ô nhiễm nước không chỉ tác động đơn lẻ tới thủy sinh mà lan truyền qua đất ngầm, chuỗi thức ăn và gây biến đổi, suy thoái toàn bộ hệ sinh thái của cả lưu vực."}, {"id": "mt_26", "num": 26, "question": "Tác động của nước ô nhiễm đến môi trường không khí chủ yếu thông qua quá trình nào?", "options": {"A": "Sự thẩm thấu khí độc qua đất", "B": "Sự bay hơi của nước mang theo vi sinh vật và khí độc (H2S, NH3, VOCs)", "C": "Khói bụi bốc lên từ mặt nước", "D": "Mưa axit tạo ra từ nguồn nước ô nhiễm"}, "answer": "B", "explanation": "Nước thải ứ đọng bị yếm khí bốc hơi giải phóng các khí độc hại, gây mùi hôi thối và mang theo vi sinh vật phát tán vào không khí."}, {"id": "mt_27", "num": 27, "question": "Điểm giống nhau cơ bản giữa thuế môi trường và côta ô nhiễm là gì?", "options": {"A": "Đều do người tiêu dùng cuối cùng chi trả", "B": "Đều là các khoản đóng góp tự nguyện", "C": "Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính", "D": "Đều chỉ áp dụng cho chất thải rắn"}, "answer": "C", "explanation": "Cả thuế môi trường (Pigouvian tax) và côta ô nhiễm (giấy phép xả thải có thể chuyển nhượng) đều là công cụ kinh tế nội hóa ngoại ứng tiêu cực, điều chỉnh hành vi của người gây ô nhiễm bằng chi phí tài chính."}, {"id": "mt_28", "num": 28, "question": "Lựa chọn câu trả lời đúng nhất: Nguyên nhân dẫn đến sản xuất sạch hơn vẫn chưa được áp dụng một cách triệt để tại Việt Nam:", "options": {"A": "Do thói quen của người lao động Việt Nam không phù hợp với sản xuất sạch hơn", "B": "Do năng lực để thực hiện sản xuất sạch hơn của các doanh nghiệp còn hạn chế", "C": "Do chi phí đầu tư công nghệ ban đầu cao và nhận thức của doanh nghiệp còn hạn chế", "D": "Do các quy định pháp luật về môi trường chưa đầy đủ"}, "answer": "A", "explanation": "Trong tài liệu câu hỏi ôn tập, đáp án được đánh dấu là phương án A (Do thói quen của người lao động Việt Nam không phù hợp với sản xuất sạch hơn)."}, {"id": "mt_29", "num": 29, "question": "Phương pháp thiêu đốt thường không hiệu quả cho loại chất thải nào dưới đây?", "options": {"A": "Chất thải có độ ẩm cao, hàm lượng vô cơ lớn", "B": "Chất thải dung môi, chất thải nguy hại dễ cháy", "C": "Rác thải y tế lây nhiễm", "D": "Chất thải nhựa và cao su tổng hợp"}, "answer": "A", "explanation": "Chất thải chứa nhiều nước (độ ẩm cao) và nhiều chất vô cơ (gạch đá, kim loại) có nhiệt trị thấp, đốt tốn nhiều năng lượng phụ trợ và sinh nhiều tro xỉ không hiệu quả."}, {"id": "mt_30", "num": 30, "question": "Hãy lựa chọn đáp án đúng nhất: Ưu điểm của phương pháp thiêu đốt chất thải là:", "options": {"A": "Khả năng tận dụng được nhiệt, xử lý được toàn bộ chất thải và giảm tối đa thể tích", "B": "Chi phí đầu tư và vận hành thấp nhất", "C": "Không phát sinh khí thải thứ cấp", "D": "Dễ dàng vận hành không cần nhân lực chuyên môn"}, "answer": "A", "explanation": "Lò đốt chất thải hiện đại giúp giảm tới 85-90% thể tích rác, tiêu hủy triệt để mầm bệnh nguy hại và có thể thu hồi nhiệt để phát điện."}, {"id": "mt_31", "num": 31, "question": "Trong sinh thái công nghiệp (STCN), chất thải của một doanh nghiệp có thể trở thành:", "options": {"A": "Sản phẩm bỏ đi hoàn toàn", "B": "Mối nguy hiểm cho toàn khu công nghiệp", "C": "Nguyên liệu đầu vào của doanh nghiệp khác", "D": "Chỉ tiêu đánh giá vi phạm môi trường"}, "answer": "C", "explanation": "Nguyên lý cốt lõi của sinh thái công nghiệp và kinh tế tuần hoàn là cộng sinh công nghiệp: chất thải của nhà máy này là nguyên liệu đầu vào của nhà máy khác."}, {"id": "mt_32", "num": 32, "question": "Nhãn sinh thái tác động đến hành vi nào trong chuỗi sản xuất – tiêu dùng?", "options": {"A": "Quy trình xin cấp phép đầu tư của chính phủ", "B": "Quyết định lựa chọn nguyên vật liệu của nhà cung cấp và quyết định mua hàng của người tiêu dùng", "C": "Chính sách trợ cấp thuế của cơ quan quản lý", "D": "Công tác kiểm tra của thanh tra môi trường"}, "answer": "B", "explanation": "Nhãn sinh thái cung cấp thông tin minh bạch về tính thân thiện môi trường, thúc đẩy người tiêu dùng mua sắm xanh và buộc nhà sản xuất cải tiến quy trình."}, {"id": "mt_33", "num": 33, "question": "Một trong những rào cản lớn nhất của sinh thái công nghiệp là:", "options": {"A": "Thiếu ngân sách đầu tư công nghệ cao và liên kết trao đổi thông tin giữa các doanh nghiệp", "B": "Sự thiếu hụt nguồn nguyên liệu tái sinh", "C": "Sự phản đối của cộng đồng dân cư xung quanh", "D": "Công nghệ tái chế đã đạt đến mức giới hạn"}, "answer": "A", "explanation": "Khó khăn chính là thiếu vốn đầu tư công nghệ đồng bộ và thiếu cơ chế chia sẻ, kết nối thông tin thị trường phế phụ phẩm giữa các nhà máy."}, {"id": "mt_34", "num": 34, "question": "Tại sao không thể sử dụng một chỉ số duy nhất để đánh giá tính bền vững của một lĩnh vực?", "options": {"A": "Vì chỉ số duy nhất không đủ độ tin cậy, cần có nhiều chỉ số mới đánh giá đầy đủ được", "B": "Vì sự phát triển bền vững là một khái niệm đa chiều (kinh tế, xã hội, môi trường)", "C": "Vì tính bền vững cần được đánh giá tổng hợp từ nhiều khía cạnh phụ thuộc lẫn nhau", "D": "Vì các quy định quốc tế bắt buộc phải sử dụng ít nhất 10 chỉ số"}, "answer": "B", "explanation": "Phát triển bền vững là khái niệm phức hợp gắn kết hữu cơ giữa kinh tế, công bằng xã hội và bảo vệ môi trường, do đó một chỉ số đơn lẻ không thể bao hàm hết."}, {"id": "mt_35", "num": 35, "question": "So sánh hai quốc gia có cùng GDP nhưng quốc gia A có cơ cấu GDP nghiêng về dịch vụ và công nghiệp, còn quốc gia B nghiêng về nông nghiệp. Quốc gia nào có khả năng tăng trưởng bền vững hơn về kinh tế và vì sao?", "options": {"A": "Quốc gia A, vì dịch vụ và công nghiệp có khả năng sinh lợi cao hơn và ít phụ thuộc vào thời tiết", "B": "Quốc gia B, vì nông nghiệp là nền tảng cốt lõi của an ninh lương thực", "C": "Cả hai có khả năng ngang nhau do cùng quy mô GDP", "D": "Quốc gia B, vì nông nghiệp thân thiện với môi trường hơn"}, "answer": "A", "explanation": "Kinh tế dịch vụ và công nghệ tri thức có giá trị gia tăng cao, năng suất lao động vượt trội và ít rủi ro trước biến đổi khí hậu hơn nông nghiệp truyền thống."}, {"id": "mt_36", "num": 36, "question": "Nếu một quốc gia duy trì tốc độ tăng trưởng GDP cao nhưng cơ cấu GDP phụ thuộc vào khai thác tài nguyên không tái tạo, đánh giá nào sau đây là chính xác nhất?", "options": {"A": "Quốc gia này phát triển không toàn diện chưa đạt phát triển bền vững", "B": "Quốc gia đạt bền vững kinh tế nhưng chưa đạt bền vững về môi trường", "C": "Quốc gia hoàn toàn đạt các tiêu chuẩn bền vững toàn cầu", "D": "Quốc gia có năng lực cạnh tranh cao nhất thế giới"}, "answer": "B", "explanation": "Tăng trưởng nhờ 'ăn mòn' vốn tự nhiên không tái tạo chỉ tạo ra sự tăng trưởng ngắn hạn về kinh tế, hủy hoại nền tảng tài nguyên của các thế hệ tương lai nên không bền vững về môi trường."}, {"id": "mt_37", "num": 37, "question": "Chỉ số HDI là tổng hợp của các yếu tố nào sau đây?", "options": {"A": "Tuổi thọ, học vấn, thu nhập bình quân theo đô la Mỹ", "B": "Tuổi thọ, trình độ học vấn, PPP/người (GNI bình quân tính theo sức mua tương đương)", "C": "GDP, GNP, PPP/người", "D": "Y tế, giáo dục, công nghệ"}, "answer": "B", "explanation": "Chỉ số Phát triển Con người (HDI) của Liên Hợp Quốc gồm 3 trụ cột: Sức khỏe (kỳ vọng sống/tuổi thọ), Tri thức (trình độ học vấn) và Mức sống (thu nhập GNI/người theo sức mua tương đương PPP)."}, {"id": "mt_38", "num": 38, "question": "Điểm tương đồng giữa chỉ số Gini và chỉ số HDI trong việc đánh giá tính bền vững là gì?", "options": {"A": "Đều chỉ đo lường sự tăng trưởng của sản xuất vật chất", "B": "Cả hai đều liên quan đến bất bình đẳng xã hội và chất lượng cuộc sống con người", "C": "Đều được tính toán dựa trên mức độ suy thoái môi trường", "D": "Đều có giá trị từ 1 đến 100"}, "answer": "B", "explanation": "Cả Gini (phân phối thu nhập) và HDI (phát triển con người) đều phản ánh khía cạnh xã hội và mức độ công bằng, chất lượng sống trong phát triển bền vững."}, {"id": "mt_39", "num": 39, "question": "Lựa chọn đáp án chính xác nhất: Tính bền vững về kinh tế được hiểu là:", "options": {"A": "Tối đa hóa lợi nhuận tài chính của các tập đoàn đa quốc gia", "B": "Tăng trưởng nhanh bằng mọi giá, chỉ số GDP/người cao", "C": "Tăng trưởng kinh tế ổn định, hiệu quả và duy trì được nguồn lực dài hạn cho thế hệ tương lai mà không tàn phá môi trường", "D": "Giữ nguyên quy mô kinh tế không tăng trưởng"}, "answer": "B", "explanation": "Trong tài liệu câu hỏi ôn tập, câu này đáp án được tác giả đánh dấu là phương án B (đáp án trắc nghiệm theo tài liệu)."}, {"id": "mt_40", "num": 40, "question": "So sánh chỉ số NCI (Chỉ số vốn tự nhiên / bảo tồn) của Việt Nam và Thái Lan giúp ta rút ra kết luận gì?", "options": {"A": "Việt Nam có diện tích bảo tồn lớn hơn Thái Lan", "B": "Việt Nam có hệ thống giáo dục về môi trường tốt hơn Thái Lan", "C": "Thái Lan có chỉ số GDP cao hơn", "D": "Việt Nam có mức độ đa dạng sinh học và bảo tồn tốt hơn Thái Lan"}, "answer": "D", "explanation": "Trong tài liệu câu hỏi ôn tập, đáp án được đánh dấu là phương án D."}, {"id": "mt_41", "num": 41, "question": "Tại sao đầu tư thích đáng cho bảo vệ môi trường được xem là chỉ tiêu của phát triển bền vững kinh tế?", "options": {"A": "Vì nó giúp giảm nợ công quốc gia, tăng trưởng kinh tế dài hạn", "B": "Vì chi phí môi trường có ảnh hưởng dài hạn đến tăng trưởng kinh tế và chất lượng nguồn lực", "C": "Vì chỉ số này được yêu cầu trong cam kết quốc tế", "D": "Vì nó làm tăng tỷ lệ thất nghiệp tạm thời"}, "answer": "A", "explanation": "Theo tài liệu câu hỏi ôn tập, đáp án được đánh dấu là phương án A."}, {"id": "mt_42", "num": 42, "question": "Chênh lệch GDP giữa các vùng trong một quốc gia phản ánh điều gì về tính bền vững kinh tế - xã hội?", "options": {"A": "Mức độ đầu tư phát triển dịch vụ và công bằng xã hội giữa các vùng", "B": "Khả năng cân đối ngân sách quốc gia", "C": "Mức độ phát triển đồng đều và công bằng xã hội giữa các vùng", "D": "Sự thay đổi cơ cấu dân số"}, "answer": "C", "explanation": "Sự phân hóa thu nhập và GDP theo vùng miền phản ánh khoảng cách giàu nghèo và mức độ phát triển đồng đều, công bằng xã hội trong quốc gia."}]}]};
+
+        class QuizApp {
+            constructor() {
+                this.data = RAW_DATA;
+                this.currentSubjectId = 'kinh_te';
+                this.currentMode = 'practice'; // 'practice', 'exam', 'mistakes', 'search'
+                this.currentIndex = 0;
+                this.questions = [];
+                this.userAnswers = {}; // qId -> selected option ('A', 'B', etc)
+                this.starredQuestions = new Set();
+                this.soundEnabled = true;
+                this.examTimer = null;
+                this.examTimeLeft = 0;
+                this.isExamSubmitted = false;
+
+                this.audioCtx = null;
+                this.initStorage();
+                this.bindShortcuts();
+                this.selectSubject('kinh_te');
             }
 
-            isMultipleParts = selectedParts.size >= 2;
-
-            userAnswers = {};
-            wrongQuestions = [];
-
-            document.getElementById('retry-btn').style.display = 'none';
-
-            document.getElementById('score-display').innerHTML = '';
-
-            // 👉 THÊM DÒNG NÀY
-            document.getElementById('result-area').style.display = 'block';
-
-            if (quizMode === "instant") {
-                document.getElementById('submit-btn').style.display = 'none';
-            } else {
-                document.getElementById('submit-btn').style.display = 'inline-block';
-            }
-
-            document.getElementById('controls').style.display = 'block';
-
-            currentList = [];
-
-            selectedParts.forEach(partIndex => {
-
-                let start = 0;
-
-                for (let i = 0; i < partIndex; i++) {
-                    start += PARTS[i].count;
+            initStorage() {
+                try {
+                    const savedStarred = localStorage.getItem('starred_quiz_questions');
+                    if (savedStarred) {
+                        this.starredQuestions = new Set(JSON.parse(savedStarred));
+                    }
+                    const savedSound = localStorage.getItem('quiz_sound_enabled');
+                    if (savedSound !== null) {
+                        this.soundEnabled = savedSound === 'true';
+                        this.updateSoundIcon();
+                    }
+                    const savedTheme = localStorage.getItem('quiz_theme') || 'dark';
+                    document.body.setAttribute('data-theme', savedTheme);
+                    this.updateThemeIcon(savedTheme);
+                } catch (e) {
+                    console.warn('Storage read error', e);
                 }
+            }
 
-                const end = start + PARTS[partIndex].count;
+            saveStorage() {
+                try {
+                    localStorage.setItem('starred_quiz_questions', JSON.stringify([...this.starredQuestions]));
+                    localStorage.setItem('quiz_sound_enabled', this.soundEnabled.toString());
+                    localStorage.setItem('quiz_theme', document.body.getAttribute('data-theme') || 'dark');
+                } catch (e) {}
+            }
 
-                const partQuestions = questions.slice(start, end);
+            playFeedbackSound(type) {
+                if (!this.soundEnabled) return;
+                try {
+                    if (!this.audioCtx) {
+                        this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                    }
+                    if (this.audioCtx.state === 'suspended') {
+                        this.audioCtx.resume();
+                    }
+                    const ctx = this.audioCtx;
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
 
-                currentList = currentList.concat(
-                    JSON.parse(JSON.stringify(partQuestions))
-                );
-            });
+                    if (type === 'correct') {
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+                        osc.frequency.exponentialRampToValueAtTime(783.99, ctx.currentTime + 0.18); // G5
+                        gain.gain.setValueAtTime(0.15, ctx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.25);
+                        osc.start();
+                        osc.stop(ctx.currentTime + 0.25);
+                    } else if (type === 'wrong') {
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(220, ctx.currentTime);
+                        osc.frequency.setValueAtTime(180, ctx.currentTime + 0.12);
+                        gain.gain.setValueAtTime(0.18, ctx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.28);
+                        osc.start();
+                        osc.stop(ctx.currentTime + 0.28);
+                    } else if (type === 'click') {
+                        osc.type = 'sine';
+                        osc.frequency.setValueAtTime(800, ctx.currentTime);
+                        gain.gain.setValueAtTime(0.05, ctx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.05);
+                        osc.start();
+                        osc.stop(ctx.currentTime + 0.05);
+                    }
+                } catch (e) {}
+            }
 
-            renderQuiz();
-            window.scrollTo(0, 0);
-        }
-        // Render câu hỏi
-        function renderQuiz() {
-            const container = document.getElementById('quiz-container');
-            container.innerHTML = currentList.map((item, idx) => `
-        <div class="question-item" id="q-box-${idx}">
-            <div class="question-text">
-    Câu ${idx + 1}: ${item.q}
-</div>
-            <ul class="options">
-                ${item.a.map((opt, oIdx) => `
-                    <li onclick="selectOption(${idx}, ${oIdx})" id="opt-${idx}-${oIdx}">
-                        <strong>${String.fromCharCode(65 + oIdx)}.</strong> ${opt}
-                    </li>
-                `).join('')}
-            </ul>
-        </div>
-    `).join('');
-        }
+            toggleSound() {
+                this.soundEnabled = !this.soundEnabled;
+                this.updateSoundIcon();
+                this.saveStorage();
+            }
 
-        // Chọn đáp án
-        function selectOption(qIdx, oIdx) {
-            const item = currentList[qIdx];
+            updateSoundIcon() {
+                const btn = document.getElementById('soundToggleBtn');
+                btn.innerHTML = this.soundEnabled ? '<i class="fa-solid fa-volume-high"></i>' : '<i class="fa-solid fa-volume-xmark"></i>';
+            }
 
-            if (document.getElementById(`opt-${qIdx}-0`).classList.contains('locked')) return;
+            toggleTheme() {
+                const current = document.body.getAttribute('data-theme') || 'dark';
+                const next = current === 'dark' ? 'light' : 'dark';
+                document.body.setAttribute('data-theme', next);
+                this.updateThemeIcon(next);
+                this.saveStorage();
+            }
 
-            const parent = document.getElementById(`q-box-${qIdx}`);
-            const options = parent.querySelectorAll('li');
+            updateThemeIcon(theme) {
+                const btn = document.getElementById('themeToggleBtn');
+                btn.innerHTML = theme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+            }
 
-            // reset chọn
-            options.forEach(li => li.classList.remove('selected'));
+            selectSubject(subId) {
+                this.currentSubjectId = subId;
+                document.querySelectorAll('.subject-pill').forEach(el => el.classList.remove('active'));
+                if (subId === 'kinh_te') document.getElementById('subKinhTeBtn').classList.add('active');
+                else if (subId === 'moi_truong') document.getElementById('subMoiTruongBtn').classList.add('active');
+                else if (subId === 'all') document.getElementById('subAllBtn').classList.add('active');
 
-            // chọn
-            document.getElementById(`opt-${qIdx}-${oIdx}`).classList.add('selected');
+                this.loadQuestions();
+                this.currentIndex = 0;
+                this.render();
+            }
 
-            // lưu đáp án
-            userAnswers[qIdx] = oIdx;
+            loadQuestions() {
+                const kt = this.data.subjects.find(s => s.id === 'kinh_te').questions.map(q => ({ ...q, subjectTitle: 'Kinh Tế' }));
+                const mt = this.data.subjects.find(s => s.id === 'moi_truong').questions.map(q => ({ ...q, subjectTitle: 'Môi Trường' }));
 
-            // 👉 CHẾ ĐỘ HIỆN NGAY ĐÚNG SAI
-            if (quizMode === "instant") {
-                options.forEach(li => li.classList.add('locked'));
-
-                const correctIdx = item.c;
-
-                // tô đáp án đúng
-                document.getElementById(`opt-${qIdx}-${correctIdx}`).classList.add('correct');
-
-                // nếu chọn sai
-                if (oIdx !== correctIdx) {
-                    document.getElementById(`opt-${qIdx}-${oIdx}`).classList.add('incorrect');
-                }
-                if (oIdx !== correctIdx) {
-
-                    currentList[qIdx].isWrong = true;
-
+                if (this.currentMode === 'mistakes') {
+                    const allQs = [...kt, ...mt];
+                    this.questions = allQs.filter(q => this.userAnswers[q.id] && this.userAnswers[q.id] !== q.answer);
+                    if (this.questions.length === 0) {
+                        this.questions = [];
+                    }
+                } else if (this.currentSubjectId === 'kinh_te') {
+                    this.questions = [...kt];
+                } else if (this.currentSubjectId === 'moi_truong') {
+                    this.questions = [...mt];
                 } else {
-
-                    currentList[qIdx].isWrong = false;
-
+                    this.questions = [...kt, ...mt];
                 }
-                collectWrongInstantQuestions();
-
             }
-        }
 
-        // Đảo câu hỏi
-        function shuffleQuestions() {
-            currentList.sort(() => Math.random() - 0.5);
-            userAnswers = {};
-            renderQuiz();
-        }
+            setMode(mode) {
+                if (this.currentMode === 'exam' && mode !== 'exam' && !this.isExamSubmitted) {
+                    if (!confirm('Bạn đang trong bài thi thử. Bạn có chắc muốn rời đi không?')) return;
+                    clearInterval(this.examTimer);
+                    document.getElementById('examTimer').classList.remove('active');
+                }
 
-        // Đảo đáp án
-        function shuffleAnswers() {
-            currentList.forEach(item => {
-                const correctText = item.a[item.c];
-                item.a.sort(() => Math.random() - 0.5);
-                item.c = item.a.indexOf(correctText);
-            });
-            userAnswers = {};
-            renderQuiz();
-        }
+                this.currentMode = mode;
+                document.querySelectorAll('.mode-pill').forEach(el => el.classList.remove('active'));
 
-        // Nộp bài
-        function submitQuiz() {
-            let score = 0;
-            wrongQuestions = [];
+                if (mode === 'practice') document.getElementById('modePracticeBtn').classList.add('active');
+                else if (mode === 'exam') document.getElementById('modeExamBtn').classList.add('active');
+                else if (mode === 'mistakes') document.getElementById('modeMistakesBtn').classList.add('active');
+                else if (mode === 'search') document.getElementById('modeSearchBtn').classList.add('active');
 
-            currentList.forEach((item, idx) => {
-                const correctIdx = item.c;
-                const selectedIdx = userAnswers[idx];
+                const quizView = document.getElementById('quizViewSection');
+                const searchView = document.getElementById('searchViewSection');
+                const submitExamBtn = document.getElementById('submitExamBtn');
+                const nextBtn = document.getElementById('nextBtn');
 
-                const options = document.querySelectorAll(`#q-box-${idx} li`);
-                options.forEach(li => li.classList.add('locked'));
+                if (mode === 'search') {
+                    quizView.style.display = 'none';
+                    searchView.style.display = 'block';
+                    this.handleSearch();
+                    return;
+                } else {
+                    quizView.style.display = 'grid';
+                    searchView.style.display = 'none';
+                }
 
-                document.getElementById(`opt-${idx}-${correctIdx}`).classList.add('correct');
+                if (mode === 'exam') {
+                    submitExamBtn.style.display = 'inline-flex';
+                } else {
+                    submitExamBtn.style.display = 'none';
+                    nextBtn.style.display = 'inline-flex';
+                }
 
-                if (selectedIdx !== undefined) {
+                this.loadQuestions();
+                this.currentIndex = 0;
+                this.render();
+            }
 
-                    if (selectedIdx === correctIdx) {
+            openExamSetup() {
+                const count = prompt('Nhập số câu bạn muốn thi thử (Ví dụ: 20, 40 hoặc để trống lấy tất cả):', '30');
+                if (count === null) return;
+                let num = parseInt(count) || 30;
+                
+                // Shuffle questions for exam
+                this.loadQuestions();
+                let pool = [...this.questions];
+                pool.sort(() => Math.random() - 0.5);
+                this.questions = pool.slice(0, Math.min(num, pool.length));
 
-                        score++;
+                // Clear answers for this exam session
+                this.questions.forEach(q => delete this.userAnswers[q.id]);
+                this.isExamSubmitted = false;
 
-                    } else {
+                // Set timer (1.2 minute per question)
+                this.examTimeLeft = Math.ceil(this.questions.length * 50); // seconds
+                this.startExamTimer();
 
-                        document.getElementById(`opt-${idx}-${selectedIdx}`)
-                            .classList.add('incorrect');
+                this.setMode('exam');
+            }
 
-                        wrongQuestions.push(
-                            JSON.parse(JSON.stringify(item))
-                        );
+            startExamTimer() {
+                clearInterval(this.examTimer);
+                const timerEl = document.getElementById('examTimer');
+                timerEl.classList.add('active');
+                this.updateTimerDisplay();
+
+                this.examTimer = setInterval(() => {
+                    this.examTimeLeft--;
+                    this.updateTimerDisplay();
+                    if (this.examTimeLeft <= 0) {
+                        clearInterval(this.examTimer);
+                        alert('Hết giờ làm bài! Hệ thống sẽ tự động nộp bài.');
+                        this.submitExam();
+                    }
+                }, 1000);
+            }
+
+            updateTimerDisplay() {
+                const mins = Math.floor(this.examTimeLeft / 60);
+                const secs = this.examTimeLeft % 60;
+                document.getElementById('timerText').innerText = 
+                    `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            render() {
+                this.updateStats();
+                this.renderSidebarGrid();
+
+                const total = this.questions.length;
+                if (total === 0) {
+                    document.getElementById('questionText').innerText = this.currentMode === 'mistakes' 
+                        ? 'Tuyệt vời! Bạn hiện không có câu sai nào trong danh sách cứu hộ.'
+                        : 'Không có câu hỏi nào.';
+                    document.getElementById('optionsList').innerHTML = '';
+                    document.getElementById('diagramContainer').style.display = 'none';
+                    document.getElementById('explanationBox').classList.remove('show');
+                    return;
+                }
+
+                const q = this.questions[this.currentIndex];
+                document.getElementById('currentQIndexDisplay').innerText = this.currentIndex + 1;
+                document.getElementById('totalQDisplay').innerText = total;
+                document.getElementById('questionSubjectBadge').innerText = q.subjectTitle || (q.id.startsWith('kt') ? 'Kinh Tế' : 'Môi Trường');
+                document.getElementById('questionText').innerText = q.question;
+
+                // Show diagram if KT Câu 10
+                const diagramEl = document.getElementById('diagramContainer');
+                if (q.id === 'kt_10') {
+                    diagramEl.style.display = 'block';
+                } else {
+                    diagramEl.style.display = 'none';
+                }
+
+                // Bookmark state
+                const starBtn = document.getElementById('starQuestionBtn');
+                const starIcon = document.getElementById('starIcon');
+                if (this.starredQuestions.has(q.id)) {
+                    starBtn.classList.add('starred');
+                    starIcon.className = 'fa-solid fa-star';
+                } else {
+                    starBtn.classList.remove('starred');
+                    starIcon.className = 'fa-regular fa-star';
+                }
+
+                // Render options
+                const optsContainer = document.getElementById('optionsList');
+                optsContainer.innerHTML = '';
+
+                const userAns = this.userAnswers[q.id];
+                const isExamMode = this.currentMode === 'exam' && !this.isExamSubmitted;
+
+                ['A', 'B', 'C', 'D'].forEach(key => {
+                    if (!q.options[key]) return;
+                    const optDiv = document.createElement('div');
+                    optDiv.className = 'option-item';
+                    optDiv.id = `opt_${key}`;
+
+                    if (userAns) {
+                        if (isExamMode) {
+                            if (userAns === key) optDiv.classList.add('selected');
+                        } else {
+                            // Show real-time correct / wrong
+                            optDiv.classList.add('locked');
+                            if (key === q.answer) {
+                                optDiv.classList.add('correct');
+                            } else if (userAns === key) {
+                                optDiv.classList.add('wrong');
+                            }
+                        }
                     }
 
+                    optDiv.innerHTML = `
+                        <div class="option-key">${key}</div>
+                        <div class="option-text">${q.options[key]}</div>
+                    `;
+
+                    optDiv.onclick = () => this.selectOption(key);
+                    optsContainer.appendChild(optDiv);
+                });
+
+                // Explanation
+                const expBox = document.getElementById('explanationBox');
+                const expContent = document.getElementById('explanationText');
+                if (userAns && !isExamMode) {
+                    expContent.innerText = q.explanation || `Đáp án chính xác là phương án ${q.answer}.`;
+                    expBox.classList.add('show');
                 } else {
-
-                    wrongQuestions.push(
-                        JSON.parse(JSON.stringify(item))
-                    );
-
+                    expBox.classList.remove('show');
                 }
-            });
 
-            document.getElementById('score-display').innerText =
-                `Kết quả: ${score} / ${currentList.length} câu đúng`;
-            if (wrongQuestions.length > 0) {
-
-                document.getElementById('retry-btn').style.display = 'inline-block';
-
-            } else {
-
-                document.getElementById('retry-btn').style.display = 'none';
-
+                // Disable/enable prev/next buttons
+                document.getElementById('prevBtn').disabled = (this.currentIndex === 0);
+                document.getElementById('nextBtn').disabled = (this.currentIndex === total - 1);
             }
 
-            window.scrollTo(0, document.body.scrollHeight);
-        }
-        function retryWrongQuestions() {
+            selectOption(optKey) {
+                const q = this.questions[this.currentIndex];
+                const prevAnswer = this.userAnswers[q.id];
+                const isExamMode = this.currentMode === 'exam' && !this.isExamSubmitted;
 
-            if (wrongQuestions.length === 0) {
-                alert("Không còn câu sai nào!");
-                return;
+                if (!isExamMode && prevAnswer) {
+                    return; // In practice mode, locked once answered
+                }
+
+                this.userAnswers[q.id] = optKey;
+
+                if (!isExamMode) {
+                    if (optKey === q.answer) {
+                        this.playFeedbackSound('correct');
+                    } else {
+                        this.playFeedbackSound('wrong');
+                    }
+                } else {
+                    this.playFeedbackSound('click');
+                }
+
+                this.render();
             }
 
-            currentList = JSON.parse(JSON.stringify(wrongQuestions));
+            nextQuestion() {
+                if (this.currentIndex < this.questions.length - 1) {
+                    this.currentIndex++;
+                    this.playFeedbackSound('click');
+                    this.render();
+                }
+            }
 
-            currentList.forEach(q => {
-                q.isWrong = false;
-            });
+            prevQuestion() {
+                if (this.currentIndex > 0) {
+                    this.currentIndex--;
+                    this.playFeedbackSound('click');
+                    this.render();
+                }
+            }
 
-            userAnswers = {};
-            wrongQuestions = [];
+            jumpToQuestion(index) {
+                this.currentIndex = index;
+                this.playFeedbackSound('click');
+                this.render();
+            }
 
-            document.getElementById('score-display').innerHTML =
-                `Đang làm lại ${currentList.length} câu sai`;
+            shuffleCurrentSubject() {
+                this.questions.sort(() => Math.random() - 0.5);
+                this.currentIndex = 0;
+                this.render();
+            }
 
-            document.getElementById('retry-btn').style.display = 'none';
+            toggleCurrentBookmark() {
+                if (this.questions.length === 0) return;
+                const q = this.questions[this.currentIndex];
+                if (this.starredQuestions.has(q.id)) {
+                    this.starredQuestions.delete(q.id);
+                } else {
+                    this.starredQuestions.add(q.id);
+                }
+                this.saveStorage();
+                this.render();
+            }
 
-            renderQuiz();
+            updateStats() {
+                let total = this.questions.length;
+                let completed = 0;
+                let correct = 0;
+                let wrong = 0;
 
-            window.scrollTo(0, 0);
-        }
-        function collectWrongInstantQuestions() {
+                this.questions.forEach(q => {
+                    const ans = this.userAnswers[q.id];
+                    if (ans) {
+                        completed++;
+                        if (ans === q.answer) correct++;
+                        else wrong++;
+                    }
+                });
 
-            wrongQuestions = currentList.filter(q => q.isWrong);
+                document.getElementById('statCompleted').innerText = `${completed} / ${total}`;
+                document.getElementById('statCorrect').innerText = correct;
+                document.getElementById('statWrong').innerText = wrong;
 
-            if (wrongQuestions.length > 0) {
+                const acc = completed > 0 ? Math.round((correct / completed) * 100) : 0;
+                document.getElementById('statAccuracy').innerText = `${acc}%`;
 
-                document.getElementById('retry-btn').style.display =
-                    'inline-block';
+                const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+                document.getElementById('progressPercentText').innerText = `${pct}%`;
 
-            } else {
+                const correctPct = total > 0 ? (correct / total) * 100 : 0;
+                const wrongPct = total > 0 ? (wrong / total) * 100 : 0;
+                document.getElementById('progressFillCorrect').style.width = `${correctPct}%`;
+                document.getElementById('progressFillWrong').style.width = `${wrongPct}%`;
 
-                document.getElementById('retry-btn').style.display =
-                    'none';
+                // Update mistake badge
+                const allQs = [
+                    ...this.data.subjects[0].questions,
+                    ...this.data.subjects[1].questions
+                ];
+                let mistakeCount = allQs.filter(q => this.userAnswers[q.id] && this.userAnswers[q.id] !== q.answer).length;
+                document.getElementById('mistakeCountBadge').innerText = mistakeCount;
+            }
+
+            renderSidebarGrid() {
+                const grid = document.getElementById('questionGrid');
+                grid.innerHTML = '';
+                document.getElementById('sidebarProgress').innerText = `${this.currentIndex + 1}/${this.questions.length}`;
+
+                const isExamMode = this.currentMode === 'exam' && !this.isExamSubmitted;
+
+                this.questions.forEach((q, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'grid-btn';
+                    btn.innerText = idx + 1;
+
+                    if (idx === this.currentIndex) btn.classList.add('current');
+
+                    const userAns = this.userAnswers[q.id];
+                    if (userAns) {
+                        if (isExamMode) {
+                            btn.style.background = 'rgba(99, 102, 241, 0.4)';
+                            btn.style.color = '#ffffff';
+                        } else {
+                            if (userAns === q.answer) btn.classList.add('correct');
+                            else btn.classList.add('wrong');
+                        }
+                    }
+
+                    btn.onclick = () => this.jumpToQuestion(idx);
+                    grid.appendChild(btn);
+                });
+            }
+
+            submitExam() {
+                clearInterval(this.examTimer);
+                document.getElementById('examTimer').classList.remove('active');
+                this.isExamSubmitted = true;
+
+                let correct = 0;
+                let wrong = 0;
+                this.questions.forEach(q => {
+                    const ans = this.userAnswers[q.id];
+                    if (ans === q.answer) correct++;
+                    else wrong++;
+                });
+
+                const total = this.questions.length;
+                const score = (correct / total) * 10;
+                const formattedScore = score.toFixed(1);
+
+                document.getElementById('modalScoreText').innerText = `${formattedScore} / 10`;
+                document.getElementById('modalCorrectCount').innerText = `${correct} / ${total}`;
+                document.getElementById('modalWrongCount').innerText = `${wrong} / ${total}`;
+
+                let emoji = '👏';
+                let title = 'Rất Tốt!';
+                if (score >= 9) { emoji = '🏆'; title = 'Xuất Sắc! Điểm Tuyệt Đối'; }
+                else if (score >= 7.5) { emoji = '🎉'; title = 'Rất Tốt! Bạn Đã Nắm Vững Kiến Thức'; }
+                else if (score >= 5) { emoji = '💪'; title = 'Khá Tốt! Hãy Tiếp Tục Cố Gắng Nhé'; }
+                else { emoji = '📚'; title = 'Cần Ôn Tập Thêm Nhiều Hơn Nhé!'; }
+
+                document.getElementById('modalEmoji').innerText = emoji;
+                document.getElementById('modalTitle').innerText = title;
+
+                document.getElementById('examResultModal').classList.add('open');
+                this.render();
+            }
+
+            closeModal() {
+                document.getElementById('examResultModal').classList.remove('open');
+            }
+
+            reviewExamMistakes() {
+                this.closeModal();
+                this.currentIndex = 0;
+                this.render();
+            }
+
+            handleSearch() {
+                const query = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+                const container = document.getElementById('searchResultsList');
+                container.innerHTML = '';
+
+                const allQs = [
+                    ...this.data.subjects[0].questions.map(q => ({ ...q, sub: 'Kinh Tế' })),
+                    ...this.data.subjects[1].questions.map(q => ({ ...q, sub: 'Môi Trường' }))
+                ];
+
+                const filtered = allQs.filter(q => {
+                    if (!query) return true;
+                    return q.question.toLowerCase().includes(query) ||
+                        Object.values(q.options).some(opt => opt.toLowerCase().includes(query)) ||
+                        (q.explanation && q.explanation.toLowerCase().includes(query));
+                });
+
+                if (filtered.length === 0) {
+                    container.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 40px;">Không tìm thấy câu hỏi nào phù hợp với từ khóa "${query}".</div>`;
+                    return;
+                }
+
+                filtered.forEach(q => {
+                    const card = document.createElement('div');
+                    card.className = 'result-card';
+                    card.innerHTML = `
+                        <div class="result-meta">
+                            <span class="q-badge"><i class="fa-solid fa-book"></i> ${q.sub}</span>
+                            <span style="font-size: 0.82rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">Câu ${q.num}</span>
+                        </div>
+                        <div class="result-q">${q.question}</div>
+                        <div class="result-ans">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span><strong>Đáp án ${q.answer}:</strong> ${q.options[q.answer]}</span>
+                        </div>
+                        ${q.explanation ? `<div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 10px; line-height: 1.5;"><i class="fa-regular fa-lightbulb" style="color: #fbbf24;"></i> ${q.explanation}</div>` : ''}
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            confirmReset() {
+                if (confirm('Bạn có chắc muốn đặt lại toàn bộ tiến độ làm bài không?')) {
+                    this.userAnswers = {};
+                    this.currentIndex = 0;
+                    this.render();
+                    alert('Đã đặt lại toàn bộ tiến độ làm bài.');
+                }
+            }
+
+            bindShortcuts() {
+                window.addEventListener('keydown', (e) => {
+                    // Ignore if typing in search input
+                    if (document.activeElement && document.activeElement.tagName === 'INPUT') return;
+
+                    const key = e.key.toUpperCase();
+                    if (['A', 'B', 'C', 'D'].includes(key)) {
+                        this.selectOption(key);
+                    } else if (e.key === 'ArrowRight' || e.key === 'Enter') {
+                        this.nextQuestion();
+                    } else if (e.key === 'ArrowLeft') {
+                        this.prevQuestion();
+                    } else if (key === 'S') {
+                        this.toggleCurrentBookmark();
+                    }
+                });
             }
         }
+
+        // Initialize application
+        let app;
+        window.addEventListener('DOMContentLoaded', () => {
+            app = new QuizApp();
+        });
     </script>
-
 </body>
-
 </html>

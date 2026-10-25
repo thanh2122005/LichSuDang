@@ -1,0 +1,1127 @@
+{
+  "subjects": [
+    {
+      "id": "kinh_te",
+      "name": "Đại Cương Về Kinh Tế",
+      "shortName": "Kinh Tế",
+      "icon": "trending-up",
+      "totalQuestions": 43,
+      "questions": [
+        {
+          "id": "kt_1",
+          "num": 1,
+          "question": "Câu nào sau đây thuộc về kinh tế vi mô:",
+          "options": {
+            "A": "Các hoạt động diễn ra trong toàn bộ nền kinh tế.",
+            "B": "Hành vi ứng xử của các tế bào kinh tế.",
+            "C": "Mức giá chung của các hàng hoá, dịch vụ.",
+            "D": "Tỷ lệ thất nghiệp."
+          },
+          "answer": "B",
+          "explanation": "Kinh tế vi mô nghiên cứu hành vi ứng xử và các quyết định của từng tế bào kinh tế (hộ gia đình, doanh nghiệp, người tiêu dùng)."
+        },
+        {
+          "id": "kt_2",
+          "num": 2,
+          "question": "Kinh tế học vi mô tiếp cận với những nghiên cứu kinh tế dưới góc độ:",
+          "options": {
+            "A": "Toàn bộ nền kinh tế",
+            "B": "Chính phủ",
+            "C": "Sự hoạt động của các thị trường riêng lẻ",
+            "D": "Hoạt động của hệ thống ngân hàng"
+          },
+          "answer": "C",
+          "explanation": "Kinh tế học vi mô tiếp cận các hoạt động kinh tế dưới góc độ hành vi của các chủ thể và thị trường riêng lẻ."
+        },
+        {
+          "id": "kt_3",
+          "num": 3,
+          "question": "Khan hiếm là vấn đề:",
+          "options": {
+            "A": "Hiệu quả sản xuất không còn nữa",
+            "B": "Không tồn tại trong các nền kinh tế giàu có",
+            "C": "Số lượng các nguồn lực xác định còn nhu cầu con người là vô hạn",
+            "D": "Nảy sinh khi năng suất tăng chậm lại"
+          },
+          "answer": "C",
+          "explanation": "Quy luật khan hiếm: Nguồn lực là hữu hạn (xác định) trong khi nhu cầu của con người là vô hạn."
+        },
+        {
+          "id": "kt_4",
+          "num": 4,
+          "question": "Các nguồn lực kinh tế là khan hiếm cho nên:",
+          "options": {
+            "A": "Phải lựa chọn mục tiêu khi sản xuất",
+            "B": "Chính phủ phải điều tiết nền kinh tế",
+            "C": "Phải mở cửa nền kinh tế",
+            "D": "Sự chênh lệch giàu – nghèo là không tránh khỏi"
+          },
+          "answer": "A",
+          "explanation": "Do nguồn lực khan hiếm, xã hội và các doanh nghiệp buộc phải đánh đổi và lựa chọn mục tiêu sản xuất tối ưu."
+        },
+        {
+          "id": "kt_5",
+          "num": 5,
+          "question": "Đường giới hạn khả năng sản xuất (PPF) mô tả:",
+          "options": {
+            "A": "Sự kết hợp hàng hóa, dịch vụ được sản xuất khi giá thay đổi",
+            "B": "Khối lượng tối đa của nguồn lực được sử dụng khi tiền lương thay đổi",
+            "C": "Sự kết hợp về hàng hóa và dịch vụ được cầu khi giá thay đổi",
+            "D": "Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật cho trước."
+          },
+          "answer": "D",
+          "explanation": "Đường giới hạn khả năng sản xuất thể hiện sản lượng tối đa các kết hợp hàng hóa/dịch vụ có thể sản xuất với nguồn lực và công nghệ nhất định."
+        },
+        {
+          "id": "kt_6",
+          "num": 6,
+          "question": "Vấn đề nào dưới đây không thuộc vấn đề của kinh tế vĩ mô:",
+          "options": {
+            "A": "Các nguyên nhân làm giá cam tăng",
+            "B": "Các chính sách hạn chế thất nghiệp",
+            "C": "Mối quan hệ giữa lạm phát và thất nghiệp",
+            "D": "Các nguyên nhân làm suy thoái kinh tế"
+          },
+          "answer": "A",
+          "explanation": "Giá cam trên một thị trường cụ thể là vấn đề thuộc kinh tế vi mô, không phải kinh tế vĩ mô."
+        },
+        {
+          "id": "kt_7",
+          "num": 7,
+          "question": "Nhân tố nào dưới đây làm dịch chuyển đường cung hàng hóa X sang trái?",
+          "options": {
+            "A": "Giá hàng hóa X giảm",
+            "B": "Giá máy móc sản xuất ra hàng hóa X tăng",
+            "C": "Thu nhập của người tiêu dùng giảm",
+            "D": "Số lượng người sản xuất hàng hóa X tăng lên"
+          },
+          "answer": "B",
+          "explanation": "Giá máy móc (chi phí yếu tố đầu vào) tăng làm chi phí sản xuất tăng, dẫn đến cung hàng hóa X giảm (đường cung dịch sang trái)."
+        },
+        {
+          "id": "kt_8",
+          "num": 8,
+          "question": "Lượng cầu tăng có nghĩa là:",
+          "options": {
+            "A": "Đường cầu dịch chuyển sang phải",
+            "B": "Dịch chuyển đường cầu sang trái",
+            "C": "Sự dịch chuyển dọc theo đường cầu xuống dưới",
+            "D": "Sự dịch chuyển dọc theo đường cầu lên trên"
+          },
+          "answer": "C",
+          "explanation": "Lượng cầu (quantity demanded) tăng do giá giảm ứng với sự vận động/di chuyển dọc theo đường cầu xuống dưới (xuống phía mức giá thấp hơn, lượng nhiều hơn). Trong tài liệu đề đánh dấu C."
+        },
+        {
+          "id": "kt_9",
+          "num": 9,
+          "question": "Có thể hạn chế dư thừa hàng hóa trên thị trường thông qua:",
+          "options": {
+            "A": "Tăng cung",
+            "B": "Chính phủ tăng giá",
+            "C": "Giảm lượng cầu",
+            "D": "Giảm giá"
+          },
+          "answer": "D",
+          "explanation": "Khi dư thừa hàng hóa (cung > cầu), việc giảm giá sẽ làm tăng lượng cầu và giảm lượng cung, đưa thị trường về điểm cân bằng."
+        },
+        {
+          "id": "kt_10",
+          "num": 10,
+          "question": "Cho đồ thị cân bằng thị trường lương thực: điểm E là điểm cân bằng ban đầu (giao của S và D), điểm E’ là điểm cân bằng mới do đường cầu dịch chuyển sang phải từ D sang D' (giá P tăng, lượng Q tăng). Yếu tố nào sau đây có thể gây ra sự thay đổi này?",
+          "options": {
+            "A": "Giá cả các yếu tố đầu vào tăng",
+            "B": "Thời tiết xấu làm cho đường cung dịch chuyển",
+            "C": "Thu nhập của người tiêu dùng tăng làm cho đường cầu dịch chuyển",
+            "D": "Cả cung và cầu đều dịch chuyển"
+          },
+          "answer": "C",
+          "explanation": "Trên đồ thị, đường cầu dịch sang phải (D -> D') khiến điểm cân bằng dịch từ E sang E'. Đối với hàng hóa thông thường, thu nhập người tiêu dùng tăng sẽ làm đường cầu dịch sang phải."
+        },
+        {
+          "id": "kt_11",
+          "num": 11,
+          "question": "Hiện tượng thiếu hụt hàng hóa trên thị trường có nghĩa là:",
+          "options": {
+            "A": "Cầu tăng khi giá tăng",
+            "B": "Lượng cầu lớn hơn lượng cung",
+            "C": "Lượng cung lớn hơn lượng cầu",
+            "D": "Giá thực tế cao hơn giá cân bằng"
+          },
+          "answer": "B",
+          "explanation": "Thiếu hụt hàng hóa (shortage) xảy ra khi tại mức giá hiện tại, lượng cầu lớn hơn lượng cung (Qd > Qs)."
+        },
+        {
+          "id": "kt_12",
+          "num": 12,
+          "question": "Hiện tượng dư thừa hàng hóa trên thị trường có nghĩa là:",
+          "options": {
+            "A": "Tồn tại nếu giá cao hơn giá cân bằng",
+            "B": "Lượng cầu lớn hơn lượng cung",
+            "C": "Tồn tại nếu giá thấp hơn giá cân bằng",
+            "D": "Cung tăng khi giá giảm"
+          },
+          "answer": "A",
+          "explanation": "Dư thừa hàng hóa (surplus) xảy ra khi giá thị trường cao hơn giá cân bằng, khiến lượng cung vượt quá lượng cầu (Qs > Qd)."
+        },
+        {
+          "id": "kt_13",
+          "num": 13,
+          "question": "Công nghệ sản xuất điện thoại di động tiên tiến hơn sẽ làm cho:",
+          "options": {
+            "A": "Đường cầu dịch chuyển sang phải",
+            "B": "Đường cầu dịch chuyển sang trái",
+            "C": "Đường cung dịch chuyển sang trái",
+            "D": "Đường cung dịch chuyển sang phải."
+          },
+          "answer": "D",
+          "explanation": "Cải tiến công nghệ làm tăng năng suất, giảm chi phí sản xuất, dẫn đến cung tăng (đường cung dịch chuyển sang phải)."
+        },
+        {
+          "id": "kt_14",
+          "num": 14,
+          "question": "Chi phí đầu vào để sản xuất ra bánh của công ty A giảm xuống sẽ làm cho:",
+          "options": {
+            "A": "Đường cầu dịch chuyển lên trên",
+            "B": "Đường cung dịch chuyển lên trên",
+            "C": "Cả đường cung và cầu đều dịch chuyển lên trên",
+            "D": "Đường cung dịch chuyển xuống dưới (bên phải)"
+          },
+          "answer": "D",
+          "explanation": "Chi phí đầu vào giảm làm tăng cung, đường cung dịch sang phải (xuống dưới theo trục tung)."
+        },
+        {
+          "id": "kt_15",
+          "num": 15,
+          "question": "Khi cung hàng hóa trên thị trường tăng và cầu hàng hóa trên thị trường giảm thì:",
+          "options": {
+            "A": "Giá cân bằng chắc chắn giảm",
+            "B": "Giá cân bằng chắc chắn tăng",
+            "C": "Giá cân bằng không thay đổi",
+            "D": "Sản lượng cân bằng chắc chắn tăng"
+          },
+          "answer": "A",
+          "explanation": "Cung tăng tạo áp lực giảm giá, cầu giảm cũng tạo áp lực giảm giá. Do đó giá cân bằng chắc chắn giảm."
+        },
+        {
+          "id": "kt_16",
+          "num": 16,
+          "question": "Khi thu nhập của người tiêu dùng tăng mạnh thì:",
+          "options": {
+            "A": "Cầu về hàng hóa cao cấp tăng",
+            "B": "Cầu về hàng hóa cao cấp giảm",
+            "C": "Cầu về mọi hàng hóa đều tăng",
+            "D": "Cầu về mọi hàng hóa đều giảm"
+          },
+          "answer": "A",
+          "explanation": "Khi thu nhập tăng mạnh, người tiêu dùng có xu hướng gia tăng tiêu dùng các mặt hàng cao cấp, xa xỉ."
+        },
+        {
+          "id": "kt_17",
+          "num": 17,
+          "question": "Cơn bão số 3 năm 2024 tại Việt Nam làm mất rất nhiều diện tích nuôi trồng thủy sản. Hiện tượng này:",
+          "options": {
+            "A": "Làm cho đường cung thủy sản Việt Nam dịch chuyển xuống dưới",
+            "B": "Làm cho đường cung thủy sản Việt Nam dịch chuyển sang phải",
+            "C": "Làm cho đường cầu thủy sản Việt Nam dịch chuyển lên trên",
+            "D": "Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên (sang trái)"
+          },
+          "answer": "D",
+          "explanation": "Thiên tai làm tổn thất sản lượng nuôi trồng, khiến cung giảm, đường cung dịch chuyển sang trái (lên trên)."
+        },
+        {
+          "id": "kt_18",
+          "num": 18,
+          "question": "Khi giá hàng hoá Y là PY = 2 thì lượng cầu hàng hoá X là QX = 15; khi PY = 4 thì QX = 20. Ta kết luận hai hàng hoá X và Y là:",
+          "options": {
+            "A": "Thay thế cho nhau.",
+            "B": "Độc lập với nhau.",
+            "C": "Bổ sung cho nhau.",
+            "D": "Thứ cấp."
+          },
+          "answer": "A",
+          "explanation": "Độ co giãn chéo: Giá Y tăng làm lượng cầu X tăng (cùng chiều), nghĩa là người tiêu dùng chuyển sang dùng X thay thế Y. X và Y là hàng hóa thay thế."
+        },
+        {
+          "id": "kt_19",
+          "num": 19,
+          "question": "Cầu hàng hoá X (X là hàng hoá thông thường) tăng khi:",
+          "options": {
+            "A": "Giá hàng hoá thay thế cho hàng hoá X giảm.",
+            "B": "Giá hàng hoá X giảm.",
+            "C": "Thu nhập người tiêu dùng tăng.",
+            "D": "Giá hàng hoá bổ sung cho hàng hoá X tăng."
+          },
+          "answer": "C",
+          "explanation": "Đối với hàng hóa thông thường (normal goods), thu nhập người tiêu dùng tăng sẽ làm cầu tăng (đường cầu dịch sang phải)."
+        },
+        {
+          "id": "kt_20",
+          "num": 20,
+          "question": "Hạn hán sẽ:",
+          "options": {
+            "A": "Làm cho đường cầu lúa gạo dịch chuyển sang phải.",
+            "B": "Làm cho đường cầu lúa gạo dịch chuyển sang trái.",
+            "C": "Làm cho đường cung lúa gạo dịch chuyển xuống dưới, sang phải.",
+            "D": "Làm cho đường cung lúa gạo dịch chuyển lên trên, sang trái."
+          },
+          "answer": "D",
+          "explanation": "Hạn hán làm giảm sản lượng thu hoạch, giảm cung lúa gạo -> đường cung dịch chuyển sang trái (lên trên)."
+        },
+        {
+          "id": "kt_21",
+          "num": 21,
+          "question": "Một hãng không thể ảnh hưởng đến giá sản phẩm mà mình bán ra gọi là:",
+          "options": {
+            "A": "Người định giá.",
+            "B": "Người chấp nhận giá.",
+            "C": "Người độc quyền.",
+            "D": "Người độc quyền nhóm."
+          },
+          "answer": "B",
+          "explanation": "Trong thị trường cạnh tranh hoàn hảo, từng doanh nghiệp có quy mô rất nhỏ nên là người chấp nhận giá (price taker)."
+        },
+        {
+          "id": "kt_22",
+          "num": 22,
+          "question": "Cung về máy fax phụ thuộc vào nhiều yếu tố, nhân tố nào sau đây không làm dịch chuyển đường cung máy fax?",
+          "options": {
+            "A": "Thuế đánh vào các công ty sản xuất máy fax tăng.",
+            "B": "Giá máy fax tăng.",
+            "C": "Kỹ thuật sản xuất máy fax tiến bộ hơn.",
+            "D": "Tiền lương của công nhân sản xuất máy fax tăng."
+          },
+          "answer": "B",
+          "explanation": "Giá của chính bản thân hàng hóa thay đổi chỉ gây ra sự di chuyển dọc (movement along) trên đường cung, chứ không làm dịch chuyển (shift) đường cung."
+        },
+        {
+          "id": "kt_23",
+          "num": 23,
+          "question": "Yếu tố nào sau đây không phải là yếu tố ảnh hưởng đến cầu hàng hoá dịch vụ?",
+          "options": {
+            "A": "Số lượng người tiêu dùng",
+            "B": "Các yếu tố đầu vào sản xuất",
+            "C": "Thu nhập của người tiêu dùng",
+            "D": "Giá của hàng hoá liên quan"
+          },
+          "answer": "B",
+          "explanation": "Chi phí các yếu tố đầu vào sản xuất là yếu tố ảnh hưởng đến CUNG, không phải cầu."
+        },
+        {
+          "id": "kt_24",
+          "num": 24,
+          "question": "Khoản mục nào sau đây không được tính một cách trực tiếp trong GDP của nước ta theo cách tiếp cận chi tiêu?",
+          "options": {
+            "A": "Dịch vụ cắt tóc gội đầu.",
+            "B": "Mua máy móc thiết bị mới của một doanh nghiệp.",
+            "C": "Sợi bông mà công ty dệt 8-3 mua và dệt thành vải để bán.",
+            "D": "Dịch vụ khám chữa bệnh tại các bệnh viện tư nhân."
+          },
+          "answer": "C",
+          "explanation": "Sợi bông là hàng hóa trung gian được dùng để dệt thành vải. GDP chỉ tính giá trị hàng hóa và dịch vụ cuối cùng để tránh tính trùng lặp."
+        },
+        {
+          "id": "kt_25",
+          "num": 25,
+          "question": "Khoản mục nào sau đây được tính một cách trực tiếp trong GDP theo cách tiếp cận chi tiêu?",
+          "options": {
+            "A": "Bột mì mà nhà máy Kinh Đô mua để sản xuất bánh quy.",
+            "B": "Dịch vụ của người giúp việc trong gia đình.",
+            "C": "Gỗ mà xưởng mộc mua để đóng bàn ghế bán.",
+            "D": "Dịch vụ tư vấn pháp lý cho doanh nghiệp."
+          },
+          "answer": "D",
+          "explanation": "Dịch vụ tư vấn pháp lý được mua trực tiếp tính vào chi tiêu dịch vụ cuối cùng của nền kinh tế."
+        },
+        {
+          "id": "kt_26",
+          "num": 26,
+          "question": "Những khoản mục nào sau đây sẽ được tính vào GDP của năm nay?",
+          "options": {
+            "A": "Một chiếc ô tô cũ được bán lại trong năm nay.",
+            "B": "Máy tính mới sản xuất ra trong năm nay được một trường học mua.",
+            "C": "Cổ phiếu Vinamilk được mua bán trên thị trường chứng khoán năm nay.",
+            "D": "Tiền trợ cấp xã hội của chính phủ dành cho người già."
+          },
+          "answer": "B",
+          "explanation": "Máy tính mới sản xuất trong năm nay được trường học mua tính vào chi tiêu đầu tư/tiêu dùng công năm nay. Ô tô cũ, cổ phiếu và trợ cấp không tính vào GDP."
+        },
+        {
+          "id": "kt_27",
+          "num": 27,
+          "question": "Câu bình luận về GDP nào sau đây là sai?",
+          "options": {
+            "A": "GDP có thể được tính bằng cách sử dụng giá cả hiện hành hoặc giá cả của năm gốc.",
+            "B": "GDP thực tế phản ánh sự thay đổi của sản lượng không bao gồm ảnh hưởng của sự thay đổi giá cả.",
+            "C": "GDP danh nghĩa phản ánh sự thay đổi của cả sản lượng và giá cả.",
+            "D": "GDP là thước đo hoàn hảo về phúc lợi kinh tế của một quốc gia."
+          },
+          "answer": "D",
+          "explanation": "GDP không phải là thước đo hoàn hảo vì không đo lường ô nhiễm môi trường, sự công bằng phân phối thu nhập, hoạt động phi chính thức, hay thời gian nhàn rỗi. Trong tài liệu đáp án là D (tài liệu gạch chân câu đúng/sai, ở đây phát biểu sai là D)."
+        },
+        {
+          "id": "kt_28",
+          "num": 28,
+          "question": "Câu nào dưới đây phản ánh sự khác nhau giữa GDP danh nghĩa và GDP thực tế?",
+          "options": {
+            "A": "GDP danh nghĩa được tính theo giá cố định của năm gốc, còn GDP thực tế tính theo giá hiện hành.",
+            "B": "GDP thực tế được tính theo giá cố định của năm gốc, còn GDP danh nghĩa tính theo giá hiện hành.",
+            "C": "GDP thực tế luôn lớn hơn GDP danh nghĩa.",
+            "D": "GDP danh nghĩa đã được điều chỉnh theo lạm phát, còn GDP thực tế thì chưa."
+          },
+          "answer": "B",
+          "explanation": "GDP thực tế tính theo giá năm gốc (đã loại bỏ lạm phát), còn GDP danh nghĩa tính theo giá thị trường hiện hành."
+        },
+        {
+          "id": "kt_29",
+          "num": 29,
+          "question": "Nếu tốc độ tăng trưởng của cung tiền cao hơn tốc độ tăng trưởng của sản lượng thực tế thì:",
+          "options": {
+            "A": "Lạm phát có xu hướng tăng.",
+            "B": "Lạm phát có xu hướng giảm.",
+            "C": "Tỷ lệ thất nghiệp chắc chắn tăng.",
+            "D": "Nền kinh tế rơi vào giảm phát."
+          },
+          "answer": "A",
+          "explanation": "Theo phương trình số lượng tiền tệ (MV = PY), khi cung tiền tăng nhanh hơn sản lượng thực tế thì mức giá chung sẽ tăng (lạm phát tăng)."
+        },
+        {
+          "id": "kt_30",
+          "num": 30,
+          "question": "Nếu lạm phát cao hơn kỳ vọng, nhóm nào dưới đây có khả năng được lợi nhất?",
+          "options": {
+            "A": "Người cho vay tiền với lãi suất cố định.",
+            "B": "Người vay tiền dài hạn với lãi suất cố định.",
+            "C": "Người có thu nhập cố định.",
+            "D": "Người giữ nhiều tiền mặt."
+          },
+          "answer": "B",
+          "explanation": "Người đi vay với lãi suất cố định được lợi vì họ trả nợ bằng đồng tiền có giá trị thực tế thấp hơn so với khi vay."
+        },
+        {
+          "id": "kt_31",
+          "num": 31,
+          "question": "Điều nào sau đây không phải là nguyên nhân gây ra lạm phát chi phí đẩy?",
+          "options": {
+            "A": "Giá dầu mỏ trên thị trường thế giới tăng mạnh.",
+            "B": "Tiền lương danh nghĩa của người lao động tăng nhanh hơn năng suất.",
+            "C": "Thuế đánh vào các yếu tố đầu vào nhập khẩu tăng.",
+            "D": "Tổng cầu tăng mạnh."
+          },
+          "answer": "D",
+          "explanation": "Tổng cầu tăng mạnh là nguyên nhân gây ra 'lạm phát cầu kéo' (demand-pull), không phải lạm phát chi phí đẩy (cost-push)."
+        },
+        {
+          "id": "kt_32",
+          "num": 32,
+          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm?",
+          "options": {
+            "A": "Tỷ lệ thất nghiệp tăng.",
+            "B": "Lực lượng lao động tăng.",
+            "C": "Tỷ lệ thất nghiệp giảm.",
+            "D": "Tỷ lệ tham gia lực lượng lao động tăng."
+          },
+          "answer": "C",
+          "explanation": "Khi ngừng tìm kiếm việc làm, họ không còn được tính vào lực lượng lao động (lao động chán nản), khiến số người thất nghiệp giảm và tỷ lệ thất nghiệp tính toán giảm."
+        },
+        {
+          "id": "kt_33",
+          "num": 33,
+          "question": "Một sinh viên mới tốt nghiệp đang tích cực tìm việc nhưng chưa có việc làm thuộc loại thất nghiệp nào?",
+          "options": {
+            "A": "Thất nghiệp cơ cấu (structural).",
+            "B": "Thất nghiệp tạm thời (frictional).",
+            "C": "Thất nghiệp chu kỳ (cyclical).",
+            "D": "Thất nghiệp tự nhiên."
+          },
+          "answer": "B",
+          "explanation": "Thất nghiệp tạm thời (cọ xát) phát sinh trong quá trình người lao động di chuyển giữa các công việc hoặc người mới gia nhập thị trường lao động đang tìm việc phù hợp."
+        },
+        {
+          "id": "kt_34",
+          "num": 34,
+          "question": "Xuất khẩu ròng (NX) âm khi nào?",
+          "options": {
+            "A": "Xuất khẩu lớn hơn nhập khẩu.",
+            "B": "Xuất khẩu bằng nhập khẩu.",
+            "C": "Xuất khẩu nhỏ hơn so với nhập khẩu.",
+            "D": "Tổng thu nhập quốc gia lớn hơn tổng chi tiêu."
+          },
+          "answer": "C",
+          "explanation": "NX = X (Xuất khẩu) - IM (Nhập khẩu). NX < 0 khi xuất khẩu nhỏ hơn nhập khẩu (thâm hụt cán cân thương mại)."
+        },
+        {
+          "id": "kt_35",
+          "num": 35,
+          "question": "Những khoản mục nào sau đây sẽ được tính vào GDP năm nay?",
+          "options": {
+            "A": "Máy tính mới sản xuất ra trong năm nay được một trường học mua.",
+            "B": "Một ngôi nhà cũ được bán lại thông qua môi giới bất động sản.",
+            "C": "Tiền học bổng của chính phủ cấp cho sinh viên đại học.",
+            "D": "Vải được nhà máy may mua để may quần áo xuất khẩu."
+          },
+          "answer": "A",
+          "explanation": "Máy tính mới sản xuất trong năm nay được trường học mua là hàng hóa cuối cùng được tính vào GDP."
+        },
+        {
+          "id": "kt_36",
+          "num": 36,
+          "question": "GDP thực khác với GDP danh nghĩa ở điểm nào?",
+          "options": {
+            "A": "GDP thực tính theo giá hiện hành.",
+            "B": "GDP thực đã điều chỉnh theo lạm phát.",
+            "C": "GDP thực bao gồm các khoản trợ cấp chính phủ.",
+            "D": "GDP thực không tính giá trị hàng hóa nhập khẩu."
+          },
+          "answer": "B",
+          "explanation": "GDP thực tế được tính theo giá cố định (năm gốc) nên đã loại bỏ yếu tố biến động giá cả (lạm phát)."
+        },
+        {
+          "id": "kt_37",
+          "num": 37,
+          "question": "Khoản mục nào sau đây được tính một cách trực tiếp trong GDP theo cách tiếp cận chi tiêu?",
+          "options": {
+            "A": "Thép cuộn mà công ty Hòa Phát bán cho công ty đóng tàu.",
+            "B": "Gạo mà nhà máy chế biến mua để làm bánh tráng xuất khẩu.",
+            "C": "Xi măng mà nhà máy sản xuất bán cho đại lý phân phối.",
+            "D": "Dịch vụ tư vấn tài chính cho một cá nhân."
+          },
+          "answer": "D",
+          "explanation": "Dịch vụ tư vấn tài chính cho cá nhân là dịch vụ tiêu dùng cuối cùng (C), được tính trực tiếp vào GDP."
+        },
+        {
+          "id": "kt_38",
+          "num": 38,
+          "question": "Nguyên nhân nào sau đây không phải là nguyên nhân trực tiếp gây ra thất nghiệp?",
+          "options": {
+            "A": "Sự thay đổi về cơ cấu ngành kinh tế.",
+            "B": "Khủng hoảng kinh tế.",
+            "C": "Thiếu hụt nguồn lao động.",
+            "D": "Tiền lương thực tế cao hơn mức lương cân bằng thị trường."
+          },
+          "answer": "C",
+          "explanation": "Thiếu hụt nguồn lao động gây ra tình trạng khan hiếm lao động/thừa việc làm, không phải nguyên nhân gây thất nghiệp."
+        },
+        {
+          "id": "kt_39",
+          "num": 39,
+          "question": "Khi nền kinh tế lâm vào tình trạng suy thoái, dạng thất nghiệp phổ biến nhất là:",
+          "options": {
+            "A": "Thất nghiệp tạm thời.",
+            "B": "Thất nghiệp cơ cấu.",
+            "C": "Thất nghiệp chu kỳ.",
+            "D": "Thất nghiệp mùa vụ."
+          },
+          "answer": "C",
+          "explanation": "Thất nghiệp chu kỳ (cyclical unemployment) là loại thất nghiệp gắn liền với các giai đoạn suy thoái của chu kỳ kinh doanh do tổng cầu giảm."
+        },
+        {
+          "id": "kt_40",
+          "num": 40,
+          "question": "Thất nghiệp ảnh hưởng tiêu cực đến xã hội như thế nào?",
+          "options": {
+            "A": "Làm tăng thu nhập bình quân đầu người.",
+            "B": "Giúp người lao động nâng cao trình độ tay nghề.",
+            "C": "Gây bất ổn xã hội và giảm mức sống.",
+            "D": "Tăng nguồn thu ngân sách từ thuế thu nhập cá nhân."
+          },
+          "answer": "C",
+          "explanation": "Thất nghiệp kéo theo mất thu nhập, giảm mức sống, gia tăng nghèo đói và các tệ nạn, gây bất ổn xã hội."
+        },
+        {
+          "id": "kt_41",
+          "num": 41,
+          "question": "Nguyên nhân chủ yếu gây ra lạm phát tiền tệ là:",
+          "options": {
+            "A": "Giá xăng dầu thế giới tăng đột biến.",
+            "B": "Năng suất lao động tăng cao.",
+            "C": "Tăng cung tiền quá mức.",
+            "D": "Tăng nhập khẩu nhiên liệu."
+          },
+          "answer": "C",
+          "explanation": "Theo lý thuyết tiền tệ của Milton Friedman, lạm phát ở đâu và lúc nào cũng là một hiện tượng tiền tệ, do ngân hàng trung ương bơm/tăng cung tiền quá mức."
+        },
+        {
+          "id": "kt_42",
+          "num": 42,
+          "question": "Lạm phát chi phí đẩy xảy ra khi:",
+          "options": {
+            "A": "Cầu hàng hoá tăng nhanh hơn cung.",
+            "B": "Ngân hàng Trung ương bơm tiền vào nền kinh tế.",
+            "C": "Chi phí sản xuất tăng làm cho giá thành sản xuất tăng.",
+            "D": "Đồng tiền mất giá do chính sách tỷ giá."
+          },
+          "answer": "C",
+          "explanation": "Lạm phát chi phí đẩy phát sinh do chi phí các yếu tố sản xuất đầu vào (tiền lương, giá nguyên nhiên vật liệu) tăng vọt đẩy giá bán tăng lên."
+        },
+        {
+          "id": "kt_43",
+          "num": 43,
+          "question": "GDP đo lường:",
+          "options": {
+            "A": "Tổng giá trị hàng hóa xuất khẩu của một quốc gia trong một năm.",
+            "B": "Tổng giá trị tài sản cố định của một quốc gia.",
+            "C": "Tổng giá trị hàng hóa và dịch vụ cuối cùng được sản xuất trong lãnh thổ một quốc gia trong một thời kỳ nhất định.",
+            "D": "Tổng thu nhập của người dân trong một quốc gia."
+          },
+          "answer": "C",
+          "explanation": "Định nghĩa GDP: Tổng sản phẩm quốc nội là toàn bộ giá trị thị trường của tất cả hàng hóa và dịch vụ cuối cùng được sản xuất ra trong phạm vi lãnh thổ quốc gia trong một thời kỳ nhất định (thường là một năm)."
+        }
+      ]
+    },
+    {
+      "id": "moi_truong",
+      "name": "Đại Cương Về Môi Trường",
+      "shortName": "Môi Trường",
+      "icon": "leaf",
+      "totalQuestions": 42,
+      "questions": [
+        {
+          "id": "mt_1",
+          "num": 1,
+          "question": "Biến đổi khí hậu có thể làm:",
+          "options": {
+            "A": "Giảm nhiệt độ trung bình toàn cầu",
+            "B": "Dâng mực nước biển",
+            "C": "Tăng độ ẩm không khí",
+            "D": "Giảm phát thải khí nhà kính"
+          },
+          "answer": "B",
+          "explanation": "Nhiệt độ toàn cầu tăng làm tan băng ở hai cực và các sông băng, dẫn đến hiện tượng dâng mực nước biển."
+        },
+        {
+          "id": "mt_2",
+          "num": 2,
+          "question": "Biến đổi khí hậu dẫn đến sự thay đổi nào của hệ sinh thái trên trái đất:",
+          "options": {
+            "A": "Làm gia tăng sinh khối của hệ sinh thái rừng",
+            "B": "Ổn định khí hậu tại 2 cực của trái đất",
+            "C": "Dịch chuyển các đới khí hậu trên trái đất",
+            "D": "Phân phối tài nguyên"
+          },
+          "answer": "C",
+          "explanation": "Biến đổi khí hậu làm thay đổi quy luật hoàn lưu khí quyển, làm dịch chuyển các đới khí hậu về phía các cực hoặc vùng núi cao."
+        },
+        {
+          "id": "mt_3",
+          "num": 3,
+          "question": "Cơ quan quốc tế quản lý môi trường của Liên Hợp Quốc là:",
+          "options": {
+            "A": "WHO",
+            "B": "FAO",
+            "C": "UNEP",
+            "D": "ILO"
+          },
+          "answer": "C",
+          "explanation": "UNEP (United Nations Environment Programme) là Chương trình Môi trường Liên Hợp Quốc."
+        },
+        {
+          "id": "mt_4",
+          "num": 4,
+          "question": "Tác hại của rác thải nhựa đến sinh vật biển:",
+          "options": {
+            "A": "Làm tăng số lượng",
+            "B": "Tạo môi trường sống",
+            "C": "Gây chết do mắc nghẹn hoặc ngộ độc",
+            "D": "Không ảnh hưởng"
+          },
+          "answer": "C",
+          "explanation": "Sinh vật biển thường nhầm lẫn rác thải nhựa là thức ăn, dẫn đến mắc nghẹn, tắc nghẽn đường tiêu hóa và ngộ độc hóa chất."
+        },
+        {
+          "id": "mt_5",
+          "num": 5,
+          "question": "Sinh quyển KHÔNG bao gồm:",
+          "options": {
+            "A": "Động vật",
+            "B": "Hệ sinh thái",
+            "C": "Nhà máy nhiệt điện",
+            "D": "Vi khuẩn"
+          },
+          "answer": "C",
+          "explanation": "Sinh quyển là quyển của sự sống trên Trái Đất gồm sinh vật sống và môi trường sinh sống tự nhiên. Nhà máy nhiệt điện là công trình nhân tạo (trí quyển / kỹ quyển)."
+        },
+        {
+          "id": "mt_6",
+          "num": 6,
+          "question": "Tác động từ hoạt động sản xuất kinh tế:",
+          "options": {
+            "A": "Tăng đa dạng sinh học",
+            "B": "Phát thải chất thải vào môi trường",
+            "C": "Tăng băng tuyết",
+            "D": "Giảm dân số"
+          },
+          "answer": "B",
+          "explanation": "Mọi quá trình sản xuất kinh tế đều tiêu thụ tài nguyên thiên nhiên và xả thải các loại chất thải rắn, lỏng, khí vào môi trường."
+        },
+        {
+          "id": "mt_7",
+          "num": 7,
+          "question": "Nguồn nước ngọt bị khủng hoảng do:",
+          "options": {
+            "A": "Tăng mưa",
+            "B": "Tăng băng tuyết",
+            "C": "Sử dụng quá mức và ô nhiễm",
+            "D": "Trồng nhiều cây xanh"
+          },
+          "answer": "C",
+          "explanation": "Khai thác quá mức cho nông nghiệp, công nghiệp, sinh hoạt cùng với việc xả thải gây ô nhiễm là nguyên nhân chính gây khủng hoảng nước ngọt."
+        },
+        {
+          "id": "mt_8",
+          "num": 8,
+          "question": "Giai đoạn tuyệt chủng sinh học đang diễn ra nhanh hơn do:",
+          "options": {
+            "A": "Sự thích nghi của các loài sinh vật",
+            "B": "Chu kỳ tự nhiên của vỏ trái đất",
+            "C": "Khai thác và phát triển của con người",
+            "D": "Gia tăng diện tích các khu bảo tồn thiên nhiên"
+          },
+          "answer": "C",
+          "explanation": "Các hoạt động tàn phá sinh cảnh, săn bắn và ô nhiễm do con người đẩy tốc độ tuyệt chủng nhanh gấp hàng trăm lần tốc độ tự nhiên."
+        },
+        {
+          "id": "mt_9",
+          "num": 9,
+          "question": "Chất ô nhiễm nào thường xuất hiện từ rác thải điện tử?",
+          "options": {
+            "A": "O3",
+            "B": "Kim loại nặng",
+            "C": "Nước muối",
+            "D": "O2"
+          },
+          "answer": "B",
+          "explanation": "Rác thải điện tử (e-waste) chứa nhiều kim loại nặng độc hại như chì, thủy ngân, cadmium, asen trong vi mạch và linh kiện."
+        },
+        {
+          "id": "mt_10",
+          "num": 10,
+          "question": "Tài nguyên thủy sản toàn cầu hiện nay:",
+          "options": {
+            "A": "Ổn định",
+            "B": "Gia tăng",
+            "C": "Suy giảm mạnh",
+            "D": "Không thay đổi"
+          },
+          "answer": "C",
+          "explanation": "Đánh bắt tận diệt và quá mức cùng biến đổi khí hậu đã làm trữ lượng thủy sản toàn cầu suy giảm nghiêm trọng."
+        },
+        {
+          "id": "mt_11",
+          "num": 11,
+          "question": "Diện tích rừng thế giới mất đi chủ yếu do:",
+          "options": {
+            "A": "Tăng độ ẩm",
+            "B": "Khai thác củi và làm nông nghiệp",
+            "C": "Phun thuốc trừ sâu",
+            "D": "Gió mạnh"
+          },
+          "answer": "B",
+          "explanation": "Phá rừng lấy đất canh tác nông nghiệp, chăn nuôi và khai thác gỗ củi là nguyên nhân hàng đầu làm suy thoái diện tích rừng."
+        },
+        {
+          "id": "mt_12",
+          "num": 12,
+          "question": "Tầng ozon bị đe dọa chủ yếu do:",
+          "options": {
+            "A": "CO2",
+            "B": "CFC",
+            "C": "O2",
+            "D": "Nước"
+          },
+          "answer": "B",
+          "explanation": "Các chất Chlorofluorocarbons (CFCs) được sử dụng trong môi chất làm lạnh khi bay lên tầng bình lưu sẽ phá hủy các phân tử ozon (O3)."
+        },
+        {
+          "id": "mt_13",
+          "num": 13,
+          "question": "Vai trò của khí quyển trong bảo vệ sự sống là:",
+          "options": {
+            "A": "Tạo ánh sáng",
+            "B": "Cản tia tử ngoại và điều hòa nhiệt độ",
+            "C": "Phát ra CO2",
+            "D": "Hấp thụ bụi"
+          },
+          "answer": "B",
+          "explanation": "Khí quyển (đặc biệt tầng ozon) ngăn chặn bức xạ tử ngoại (UV) có hại và tạo hiệu ứng nhà kính tự nhiên giúp duy trì nhiệt độ thích hợp cho sự sống."
+        },
+        {
+          "id": "mt_14",
+          "num": 14,
+          "question": "Hít phải khí SO2 với nồng độ cao có thể gây ra hiện tượng gì?",
+          "options": {
+            "A": "Suy tim",
+            "B": "Tổn thương gan",
+            "C": "Co thắt phế quản",
+            "D": "Tổn thương thận"
+          },
+          "answer": "C",
+          "explanation": "SO2 là chất khí kích ứng mạnh đường hô hấp, gây bỏng niêm mạc, co thắt cơ trơn phế quản và khó thở cấp tính."
+        },
+        {
+          "id": "mt_15",
+          "num": 15,
+          "question": "Các chất gây ô nhiễm trong luyện kim bao gồm:",
+          "options": {
+            "A": "Hơi nước và khí CO2",
+            "B": "CO và khí amoniac",
+            "C": "SO2, NOx, bụi, hơi kim loại độc hại",
+            "D": "Oxy và khí nitơ"
+          },
+          "answer": "C",
+          "explanation": "Quá trình nung luyện quặng kim loại thải ra lượng lớn khí SO2, NOx, bụi mịn và hơi oxit kim loại độc hại (Pb, As, Cd...)."
+        },
+        {
+          "id": "mt_16",
+          "num": 16,
+          "question": "Trong nông nghiệp, khí thải CH4 và H2S phát sinh chủ yếu từ hoạt động nào?",
+          "options": {
+            "A": "Phân hủy phân động vật",
+            "B": "Phun thuốc trừ sâu",
+            "C": "Tưới tiêu bằng nước giếng",
+            "D": "Bón phân hóa học"
+          },
+          "answer": "A",
+          "explanation": "Phân động vật và chất thải hữu cơ trong điều kiện kỵ khí (yếm khí) bị vi sinh vật phân hủy sinh ra khí mê-tan (CH4) và hydrosunfua (H2S)."
+        },
+        {
+          "id": "mt_17",
+          "num": 17,
+          "question": "Tác hại của chì (Pb) đối với trẻ em là:",
+          "options": {
+            "A": "Gây ra tình trạng suy tim",
+            "B": "Gây rối loạn tiêu hóa",
+            "C": "Gây nhiễm độc thần kinh, chậm phát triển trí tuệ",
+            "D": "Gây ra tình trạng suy hô hấp"
+          },
+          "answer": "C",
+          "explanation": "Chì là chất độc thần kinh nguy hiểm, ở trẻ nhỏ hấp thụ chì dẫn đến tổn thương não vĩnh viễn, giảm IQ và rối loạn hành vi."
+        },
+        {
+          "id": "mt_18",
+          "num": 18,
+          "question": "Nước thải y tế nguy hiểm vì chứa:",
+          "options": {
+            "A": "Nhiều muối khoáng",
+            "B": "Chất hoạt động bề mặt",
+            "C": "Vi sinh vật gây bệnh, hóa chất và phóng xạ",
+            "D": "Dư lượng dầu mỡ"
+          },
+          "answer": "C",
+          "explanation": "Nước thải y tế từ bệnh viện, phòng thí nghiệm chứa nhiều mầm bệnh lây nhiễm (vi khuẩn, virus), tàn dư dược phẩm, hóa chất và đồng vị phóng xạ."
+        },
+        {
+          "id": "mt_19",
+          "num": 19,
+          "question": "Ô nhiễm đất do chiến tranh là do:",
+          "options": {
+            "A": "Sử dụng nhiều bom mìn",
+            "B": "Mảnh kim loại",
+            "C": "Tồn lưu hóa chất diệt cỏ chứa Dioxin và kim loại nặng",
+            "D": "Tro bụi từ hỏa hoạn"
+          },
+          "answer": "C",
+          "explanation": "Chất độc màu da cam chứa Dioxin và các chất độc hóa học quân sự tồn lưu lâu bền trong đất và trầm tích suốt nhiều thập kỷ."
+        },
+        {
+          "id": "mt_20",
+          "num": 20,
+          "question": "Biện pháp hiệu quả để hạn chế ô nhiễm đất do rác thải là:",
+          "options": {
+            "A": "Đốt rác tại các bãi hở",
+            "B": "Chôn lấp không phân loại",
+            "C": "Phân loại, tái chế và xử lý hợp vệ sinh",
+            "D": "Thải trực tiếp ra nguồn tiếp nhận"
+          },
+          "answer": "C",
+          "explanation": "Phân loại rác tại nguồn, tái chế tối đa và xử lý bằng các công nghệ chôn lấp hợp vệ sinh/thiêu đốt hiện đại là biện pháp bảo vệ tài nguyên đất hiệu quả."
+        },
+        {
+          "id": "mt_21",
+          "num": 21,
+          "question": "Hậu quả chung của ô nhiễm nước là:",
+          "options": {
+            "A": "Làm mất mỹ quan khu dân cư",
+            "B": "Gây bệnh, đột biến gen và suy thoái hệ sinh thái",
+            "C": "Gây thiếu nước cục bộ",
+            "D": "Làm giảm nhiệt độ nguồn nước"
+          },
+          "answer": "B",
+          "explanation": "Ô nhiễm nguồn nước gây ra các dịch bệnh đường tiêu hóa, tích lũy độc chất gây ung thư, đột biến gen và hủy diệt chuỗi thức ăn thủy sinh."
+        },
+        {
+          "id": "mt_22",
+          "num": 22,
+          "question": "Lượng nước thải sinh hoạt của mỗi người trong ngày phụ thuộc chủ yếu vào:",
+          "options": {
+            "A": "Thời gian làm việc",
+            "B": "Nhiệt độ môi trường",
+            "C": "Mức sống và lối sống",
+            "D": "Áp lực nguồn cung cấp nước"
+          },
+          "answer": "C",
+          "explanation": "Mức sống cao hơn với các thiết bị tiện nghi (máy giặt, bồn tắm, vòi sen) và thói quen sinh hoạt quyết định trực tiếp định mức tiêu thụ nước sinh hoạt và lượng nước thải ra."
+        },
+        {
+          "id": "mt_23",
+          "num": 23,
+          "question": "Một trong những đặc điểm nguy hiểm của chất dioxin là:",
+          "options": {
+            "A": "Dễ bị hòa tan và rửa trôi nhanh trong nước",
+            "B": "Làm ô nhiễm không khí",
+            "C": "Có thể tồn tại lâu dài và tích lũy sinh học trong chuỗi thức ăn",
+            "D": "Dễ dàng bị phân hủy bởi ánh sáng mặt trời"
+          },
+          "answer": "C",
+          "explanation": "Dioxin là hợp chất hữu cơ khó phân hủy (POP), tan tốt trong mô mỡ, có tính tích lũy sinh học cao qua các bậc dinh dưỡng trong chuỗi thức ăn."
+        },
+        {
+          "id": "mt_24",
+          "num": 24,
+          "question": "Chất hữu cơ dễ phân hủy sinh học trong nước thải chủ yếu là:",
+          "options": {
+            "A": "Thuốc trừ sâu và hóa chất",
+            "B": "Protein, carbohydrate, lipid",
+            "C": "Chất bảo quản thực phẩm",
+            "D": "Hợp chất clo hữu cơ"
+          },
+          "answer": "B",
+          "explanation": "Chất hữu cơ trong chất thải sinh hoạt và công nghiệp chế biến thực phẩm chủ yếu gồm protein, đường/tinh bột (carbohydrate) và chất béo (lipid), dễ bị vi sinh vật phân hủy hiếu khí hoặc kỵ khí."
+        },
+        {
+          "id": "mt_25",
+          "num": 25,
+          "question": "Tác động phức hợp của nước ô nhiễm lên môi trường thể hiện rõ nhất qua:",
+          "options": {
+            "A": "Sự đổi màu của nguồn nước mặt",
+            "B": "Sự thay đổi hệ sinh thái toàn vùng",
+            "C": "Mùi hôi bốc lên từ dòng sông",
+            "D": "Làm giảm lưu lượng dòng chảy"
+          },
+          "answer": "B",
+          "explanation": "Ô nhiễm nước không chỉ tác động đơn lẻ tới thủy sinh mà lan truyền qua đất ngầm, chuỗi thức ăn và gây biến đổi, suy thoái toàn bộ hệ sinh thái của cả lưu vực."
+        },
+        {
+          "id": "mt_26",
+          "num": 26,
+          "question": "Tác động của nước ô nhiễm đến môi trường không khí chủ yếu thông qua quá trình nào?",
+          "options": {
+            "A": "Sự thẩm thấu khí độc qua đất",
+            "B": "Sự bay hơi của nước mang theo vi sinh vật và khí độc (H2S, NH3, VOCs)",
+            "C": "Khói bụi bốc lên từ mặt nước",
+            "D": "Mưa axit tạo ra từ nguồn nước ô nhiễm"
+          },
+          "answer": "B",
+          "explanation": "Nước thải ứ đọng bị yếm khí bốc hơi giải phóng các khí độc hại, gây mùi hôi thối và mang theo vi sinh vật phát tán vào không khí."
+        },
+        {
+          "id": "mt_27",
+          "num": 27,
+          "question": "Điểm giống nhau cơ bản giữa thuế môi trường và côta ô nhiễm là gì?",
+          "options": {
+            "A": "Đều do người tiêu dùng cuối cùng chi trả",
+            "B": "Đều là các khoản đóng góp tự nguyện",
+            "C": "Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính",
+            "D": "Đều chỉ áp dụng cho chất thải rắn"
+          },
+          "answer": "C",
+          "explanation": "Cả thuế môi trường (Pigouvian tax) và côta ô nhiễm (giấy phép xả thải có thể chuyển nhượng) đều là công cụ kinh tế nội hóa ngoại ứng tiêu cực, điều chỉnh hành vi của người gây ô nhiễm bằng chi phí tài chính."
+        },
+        {
+          "id": "mt_28",
+          "num": 28,
+          "question": "Lựa chọn câu trả lời đúng nhất: Nguyên nhân dẫn đến sản xuất sạch hơn vẫn chưa được áp dụng một cách triệt để tại Việt Nam:",
+          "options": {
+            "A": "Do thói quen của người lao động Việt Nam không phù hợp với sản xuất sạch hơn",
+            "B": "Do năng lực để thực hiện sản xuất sạch hơn của các doanh nghiệp còn hạn chế",
+            "C": "Do chi phí đầu tư công nghệ ban đầu cao và nhận thức của doanh nghiệp còn hạn chế",
+            "D": "Do các quy định pháp luật về môi trường chưa đầy đủ"
+          },
+          "answer": "A",
+          "explanation": "Trong tài liệu câu hỏi ôn tập, đáp án được đánh dấu là phương án A (Do thói quen của người lao động Việt Nam không phù hợp với sản xuất sạch hơn)."
+        },
+        {
+          "id": "mt_29",
+          "num": 29,
+          "question": "Phương pháp thiêu đốt thường không hiệu quả cho loại chất thải nào dưới đây?",
+          "options": {
+            "A": "Chất thải có độ ẩm cao, hàm lượng vô cơ lớn",
+            "B": "Chất thải dung môi, chất thải nguy hại dễ cháy",
+            "C": "Rác thải y tế lây nhiễm",
+            "D": "Chất thải nhựa và cao su tổng hợp"
+          },
+          "answer": "A",
+          "explanation": "Chất thải chứa nhiều nước (độ ẩm cao) và nhiều chất vô cơ (gạch đá, kim loại) có nhiệt trị thấp, đốt tốn nhiều năng lượng phụ trợ và sinh nhiều tro xỉ không hiệu quả."
+        },
+        {
+          "id": "mt_30",
+          "num": 30,
+          "question": "Hãy lựa chọn đáp án đúng nhất: Ưu điểm của phương pháp thiêu đốt chất thải là:",
+          "options": {
+            "A": "Khả năng tận dụng được nhiệt, xử lý được toàn bộ chất thải và giảm tối đa thể tích",
+            "B": "Chi phí đầu tư và vận hành thấp nhất",
+            "C": "Không phát sinh khí thải thứ cấp",
+            "D": "Dễ dàng vận hành không cần nhân lực chuyên môn"
+          },
+          "answer": "A",
+          "explanation": "Lò đốt chất thải hiện đại giúp giảm tới 85-90% thể tích rác, tiêu hủy triệt để mầm bệnh nguy hại và có thể thu hồi nhiệt để phát điện."
+        },
+        {
+          "id": "mt_31",
+          "num": 31,
+          "question": "Trong sinh thái công nghiệp (STCN), chất thải của một doanh nghiệp có thể trở thành:",
+          "options": {
+            "A": "Sản phẩm bỏ đi hoàn toàn",
+            "B": "Mối nguy hiểm cho toàn khu công nghiệp",
+            "C": "Nguyên liệu đầu vào của doanh nghiệp khác",
+            "D": "Chỉ tiêu đánh giá vi phạm môi trường"
+          },
+          "answer": "C",
+          "explanation": "Nguyên lý cốt lõi của sinh thái công nghiệp và kinh tế tuần hoàn là cộng sinh công nghiệp: chất thải của nhà máy này là nguyên liệu đầu vào của nhà máy khác."
+        },
+        {
+          "id": "mt_32",
+          "num": 32,
+          "question": "Nhãn sinh thái tác động đến hành vi nào trong chuỗi sản xuất – tiêu dùng?",
+          "options": {
+            "A": "Quy trình xin cấp phép đầu tư của chính phủ",
+            "B": "Quyết định lựa chọn nguyên vật liệu của nhà cung cấp và quyết định mua hàng của người tiêu dùng",
+            "C": "Chính sách trợ cấp thuế của cơ quan quản lý",
+            "D": "Công tác kiểm tra của thanh tra môi trường"
+          },
+          "answer": "B",
+          "explanation": "Nhãn sinh thái cung cấp thông tin minh bạch về tính thân thiện môi trường, thúc đẩy người tiêu dùng mua sắm xanh và buộc nhà sản xuất cải tiến quy trình."
+        },
+        {
+          "id": "mt_33",
+          "num": 33,
+          "question": "Một trong những rào cản lớn nhất của sinh thái công nghiệp là:",
+          "options": {
+            "A": "Thiếu ngân sách đầu tư công nghệ cao và liên kết trao đổi thông tin giữa các doanh nghiệp",
+            "B": "Sự thiếu hụt nguồn nguyên liệu tái sinh",
+            "C": "Sự phản đối của cộng đồng dân cư xung quanh",
+            "D": "Công nghệ tái chế đã đạt đến mức giới hạn"
+          },
+          "answer": "A",
+          "explanation": "Khó khăn chính là thiếu vốn đầu tư công nghệ đồng bộ và thiếu cơ chế chia sẻ, kết nối thông tin thị trường phế phụ phẩm giữa các nhà máy."
+        },
+        {
+          "id": "mt_34",
+          "num": 34,
+          "question": "Tại sao không thể sử dụng một chỉ số duy nhất để đánh giá tính bền vững của một lĩnh vực?",
+          "options": {
+            "A": "Vì chỉ số duy nhất không đủ độ tin cậy, cần có nhiều chỉ số mới đánh giá đầy đủ được",
+            "B": "Vì sự phát triển bền vững là một khái niệm đa chiều (kinh tế, xã hội, môi trường)",
+            "C": "Vì tính bền vững cần được đánh giá tổng hợp từ nhiều khía cạnh phụ thuộc lẫn nhau",
+            "D": "Vì các quy định quốc tế bắt buộc phải sử dụng ít nhất 10 chỉ số"
+          },
+          "answer": "B",
+          "explanation": "Phát triển bền vững là khái niệm phức hợp gắn kết hữu cơ giữa kinh tế, công bằng xã hội và bảo vệ môi trường, do đó một chỉ số đơn lẻ không thể bao hàm hết."
+        },
+        {
+          "id": "mt_35",
+          "num": 35,
+          "question": "So sánh hai quốc gia có cùng GDP nhưng quốc gia A có cơ cấu GDP nghiêng về dịch vụ và công nghiệp, còn quốc gia B nghiêng về nông nghiệp. Quốc gia nào có khả năng tăng trưởng bền vững hơn về kinh tế và vì sao?",
+          "options": {
+            "A": "Quốc gia A, vì dịch vụ và công nghiệp có khả năng sinh lợi cao hơn và ít phụ thuộc vào thời tiết",
+            "B": "Quốc gia B, vì nông nghiệp là nền tảng cốt lõi của an ninh lương thực",
+            "C": "Cả hai có khả năng ngang nhau do cùng quy mô GDP",
+            "D": "Quốc gia B, vì nông nghiệp thân thiện với môi trường hơn"
+          },
+          "answer": "A",
+          "explanation": "Kinh tế dịch vụ và công nghệ tri thức có giá trị gia tăng cao, năng suất lao động vượt trội và ít rủi ro trước biến đổi khí hậu hơn nông nghiệp truyền thống."
+        },
+        {
+          "id": "mt_36",
+          "num": 36,
+          "question": "Nếu một quốc gia duy trì tốc độ tăng trưởng GDP cao nhưng cơ cấu GDP phụ thuộc vào khai thác tài nguyên không tái tạo, đánh giá nào sau đây là chính xác nhất?",
+          "options": {
+            "A": "Quốc gia này phát triển không toàn diện chưa đạt phát triển bền vững",
+            "B": "Quốc gia đạt bền vững kinh tế nhưng chưa đạt bền vững về môi trường",
+            "C": "Quốc gia hoàn toàn đạt các tiêu chuẩn bền vững toàn cầu",
+            "D": "Quốc gia có năng lực cạnh tranh cao nhất thế giới"
+          },
+          "answer": "B",
+          "explanation": "Tăng trưởng nhờ 'ăn mòn' vốn tự nhiên không tái tạo chỉ tạo ra sự tăng trưởng ngắn hạn về kinh tế, hủy hoại nền tảng tài nguyên của các thế hệ tương lai nên không bền vững về môi trường."
+        },
+        {
+          "id": "mt_37",
+          "num": 37,
+          "question": "Chỉ số HDI là tổng hợp của các yếu tố nào sau đây?",
+          "options": {
+            "A": "Tuổi thọ, học vấn, thu nhập bình quân theo đô la Mỹ",
+            "B": "Tuổi thọ, trình độ học vấn, PPP/người (GNI bình quân tính theo sức mua tương đương)",
+            "C": "GDP, GNP, PPP/người",
+            "D": "Y tế, giáo dục, công nghệ"
+          },
+          "answer": "B",
+          "explanation": "Chỉ số Phát triển Con người (HDI) của Liên Hợp Quốc gồm 3 trụ cột: Sức khỏe (kỳ vọng sống/tuổi thọ), Tri thức (trình độ học vấn) và Mức sống (thu nhập GNI/người theo sức mua tương đương PPP)."
+        },
+        {
+          "id": "mt_38",
+          "num": 38,
+          "question": "Điểm tương đồng giữa chỉ số Gini và chỉ số HDI trong việc đánh giá tính bền vững là gì?",
+          "options": {
+            "A": "Đều chỉ đo lường sự tăng trưởng của sản xuất vật chất",
+            "B": "Cả hai đều liên quan đến bất bình đẳng xã hội và chất lượng cuộc sống con người",
+            "C": "Đều được tính toán dựa trên mức độ suy thoái môi trường",
+            "D": "Đều có giá trị từ 1 đến 100"
+          },
+          "answer": "B",
+          "explanation": "Cả Gini (phân phối thu nhập) và HDI (phát triển con người) đều phản ánh khía cạnh xã hội và mức độ công bằng, chất lượng sống trong phát triển bền vững."
+        },
+        {
+          "id": "mt_39",
+          "num": 39,
+          "question": "Lựa chọn đáp án chính xác nhất: Tính bền vững về kinh tế được hiểu là:",
+          "options": {
+            "A": "Tối đa hóa lợi nhuận tài chính của các tập đoàn đa quốc gia",
+            "B": "Tăng trưởng nhanh bằng mọi giá, chỉ số GDP/người cao",
+            "C": "Tăng trưởng kinh tế ổn định, hiệu quả và duy trì được nguồn lực dài hạn cho thế hệ tương lai mà không tàn phá môi trường",
+            "D": "Giữ nguyên quy mô kinh tế không tăng trưởng"
+          },
+          "answer": "B",
+          "explanation": "Trong tài liệu câu hỏi ôn tập, câu này đáp án được tác giả đánh dấu là phương án B (đáp án trắc nghiệm theo tài liệu)."
+        },
+        {
+          "id": "mt_40",
+          "num": 40,
+          "question": "So sánh chỉ số NCI (Chỉ số vốn tự nhiên / bảo tồn) của Việt Nam và Thái Lan giúp ta rút ra kết luận gì?",
+          "options": {
+            "A": "Việt Nam có diện tích bảo tồn lớn hơn Thái Lan",
+            "B": "Việt Nam có hệ thống giáo dục về môi trường tốt hơn Thái Lan",
+            "C": "Thái Lan có chỉ số GDP cao hơn",
+            "D": "Việt Nam có mức độ đa dạng sinh học và bảo tồn tốt hơn Thái Lan"
+          },
+          "answer": "D",
+          "explanation": "Trong tài liệu câu hỏi ôn tập, đáp án được đánh dấu là phương án D."
+        },
+        {
+          "id": "mt_41",
+          "num": 41,
+          "question": "Tại sao đầu tư thích đáng cho bảo vệ môi trường được xem là chỉ tiêu của phát triển bền vững kinh tế?",
+          "options": {
+            "A": "Vì nó giúp giảm nợ công quốc gia, tăng trưởng kinh tế dài hạn",
+            "B": "Vì chi phí môi trường có ảnh hưởng dài hạn đến tăng trưởng kinh tế và chất lượng nguồn lực",
+            "C": "Vì chỉ số này được yêu cầu trong cam kết quốc tế",
+            "D": "Vì nó làm tăng tỷ lệ thất nghiệp tạm thời"
+          },
+          "answer": "A",
+          "explanation": "Theo tài liệu câu hỏi ôn tập, đáp án được đánh dấu là phương án A."
+        },
+        {
+          "id": "mt_42",
+          "num": 42,
+          "question": "Chênh lệch GDP giữa các vùng trong một quốc gia phản ánh điều gì về tính bền vững kinh tế - xã hội?",
+          "options": {
+            "A": "Mức độ đầu tư phát triển dịch vụ và công bằng xã hội giữa các vùng",
+            "B": "Khả năng cân đối ngân sách quốc gia",
+            "C": "Mức độ phát triển đồng đều và công bằng xã hội giữa các vùng",
+            "D": "Sự thay đổi cơ cấu dân số"
+          },
+          "answer": "C",
+          "explanation": "Sự phân hóa thu nhập và GDP theo vùng miền phản ánh khoảng cách giàu nghèo và mức độ phát triển đồng đều, công bằng xã hội trong quốc gia."
+        }
+      ]
+    }
+  ]
+}
