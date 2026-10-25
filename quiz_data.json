@@ -67,10 +67,10 @@
             "A": "Sự kết hợp hàng hóa, dịch vụ được sản xuất khi giá thay đổi",
             "B": "Khối lượng tối đa của nguồn lực được sử dụng khi tiền lương thay đổi",
             "C": "Sự kết hợp về hàng hóa và dịch vụ được cầu khi giá thay đổi",
-            "D": "Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật  cho trước."
+            "D": "Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật cho trước."
           },
           "answer": "D",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật  cho trước.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật cho trước.)."
         },
         {
           "id": "kt_6",
@@ -88,15 +88,15 @@
         {
           "id": "kt_7",
           "num": 7,
-          "question": "hân tố nào dưới đây làm dịch chuyển đường cung hàng hóa   sang trái",
+          "question": "hân tố nào dưới đây làm dịch chuyển đường cung hàng hóa sang trái",
           "options": {
-            "A": "Lương c ng nhân sản xuất hàng hóa   giảm",
-            "B": "iá máy móc sản xuất ra hàng hóa   tăng",
-            "C": "C ng nghệ sản xuất ra hàng hóa   được cải tiến",
+            "A": "Lương công nhân sản xuất hàng hóa giảm",
+            "B": "Giá máy móc sản xuất ra hàng hóa tăng",
+            "C": "C ng nghệ sản xuất ra hàng hóa được cải tiến",
             "D": "Là t nh huống lượng cầu lớn hơn lượng cung"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (iá máy móc sản xuất ra hàng hóa   tăng)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy móc sản xuất ra hàng hóa tăng)."
         },
         {
           "id": "kt_8",
@@ -106,7 +106,7 @@
             "A": "Dịch chuyển đường cầu sang phải",
             "B": "Dịch chuyển đường cầu sang trái",
             "C": "Di chuyển về phía trên (bên trái) đường cầu",
-            "D": "Đường cung kh ng thay đổi"
+            "D": "Đường cung không thay đổi"
           },
           "answer": "B",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Dịch chuyển đường cầu sang trái)."
@@ -196,7 +196,7 @@
           "options": {
             "A": "Giá cân bằng chắc chắn giảm",
             "B": "Giá cân bằng chắc chắn tăng",
-            "C": "Giá cân bằng kh ng thay đổi",
+            "C": "Giá cân bằng không thay đổi",
             "D": "Sản lượng cân bằng chắc chắn tăng"
           },
           "answer": "A",
@@ -209,7 +209,7 @@
           "options": {
             "A": "Cầu về hàng hóa cao cấp tăng",
             "B": "Cầu về hàng hóa cao cấp giảm",
-            "C": "Cầu về hàng hóa cao cấp kh ng đổi",
+            "C": "Cầu về hàng hóa cao cấp không đổi",
             "D": "Cầu về hàng hóa thứ cấp tăng"
           },
           "answer": "A",
@@ -218,20 +218,20 @@
         {
           "id": "kt_17",
           "num": 17,
-          "question": "Cơn b o số   năm      tại  iệt  am làm mất rất nhiều diện tích nu i trồng thủy sản có thể sẽ",
+          "question": "Cơn b o số năm tại Việt Nam làm mất rất nhiều diện tích nu i trồng thủy sản có thể sẽ",
           "options": {
-            "A": "ây ra sự vận động dọc theo đường cung thủy sản ở  iệt  am tới mức giá cao hơn",
+            "A": "ây ra sự vận động dọc theo đường cung thủy sản ở Việt Nam tới mức giá cao hơn",
             "B": "ây ra cầu tăng làm cho giá thủy sản cao hơn",
             "C": "Làm cho cầu đối với thủy sản giảm xuống",
-            "D": "Làm cho đường cung thủy sản  iệt  am dịch chuyển lên trên sang trái"
+            "D": "Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên sang trái"
           },
           "answer": "D",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Làm cho đường cung thủy sản  iệt  am dịch chuyển lên trên sang trái)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên sang trái)."
         },
         {
           "id": "kt_18",
           "num": 18,
-          "question": "Khi giá hàng hoá Y  PY =   th  lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác kh ng đổi X và Y là 2 hàng hoá:",
+          "question": "Khi giá hàng hoá Y PY = th lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác không đổi X và Y là 2 hàng hoá:",
           "options": {
             "A": "Thay thế cho nhau.",
             "B": "Vừa thay thế vừa bổ sung cho nhau.",
@@ -244,10 +244,10 @@
         {
           "id": "kt_19",
           "num": 19,
-          "question": "Cầu hàng hoá   (  là hàng hoá th ng thường) tăng khi",
+          "question": "Cầu hàng hoá ( là hàng hoá th ng thường) tăng khi",
           "options": {
-            "A": "Công nghệ sản xuất hàng hoá   thay đổi.",
-            "B": "Giá của hàng hoá   tăng.",
+            "A": "Công nghệ sản xuất hàng hoá thay đổi.",
+            "B": "Giá của hàng hoá tăng.",
             "C": "Thu nhập người tiêu dùng tăng.",
             "D": "Có nhiều người cung ứng mới xuất hiện trên thị trường."
           },
@@ -272,31 +272,31 @@
           "num": 21,
           "question": "Một hãng không thể ảnh hưởng đến giá sản phẩm mà mình bán ra gọi là:",
           "options": {
-            "A": "gười đặt giá",
-            "B": "gười chấp nhận giá.",
-            "C": "gười ra quyết định hợp lý",
-            "D": "gười điều tiết giá"
+            "A": "Người đặt giá",
+            "B": "Người chấp nhận giá.",
+            "C": "Người ra quyết định hợp lý",
+            "D": "Người điều tiết giá"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (gười chấp nhận giá.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Người chấp nhận giá.)."
         },
         {
           "id": "kt_22",
           "num": 22,
-          "question": "Cung về máy fax phụ thuộc vào nhiều yếu tố, nhân tố nào sau đây kh ng làm dịch chuyển đường cung máy fax?",
+          "question": "Cung về máy fax phụ thuộc vào nhiều yếu tố, nhân tố nào sau đây không làm dịch chuyển đường cung máy fax?",
           "options": {
-            "A": "Tiền lương c ng nhân tăng.",
-            "B": "iá máy fax tăng.",
+            "A": "Tiền lương công nhân tăng.",
+            "B": "Giá máy fax tăng.",
             "C": "Chi phí sản xuất máy fax tăng.",
             "D": "Chính phủ đánh thuế ngành kinh doanh máy fax."
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (iá máy fax tăng.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy fax tăng.)."
         },
         {
           "id": "kt_23",
           "num": 23,
-          "question": "Yếu tố nào sau đây kh ng phải là yếu tố ảnh hưởng đến cầu hàng hoá dịch vụ:",
+          "question": "Yếu tố nào sau đây không phải là yếu tố ảnh hưởng đến cầu hàng hoá dịch vụ:",
           "options": {
             "A": "Thị hiếu, sở thích của người tiêu dùng.",
             "B": "Các yếu tố đầu vào sản xuất.",
@@ -340,7 +340,7 @@
             "A": "Máy in mới sản xuất ra trong năm nay được một công ty xuất bản mua.",
             "B": "Máy tính cá nhân sản xuất trong năm trước được một sinh viên mua để chuẩn bị cho kỳ thi học kỳ.",
             "C": "Một chiếc ôtô mới được nhập khẩu từ nước ngoài.",
-            "D": "Nhà máy giày Thượng Đ nh vừa xuất khẩu một l  hàng được sản xuất từ năm trước."
+            "D": "Nhà máy giày Thượng Đình vừa xuất khẩu một lô hàng được sản xuất từ năm trước."
           },
           "answer": "A",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Máy in mới sản xuất ra trong năm nay được một công ty xuất bản mua.)."
@@ -348,7 +348,7 @@
         {
           "id": "kt_27",
           "num": 27,
-          "question": "Câu nào bình luận về  DP nào sau đây là sai?",
+          "question": "Câu nào bình luận về GDP nào sau đây là sai?",
           "options": {
             "A": "GDP có thể được tính bằng cách sử dụng giá cả hiện hành hoặc giá cả năm gốc.",
             "B": "Cả hàng hoá trung gian và hàng hoá cuối cùng đều được tính vào GDP.",
@@ -361,15 +361,15 @@
         {
           "id": "kt_28",
           "num": 28,
-          "question": "Câu nào dưới đây phản ánh sự khác nhau giữa  DP danh nghĩa và  DP thực tế?",
+          "question": "Câu nào dưới đây phản ánh sự khác nhau giữa GDP danh nghĩa và GDP thực tế?",
           "options": {
-            "A": "GDP thực tế chỉ bao gồm hàng hoá, trong khi  DP danh nghĩa bao gồm cả hàng hóa và dịch vụ.",
-            "B": "GDP thực tế được tính theo giá cố định của năm gốc, trong khi  DP danh nghĩa được tính theo giá hiện hành.",
-            "C": "GDP thực tế bằng  DP danh nghĩa trừ đi khấu hao.",
+            "A": "GDP thực tế chỉ bao gồm hàng hoá, trong khi GDP danh nghĩa bao gồm cả hàng hóa và dịch vụ.",
+            "B": "GDP thực tế được tính theo giá cố định của năm gốc, trong khi GDP danh nghĩa được tính theo giá hiện hành.",
+            "C": "GDP thực tế bằng GDP danh nghĩa trừ đi khấu hao.",
             "D": "GDP thực tế bằng GDP danh nghĩa nhân với chỉ số điều chỉnh GDP."
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực tế được tính theo giá cố định của năm gốc, trong khi  DP danh nghĩa được tính theo giá hiện hành.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực tế được tính theo giá cố định của năm gốc, trong khi GDP danh nghĩa được tính theo giá hiện hành.)."
         },
         {
           "id": "kt_29",
@@ -389,18 +389,18 @@
           "num": 30,
           "question": "Nếu lạm phát cao hơn kỳ vọng, nhóm nào dưới đây có khả năng được lợi nhất?",
           "options": {
-            "A": "gười gửi tiền tại ngân hàng",
-            "B": "gười vay tiền dài hạn với lãi suất cố định",
-            "C": "gười làm c ng ăn lương cố định",
-            "D": "gười về hưu sống bằng trợ cấp xã hội"
+            "A": "Người gửi tiền tại ngân hàng",
+            "B": "Người vay tiền dài hạn với lãi suất cố định",
+            "C": "Người làm công ăn lương cố định",
+            "D": "Người về hưu sống bằng trợ cấp xã hội"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (gười vay tiền dài hạn với lãi suất cố định)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Người vay tiền dài hạn với lãi suất cố định)."
         },
         {
           "id": "kt_31",
           "num": 31,
-          "question": "Điều nào sau đây kh ng phải là nguyên nhân gây ra lạm phát chi phí đẩy?",
+          "question": "Điều nào sau đây không phải là nguyên nhân gây ra lạm phát chi phí đẩy?",
           "options": {
             "A": "Giá nguyên liệu đầu vào tăng",
             "B": "Tăng thuế gián thu",
@@ -452,12 +452,12 @@
         {
           "id": "kt_35",
           "num": 35,
-          "question": "Những khoản mục nào sau đây sẽ được tính vào  DP năm nay?",
+          "question": "Những khoản mục nào sau đây sẽ được tính vào GDP năm nay?",
           "options": {
             "A": "Máy tính mới sản xuất ra trong năm nay được một công ty xuất bản mua.",
             "B": "Máy tính cá nhân sản xuất trong năm trước được một sinh viên mua để chuẩn bị cho kỳ thi học kỳ.",
             "C": "Một chiếc Máy bay mới được nhập khẩu từ nước ngoài.",
-            "D": "Nhà máy thép vừa xuất khẩu một l  hàng được sản xuất từ năm trước."
+            "D": "Nhà máy thép vừa xuất khẩu một lô hàng được sản xuất từ năm trước."
           },
           "answer": "A",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Máy tính mới sản xuất ra trong năm nay được một công ty xuất bản mua.)."
@@ -465,15 +465,15 @@
         {
           "id": "kt_36",
           "num": 36,
-          "question": "GDP thực khác với  DP danh nghĩa ở điểm nào?",
+          "question": "GDP thực khác với GDP danh nghĩa ở điểm nào?",
           "options": {
             "A": "GDP thực không bao gồm thuế",
-            "B": "GDP thực đ  điều chỉnh theo lạm phát",
+            "B": "GDP thực đã điều chỉnh theo lạm phát",
             "C": "GDP thực không bao gồm sản phẩm dịch vụ",
             "D": "GDP thực chỉ tính hàng xuất khẩu"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực đ  điều chỉnh theo lạm phát)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực đã điều chỉnh theo lạm phát)."
         },
         {
           "id": "kt_37",
@@ -491,7 +491,7 @@
         {
           "id": "kt_38",
           "num": 38,
-          "question": "guyên nhân nào sau đây kh ng phải là nguyên nhân trực tiếp gây ra thất nghiệp?",
+          "question": "Nguyên nhân nào sau đây không phải là nguyên nhân trực tiếp gây ra thất nghiệp?",
           "options": {
             "A": "Sự phát triển của khoa học kỹ thuật",
             "B": "Khủng hoảng kinh tế",
@@ -535,7 +535,7 @@
             "A": "Chính sách tiền tệ thắt chặt",
             "B": "Giảm chi tiêu của chính phủ",
             "C": "Tăng cung tiền quá mức",
-            "D": "Tăng nhập hẩu nhiên liệu"
+            "D": "Tăng nhập khẩu nhiên liệu"
           },
           "answer": "C",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Tăng cung tiền quá mức)."
@@ -546,7 +546,7 @@
           "question": "Lạm phát chi phí đẩy xảy ra khi:",
           "options": {
             "A": "Cầu hàng hoá tăng nhanh hơn cung",
-            "B": "gân hàng Trung ương bơm tiền vào nền kinh tế",
+            "B": "Ngân hàng Trung ương bơm tiền vào nền kinh tế",
             "C": "Chi phí sản xuất tăng làm cho giá thành sản xuất tăng",
             "D": "Đồng tiền mất giá do chính sách tỷ giá"
           },
@@ -556,7 +556,7 @@
         {
           "id": "kt_43",
           "num": 43,
-          "question": "DP đo lường",
+          "question": "GDP đo lường",
           "options": {
             "A": "Tổng giá trị hàng hóa xuất khẩu của một quốc gia trong một năm",
             "B": "Tổng giá trị tài sản cố định của một quốc gia",
@@ -942,7 +942,7 @@
         {
           "id": "mt_29",
           "num": 29,
-          "question": "Phương pháp thiêu đốt  thường không hiệu quả cho loại chất thải nào dưới đây?",
+          "question": "Phương pháp thiêu đốt thường không hiệu quả cho loại chất thải nào dưới đây?",
           "options": {
             "A": "Chất thải hữu cơ",
             "B": "Chất thải dung môi, chất thải không phân hủy sinh học",
@@ -996,13 +996,13 @@
           "num": 33,
           "question": "Một trong những rào cản lớn nhất của sinh thái công nghiệp là:",
           "options": {
-            "A": "Thiếu ngân sách đầu tư công nghệ cao  và các điều kiện để xây dựng khu STCN",
+            "A": "Thiếu ngân sách đầu tư công nghệ cao và các điều kiện để xây dựng khu STCN",
             "B": "Mối quan hệ phụ thuộc giữa các doanh nghiệp khiến rủi ro tăng cao",
-            "C": "Không có chính sách pháp luật về bảo vệ môi trường  khuyến khích việc xây dựng khu STCN",
-            "D": "Thiếu nguồn nhân lực chất lượng cao  và kinh nghiệm trong việc xây dựng khu STCN"
+            "C": "Không có chính sách pháp luật về bảo vệ môi trường khuyến khích việc xây dựng khu STCN",
+            "D": "Thiếu nguồn nhân lực chất lượng cao và kinh nghiệm trong việc xây dựng khu STCN"
           },
           "answer": "A",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Thiếu ngân sách đầu tư công nghệ cao  và các điều kiện để xây dựng khu STCN)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Thiếu ngân sách đầu tư công nghệ cao và các điều kiện để xây dựng khu STCN)."
         },
         {
           "id": "mt_34",
@@ -1077,7 +1077,7 @@
             "A": "Khai thác tối đa các nguồn tài nguyên để phát triển",
             "B": "Tăng trưởng nhanh bằng mọi giá, chỉ số GDP/người cao",
             "C": "Tăng trưởng cao và ổn định, sử dụng hiệu quả tài nguyên",
-            "D": "Tăng trưởng cao,  chỉ số GDP/người cao"
+            "D": "Tăng trưởng cao, chỉ số GDP/người cao"
           },
           "answer": "C",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Tăng trưởng cao và ổn định, sử dụng hiệu quả tài nguyên)."
@@ -1359,7 +1359,7 @@
           "id": "btcn_kt_16",
           "section": "btcn_kt",
           "num": 16,
-          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua: a. Tăng cung b. Chính phủ tăng giá c. Giảm lượng cầu d. Giảm giá   ✓ ĐÁP ÁN ĐÚNG",
+          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua: a. Tăng cung b. Chính phủ tăng giá c. Giảm lượng cầu d. Giảm giá ✓ ĐÁP ÁN ĐÚNG",
           "options": {},
           "answer": "D",
           "explanation": "Dư thừa xảy ra khi giá cao làm Qs>Qd. Giảm giá làm Qd tăng và Qs giảm, thu hẹp phần dư thừa.",
@@ -1594,7 +1594,7 @@
           "id": "btcn_kt_32",
           "section": "btcn_kt",
           "num": 32,
-          "question": " *(Sơ đồ đồ thị Cung - Cầu thể hiện điểm cân bằng tại Q = 200, P = 4)* Theo hình trên khi giá là 4 thì tổng doanh thu là:",
+          "question": "*(Sơ đồ đồ thị Cung - Cầu thể hiện điểm cân bằng tại Q = 200, P = 4)* Theo hình trên khi giá là 4 thì tổng doanh thu là:",
           "options": {
             "A": "1000",
             "B": "1200",
@@ -1894,7 +1894,7 @@
           "id": "btcn_kt_52",
           "section": "btcn_kt",
           "num": 52,
-          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm? Tỷ lệ thất nghiệp tăng Lực lượng lao động tăng Tỷ lệ thất nghiệp giảm   ✓ ĐÁP ÁN ĐÚNG Sản lượng tiềm năng tăng",
+          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm? Tỷ lệ thất nghiệp tăng Lực lượng lao động tăng Tỷ lệ thất nghiệp giảm ✓ ĐÁP ÁN ĐÚNG Sản lượng tiềm năng tăng",
           "options": {},
           "answer": "C",
           "explanation": "Người ngừng tìm việc không còn được tính trong lực lượng lao động và cũng không còn được tính là thất nghiệp, nên tỷ lệ thất nghiệp đo lường có thể giảm.",
@@ -2114,7 +2114,7 @@
           "id": "btcn_kt_67",
           "section": "btcn_kt",
           "num": 67,
-          "question": "Cho phương trình đường cầu  và phương trình đường cung . Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
+          "question": "Cho phương trình đường cầu và phương trình đường cung . Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
           "options": {
             "A": "",
             "B": "",
@@ -2129,7 +2129,7 @@
           "id": "btcn_kt_68",
           "section": "btcn_kt",
           "num": 68,
-          "question": " Theo hình trên khi giá là 4 thì tổng doanh thu là:",
+          "question": "Theo hình trên khi giá là 4 thì tổng doanh thu là:",
           "options": {
             "A": "1000",
             "B": "1200",
@@ -2187,7 +2187,7 @@
           "id": "btcn_kt_70",
           "section": "btcn_kt",
           "num": 70,
-          "question": "Cho hàm cầu  và hàm cung . Nếu chính phủ đánh thuế 1 nd/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
+          "question": "Cho hàm cầu và hàm cung . Nếu chính phủ đánh thuế 1 nd/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
           "options": {
             "A": "",
             "B": "",
@@ -2288,7 +2288,7 @@
           "id": "btcn_kt_73",
           "section": "btcn_kt",
           "num": 73,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau:  và  Nếu nhà nước đánh thuế 10 đơm vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơm vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -2303,7 +2303,7 @@
           "id": "btcn_kt_74",
           "section": "btcn_kt",
           "num": 74,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau:  và  Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -2318,7 +2318,7 @@
           "id": "btcn_kt_75",
           "section": "btcn_kt",
           "num": 75,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau:  và  Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
           "options": {
             "A": "",
             "B": "",
@@ -2333,7 +2333,7 @@
           "id": "btcn_kt_76",
           "section": "btcn_kt",
           "num": 76,
-          "question": "Cho đường cung  và đường cầu . Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
+          "question": "Cho đường cung và đường cầu . Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
           "options": {
             "A": "",
             "B": "",
@@ -3801,10 +3801,10 @@
             "A": "Sự kết hợp hàng hóa, dịch vụ được sản xuất khi giá thay đổi",
             "B": "Khối lượng tối đa của nguồn lực được sử dụng khi tiền lương thay đổi",
             "C": "Sự kết hợp về hàng hóa và dịch vụ được cầu khi giá thay đổi",
-            "D": "Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật  cho trước."
+            "D": "Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật cho trước."
           },
           "answer": "D",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật  cho trước.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Khối lượng tối đa hàng hóa, dịch vụ có thể sản xuất được với số lượng về nguồn lực và kỹ thuật cho trước.)."
         },
         {
           "id": "kt_6",
@@ -3822,15 +3822,15 @@
         {
           "id": "kt_7",
           "num": 7,
-          "question": "hân tố nào dưới đây làm dịch chuyển đường cung hàng hóa   sang trái",
+          "question": "hân tố nào dưới đây làm dịch chuyển đường cung hàng hóa sang trái",
           "options": {
-            "A": "Lương c ng nhân sản xuất hàng hóa   giảm",
-            "B": "iá máy móc sản xuất ra hàng hóa   tăng",
-            "C": "C ng nghệ sản xuất ra hàng hóa   được cải tiến",
+            "A": "Lương công nhân sản xuất hàng hóa giảm",
+            "B": "Giá máy móc sản xuất ra hàng hóa tăng",
+            "C": "C ng nghệ sản xuất ra hàng hóa được cải tiến",
             "D": "Là t nh huống lượng cầu lớn hơn lượng cung"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (iá máy móc sản xuất ra hàng hóa   tăng)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy móc sản xuất ra hàng hóa tăng)."
         },
         {
           "id": "kt_8",
@@ -3840,7 +3840,7 @@
             "A": "Dịch chuyển đường cầu sang phải",
             "B": "Dịch chuyển đường cầu sang trái",
             "C": "Di chuyển về phía trên (bên trái) đường cầu",
-            "D": "Đường cung kh ng thay đổi"
+            "D": "Đường cung không thay đổi"
           },
           "answer": "B",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Dịch chuyển đường cầu sang trái)."
@@ -3930,7 +3930,7 @@
           "options": {
             "A": "Giá cân bằng chắc chắn giảm",
             "B": "Giá cân bằng chắc chắn tăng",
-            "C": "Giá cân bằng kh ng thay đổi",
+            "C": "Giá cân bằng không thay đổi",
             "D": "Sản lượng cân bằng chắc chắn tăng"
           },
           "answer": "A",
@@ -3943,7 +3943,7 @@
           "options": {
             "A": "Cầu về hàng hóa cao cấp tăng",
             "B": "Cầu về hàng hóa cao cấp giảm",
-            "C": "Cầu về hàng hóa cao cấp kh ng đổi",
+            "C": "Cầu về hàng hóa cao cấp không đổi",
             "D": "Cầu về hàng hóa thứ cấp tăng"
           },
           "answer": "A",
@@ -3952,20 +3952,20 @@
         {
           "id": "kt_17",
           "num": 17,
-          "question": "Cơn b o số   năm      tại  iệt  am làm mất rất nhiều diện tích nu i trồng thủy sản có thể sẽ",
+          "question": "Cơn b o số năm tại Việt Nam làm mất rất nhiều diện tích nu i trồng thủy sản có thể sẽ",
           "options": {
-            "A": "ây ra sự vận động dọc theo đường cung thủy sản ở  iệt  am tới mức giá cao hơn",
+            "A": "ây ra sự vận động dọc theo đường cung thủy sản ở Việt Nam tới mức giá cao hơn",
             "B": "ây ra cầu tăng làm cho giá thủy sản cao hơn",
             "C": "Làm cho cầu đối với thủy sản giảm xuống",
-            "D": "Làm cho đường cung thủy sản  iệt  am dịch chuyển lên trên sang trái"
+            "D": "Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên sang trái"
           },
           "answer": "D",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Làm cho đường cung thủy sản  iệt  am dịch chuyển lên trên sang trái)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án D (Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên sang trái)."
         },
         {
           "id": "kt_18",
           "num": 18,
-          "question": "Khi giá hàng hoá Y  PY =   th  lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác kh ng đổi X và Y là 2 hàng hoá:",
+          "question": "Khi giá hàng hoá Y PY = th lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác không đổi X và Y là 2 hàng hoá:",
           "options": {
             "A": "Thay thế cho nhau.",
             "B": "Vừa thay thế vừa bổ sung cho nhau.",
@@ -3978,10 +3978,10 @@
         {
           "id": "kt_19",
           "num": 19,
-          "question": "Cầu hàng hoá   (  là hàng hoá th ng thường) tăng khi",
+          "question": "Cầu hàng hoá ( là hàng hoá th ng thường) tăng khi",
           "options": {
-            "A": "Công nghệ sản xuất hàng hoá   thay đổi.",
-            "B": "Giá của hàng hoá   tăng.",
+            "A": "Công nghệ sản xuất hàng hoá thay đổi.",
+            "B": "Giá của hàng hoá tăng.",
             "C": "Thu nhập người tiêu dùng tăng.",
             "D": "Có nhiều người cung ứng mới xuất hiện trên thị trường."
           },
@@ -4006,31 +4006,31 @@
           "num": 21,
           "question": "Một hãng không thể ảnh hưởng đến giá sản phẩm mà mình bán ra gọi là:",
           "options": {
-            "A": "gười đặt giá",
-            "B": "gười chấp nhận giá.",
-            "C": "gười ra quyết định hợp lý",
-            "D": "gười điều tiết giá"
+            "A": "Người đặt giá",
+            "B": "Người chấp nhận giá.",
+            "C": "Người ra quyết định hợp lý",
+            "D": "Người điều tiết giá"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (gười chấp nhận giá.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Người chấp nhận giá.)."
         },
         {
           "id": "kt_22",
           "num": 22,
-          "question": "Cung về máy fax phụ thuộc vào nhiều yếu tố, nhân tố nào sau đây kh ng làm dịch chuyển đường cung máy fax?",
+          "question": "Cung về máy fax phụ thuộc vào nhiều yếu tố, nhân tố nào sau đây không làm dịch chuyển đường cung máy fax?",
           "options": {
-            "A": "Tiền lương c ng nhân tăng.",
-            "B": "iá máy fax tăng.",
+            "A": "Tiền lương công nhân tăng.",
+            "B": "Giá máy fax tăng.",
             "C": "Chi phí sản xuất máy fax tăng.",
             "D": "Chính phủ đánh thuế ngành kinh doanh máy fax."
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (iá máy fax tăng.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy fax tăng.)."
         },
         {
           "id": "kt_23",
           "num": 23,
-          "question": "Yếu tố nào sau đây kh ng phải là yếu tố ảnh hưởng đến cầu hàng hoá dịch vụ:",
+          "question": "Yếu tố nào sau đây không phải là yếu tố ảnh hưởng đến cầu hàng hoá dịch vụ:",
           "options": {
             "A": "Thị hiếu, sở thích của người tiêu dùng.",
             "B": "Các yếu tố đầu vào sản xuất.",
@@ -4074,7 +4074,7 @@
             "A": "Máy in mới sản xuất ra trong năm nay được một công ty xuất bản mua.",
             "B": "Máy tính cá nhân sản xuất trong năm trước được một sinh viên mua để chuẩn bị cho kỳ thi học kỳ.",
             "C": "Một chiếc ôtô mới được nhập khẩu từ nước ngoài.",
-            "D": "Nhà máy giày Thượng Đ nh vừa xuất khẩu một l  hàng được sản xuất từ năm trước."
+            "D": "Nhà máy giày Thượng Đình vừa xuất khẩu một lô hàng được sản xuất từ năm trước."
           },
           "answer": "A",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Máy in mới sản xuất ra trong năm nay được một công ty xuất bản mua.)."
@@ -4082,7 +4082,7 @@
         {
           "id": "kt_27",
           "num": 27,
-          "question": "Câu nào bình luận về  DP nào sau đây là sai?",
+          "question": "Câu nào bình luận về GDP nào sau đây là sai?",
           "options": {
             "A": "GDP có thể được tính bằng cách sử dụng giá cả hiện hành hoặc giá cả năm gốc.",
             "B": "Cả hàng hoá trung gian và hàng hoá cuối cùng đều được tính vào GDP.",
@@ -4095,15 +4095,15 @@
         {
           "id": "kt_28",
           "num": 28,
-          "question": "Câu nào dưới đây phản ánh sự khác nhau giữa  DP danh nghĩa và  DP thực tế?",
+          "question": "Câu nào dưới đây phản ánh sự khác nhau giữa GDP danh nghĩa và GDP thực tế?",
           "options": {
-            "A": "GDP thực tế chỉ bao gồm hàng hoá, trong khi  DP danh nghĩa bao gồm cả hàng hóa và dịch vụ.",
-            "B": "GDP thực tế được tính theo giá cố định của năm gốc, trong khi  DP danh nghĩa được tính theo giá hiện hành.",
-            "C": "GDP thực tế bằng  DP danh nghĩa trừ đi khấu hao.",
+            "A": "GDP thực tế chỉ bao gồm hàng hoá, trong khi GDP danh nghĩa bao gồm cả hàng hóa và dịch vụ.",
+            "B": "GDP thực tế được tính theo giá cố định của năm gốc, trong khi GDP danh nghĩa được tính theo giá hiện hành.",
+            "C": "GDP thực tế bằng GDP danh nghĩa trừ đi khấu hao.",
             "D": "GDP thực tế bằng GDP danh nghĩa nhân với chỉ số điều chỉnh GDP."
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực tế được tính theo giá cố định của năm gốc, trong khi  DP danh nghĩa được tính theo giá hiện hành.)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực tế được tính theo giá cố định của năm gốc, trong khi GDP danh nghĩa được tính theo giá hiện hành.)."
         },
         {
           "id": "kt_29",
@@ -4123,18 +4123,18 @@
           "num": 30,
           "question": "Nếu lạm phát cao hơn kỳ vọng, nhóm nào dưới đây có khả năng được lợi nhất?",
           "options": {
-            "A": "gười gửi tiền tại ngân hàng",
-            "B": "gười vay tiền dài hạn với lãi suất cố định",
-            "C": "gười làm c ng ăn lương cố định",
-            "D": "gười về hưu sống bằng trợ cấp xã hội"
+            "A": "Người gửi tiền tại ngân hàng",
+            "B": "Người vay tiền dài hạn với lãi suất cố định",
+            "C": "Người làm công ăn lương cố định",
+            "D": "Người về hưu sống bằng trợ cấp xã hội"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (gười vay tiền dài hạn với lãi suất cố định)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Người vay tiền dài hạn với lãi suất cố định)."
         },
         {
           "id": "kt_31",
           "num": 31,
-          "question": "Điều nào sau đây kh ng phải là nguyên nhân gây ra lạm phát chi phí đẩy?",
+          "question": "Điều nào sau đây không phải là nguyên nhân gây ra lạm phát chi phí đẩy?",
           "options": {
             "A": "Giá nguyên liệu đầu vào tăng",
             "B": "Tăng thuế gián thu",
@@ -4186,12 +4186,12 @@
         {
           "id": "kt_35",
           "num": 35,
-          "question": "Những khoản mục nào sau đây sẽ được tính vào  DP năm nay?",
+          "question": "Những khoản mục nào sau đây sẽ được tính vào GDP năm nay?",
           "options": {
             "A": "Máy tính mới sản xuất ra trong năm nay được một công ty xuất bản mua.",
             "B": "Máy tính cá nhân sản xuất trong năm trước được một sinh viên mua để chuẩn bị cho kỳ thi học kỳ.",
             "C": "Một chiếc Máy bay mới được nhập khẩu từ nước ngoài.",
-            "D": "Nhà máy thép vừa xuất khẩu một l  hàng được sản xuất từ năm trước."
+            "D": "Nhà máy thép vừa xuất khẩu một lô hàng được sản xuất từ năm trước."
           },
           "answer": "A",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Máy tính mới sản xuất ra trong năm nay được một công ty xuất bản mua.)."
@@ -4199,15 +4199,15 @@
         {
           "id": "kt_36",
           "num": 36,
-          "question": "GDP thực khác với  DP danh nghĩa ở điểm nào?",
+          "question": "GDP thực khác với GDP danh nghĩa ở điểm nào?",
           "options": {
             "A": "GDP thực không bao gồm thuế",
-            "B": "GDP thực đ  điều chỉnh theo lạm phát",
+            "B": "GDP thực đã điều chỉnh theo lạm phát",
             "C": "GDP thực không bao gồm sản phẩm dịch vụ",
             "D": "GDP thực chỉ tính hàng xuất khẩu"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực đ  điều chỉnh theo lạm phát)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (GDP thực đã điều chỉnh theo lạm phát)."
         },
         {
           "id": "kt_37",
@@ -4225,7 +4225,7 @@
         {
           "id": "kt_38",
           "num": 38,
-          "question": "guyên nhân nào sau đây kh ng phải là nguyên nhân trực tiếp gây ra thất nghiệp?",
+          "question": "Nguyên nhân nào sau đây không phải là nguyên nhân trực tiếp gây ra thất nghiệp?",
           "options": {
             "A": "Sự phát triển của khoa học kỹ thuật",
             "B": "Khủng hoảng kinh tế",
@@ -4269,7 +4269,7 @@
             "A": "Chính sách tiền tệ thắt chặt",
             "B": "Giảm chi tiêu của chính phủ",
             "C": "Tăng cung tiền quá mức",
-            "D": "Tăng nhập hẩu nhiên liệu"
+            "D": "Tăng nhập khẩu nhiên liệu"
           },
           "answer": "C",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Tăng cung tiền quá mức)."
@@ -4280,7 +4280,7 @@
           "question": "Lạm phát chi phí đẩy xảy ra khi:",
           "options": {
             "A": "Cầu hàng hoá tăng nhanh hơn cung",
-            "B": "gân hàng Trung ương bơm tiền vào nền kinh tế",
+            "B": "Ngân hàng Trung ương bơm tiền vào nền kinh tế",
             "C": "Chi phí sản xuất tăng làm cho giá thành sản xuất tăng",
             "D": "Đồng tiền mất giá do chính sách tỷ giá"
           },
@@ -4290,7 +4290,7 @@
         {
           "id": "kt_43",
           "num": 43,
-          "question": "DP đo lường",
+          "question": "GDP đo lường",
           "options": {
             "A": "Tổng giá trị hàng hóa xuất khẩu của một quốc gia trong một năm",
             "B": "Tổng giá trị tài sản cố định của một quốc gia",
@@ -4667,7 +4667,7 @@
         {
           "id": "mt_29",
           "num": 29,
-          "question": "Phương pháp thiêu đốt  thường không hiệu quả cho loại chất thải nào dưới đây?",
+          "question": "Phương pháp thiêu đốt thường không hiệu quả cho loại chất thải nào dưới đây?",
           "options": {
             "A": "Chất thải hữu cơ",
             "B": "Chất thải dung môi, chất thải không phân hủy sinh học",
@@ -4721,13 +4721,13 @@
           "num": 33,
           "question": "Một trong những rào cản lớn nhất của sinh thái công nghiệp là:",
           "options": {
-            "A": "Thiếu ngân sách đầu tư công nghệ cao  và các điều kiện để xây dựng khu STCN",
+            "A": "Thiếu ngân sách đầu tư công nghệ cao và các điều kiện để xây dựng khu STCN",
             "B": "Mối quan hệ phụ thuộc giữa các doanh nghiệp khiến rủi ro tăng cao",
-            "C": "Không có chính sách pháp luật về bảo vệ môi trường  khuyến khích việc xây dựng khu STCN",
-            "D": "Thiếu nguồn nhân lực chất lượng cao  và kinh nghiệm trong việc xây dựng khu STCN"
+            "C": "Không có chính sách pháp luật về bảo vệ môi trường khuyến khích việc xây dựng khu STCN",
+            "D": "Thiếu nguồn nhân lực chất lượng cao và kinh nghiệm trong việc xây dựng khu STCN"
           },
           "answer": "A",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Thiếu ngân sách đầu tư công nghệ cao  và các điều kiện để xây dựng khu STCN)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Thiếu ngân sách đầu tư công nghệ cao và các điều kiện để xây dựng khu STCN)."
         },
         {
           "id": "mt_34",
@@ -4802,7 +4802,7 @@
             "A": "Khai thác tối đa các nguồn tài nguyên để phát triển",
             "B": "Tăng trưởng nhanh bằng mọi giá, chỉ số GDP/người cao",
             "C": "Tăng trưởng cao và ổn định, sử dụng hiệu quả tài nguyên",
-            "D": "Tăng trưởng cao,  chỉ số GDP/người cao"
+            "D": "Tăng trưởng cao, chỉ số GDP/người cao"
           },
           "answer": "C",
           "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Tăng trưởng cao và ổn định, sử dụng hiệu quả tài nguyên)."
@@ -5075,7 +5075,7 @@
           "id": "btcn_kt_16",
           "section": "btcn_kt",
           "num": 16,
-          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua: a. Tăng cung b. Chính phủ tăng giá c. Giảm lượng cầu d. Giảm giá   ✓ ĐÁP ÁN ĐÚNG",
+          "question": "Có thể hạn chế sự dư thừa hàng hóa trên thị trường thông qua: a. Tăng cung b. Chính phủ tăng giá c. Giảm lượng cầu d. Giảm giá ✓ ĐÁP ÁN ĐÚNG",
           "options": {},
           "answer": "D",
           "explanation": "Dư thừa xảy ra khi giá cao làm Qs>Qd. Giảm giá làm Qd tăng và Qs giảm, thu hẹp phần dư thừa.",
@@ -5310,7 +5310,7 @@
           "id": "btcn_kt_32",
           "section": "btcn_kt",
           "num": 32,
-          "question": " *(Sơ đồ đồ thị Cung - Cầu thể hiện điểm cân bằng tại Q = 200, P = 4)* Theo hình trên khi giá là 4 thì tổng doanh thu là:",
+          "question": "*(Sơ đồ đồ thị Cung - Cầu thể hiện điểm cân bằng tại Q = 200, P = 4)* Theo hình trên khi giá là 4 thì tổng doanh thu là:",
           "options": {
             "A": "1000",
             "B": "1200",
@@ -5610,7 +5610,7 @@
           "id": "btcn_kt_52",
           "section": "btcn_kt",
           "num": 52,
-          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm? Tỷ lệ thất nghiệp tăng Lực lượng lao động tăng Tỷ lệ thất nghiệp giảm   ✓ ĐÁP ÁN ĐÚNG Sản lượng tiềm năng tăng",
+          "question": "Điều gì xảy ra nếu những người thất nghiệp lâu năm ngừng tìm kiếm việc làm? Tỷ lệ thất nghiệp tăng Lực lượng lao động tăng Tỷ lệ thất nghiệp giảm ✓ ĐÁP ÁN ĐÚNG Sản lượng tiềm năng tăng",
           "options": {},
           "answer": "C",
           "explanation": "Người ngừng tìm việc không còn được tính trong lực lượng lao động và cũng không còn được tính là thất nghiệp, nên tỷ lệ thất nghiệp đo lường có thể giảm.",
@@ -5830,7 +5830,7 @@
           "id": "btcn_kt_67",
           "section": "btcn_kt",
           "num": 67,
-          "question": "Cho phương trình đường cầu  và phương trình đường cung . Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
+          "question": "Cho phương trình đường cầu và phương trình đường cung . Nếu thu nhập của người tiêu dùng tăng lên, làm cho lượng cầu tăng lên 20 đơn vị tại mỗi mức giá. Tính giá cả và sản lượng cân bằng:",
           "options": {
             "A": "",
             "B": "",
@@ -5845,7 +5845,7 @@
           "id": "btcn_kt_68",
           "section": "btcn_kt",
           "num": 68,
-          "question": " Theo hình trên khi giá là 4 thì tổng doanh thu là:",
+          "question": "Theo hình trên khi giá là 4 thì tổng doanh thu là:",
           "options": {
             "A": "1000",
             "B": "1200",
@@ -5903,7 +5903,7 @@
           "id": "btcn_kt_70",
           "section": "btcn_kt",
           "num": 70,
-          "question": "Cho hàm cầu  và hàm cung . Nếu chính phủ đánh thuế 1 nd/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
+          "question": "Cho hàm cầu và hàm cung . Nếu chính phủ đánh thuế 1 nd/sản phẩm trên mỗi đơn vị sản phẩm bán ra trên thị trường. Hãy xác định giá và sản lượng cân bằng mới của thị trường sau khi có thuế:",
           "options": {
             "A": "",
             "B": "",
@@ -6004,7 +6004,7 @@
           "id": "btcn_kt_73",
           "section": "btcn_kt",
           "num": 73,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau:  và  Nếu nhà nước đánh thuế 10 đơm vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơm vị giá/sản phẩm, xác định phần thuế mà người sản xuất phải chịu trên một đơn vị sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -6019,7 +6019,7 @@
           "id": "btcn_kt_74",
           "section": "btcn_kt",
           "num": 74,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau:  và  Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định phần thuế mà người tiêu dùng phải chịu trên một sản phẩm:",
           "options": {
             "A": "4 đơn vị giá/sản phẩm",
             "B": "5 đơn vị giá/sản phẩm",
@@ -6034,7 +6034,7 @@
           "id": "btcn_kt_75",
           "section": "btcn_kt",
           "num": 75,
-          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau:  và  Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
+          "question": "Thị trường sản phẩm A có hàm cung và cầu như sau: và Nếu nhà nước đánh thuế 10 đơn vị giá/sản phẩm, xác định điểm cân bằng mới:",
           "options": {
             "A": "",
             "B": "",
@@ -6049,7 +6049,7 @@
           "id": "btcn_kt_76",
           "section": "btcn_kt",
           "num": 76,
-          "question": "Cho đường cung  và đường cầu . Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
+          "question": "Cho đường cung và đường cầu . Khi giá bù áp đặt là 11.5 nghìn đồng/đơn vị, doanh thu là bao nhiêu?",
           "options": {
             "A": "",
             "B": "",
