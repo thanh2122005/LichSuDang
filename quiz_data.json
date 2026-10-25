@@ -88,20 +88,20 @@
         {
           "id": "kt_7",
           "num": 7,
-          "question": "hân tố nào dưới đây làm dịch chuyển đường cung hàng hóa sang trái",
+          "question": "Nhân tố nào dưới đây làm dịch chuyển đường cung hàng hóa X sang trái:",
           "options": {
-            "A": "Lương công nhân sản xuất hàng hóa giảm",
-            "B": "Giá máy móc sản xuất ra hàng hóa tăng",
-            "C": "C ng nghệ sản xuất ra hàng hóa được cải tiến",
-            "D": "Là t nh huống lượng cầu lớn hơn lượng cung"
+            "A": "Lương công nhân sản xuất hàng hóa X giảm",
+            "B": "Giá máy móc sản xuất ra hàng hóa X tăng",
+            "C": "Công nghệ sản xuất ra hàng hóa X được cải tiến",
+            "D": "Là tình huống lượng cầu lớn hơn lượng cung"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy móc sản xuất ra hàng hóa tăng)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy móc sản xuất ra hàng hóa X tăng)."
         },
         {
           "id": "kt_8",
           "num": 8,
-          "question": "Lượng cầu tăng có nghĩa là",
+          "question": "Lượng cầu tăng có nghĩa là:",
           "options": {
             "A": "Dịch chuyển đường cầu sang phải",
             "B": "Dịch chuyển đường cầu sang trái",
@@ -127,7 +127,7 @@
         {
           "id": "kt_10",
           "num": 10,
-          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này?",
+          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này:",
           "options": {
             "A": "Giá cả các yếu tố đầu vào tăng",
             "B": "Thời tiết xấu làm cho đường cung dịch chuyển",
@@ -140,7 +140,7 @@
         {
           "id": "kt_11",
           "num": 11,
-          "question": "Hiện tượng thiếu hụt hàng hóa trên thị trường có nghĩa là",
+          "question": "Hiện tượng thiếu hụt hàng hóa trên thị trường có nghĩa là:",
           "options": {
             "A": "Cầu tăng khi giá tăng",
             "B": "Lượng cầu lớn hơn lượng cung",
@@ -153,7 +153,7 @@
         {
           "id": "kt_12",
           "num": 12,
-          "question": "Hiện tượng dư thừa hàng hóa trên thị trường có nghĩa là",
+          "question": "Hiện tượng dư thừa hàng hóa trên thị trường có nghĩa là:",
           "options": {
             "A": "Tồn tại nếu giá cao hơn giá cân bằng",
             "B": "Là chênh lệch giữa lượng cầu và lượng cung",
@@ -200,7 +200,7 @@
             "D": "Sản lượng cân bằng chắc chắn tăng"
           },
           "answer": "A",
-          "explanation": "Khi cung tăng và cầu giảm, cả hai yếu tố đều tác động làm giảm mức giá cân bằng, nên giá cân bằng chắc chắn giảm."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Giá cân bằng chắc chắn giảm)."
         },
         {
           "id": "kt_16",
@@ -218,10 +218,10 @@
         {
           "id": "kt_17",
           "num": 17,
-          "question": "Cơn b o số năm tại Việt Nam làm mất rất nhiều diện tích nu i trồng thủy sản có thể sẽ",
+          "question": "Cơn bão số 3 năm 2024 tại Việt Nam làm mất rất nhiều diện tích nuôi trồng thủy sản có thể sẽ:",
           "options": {
-            "A": "ây ra sự vận động dọc theo đường cung thủy sản ở Việt Nam tới mức giá cao hơn",
-            "B": "ây ra cầu tăng làm cho giá thủy sản cao hơn",
+            "A": "Gây ra sự vận động dọc theo đường cung thủy sản ở Việt Nam tới mức giá cao hơn",
+            "B": "Gây ra cầu tăng làm cho giá thủy sản cao hơn",
             "C": "Làm cho cầu đối với thủy sản giảm xuống",
             "D": "Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên sang trái"
           },
@@ -231,7 +231,7 @@
         {
           "id": "kt_18",
           "num": 18,
-          "question": "Khi giá hàng hoá Y PY = th lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác không đổi X và Y là 2 hàng hoá:",
+          "question": "Khi giá hàng hoá Y: PY = 4 thì lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác không đổi X và Y là 2 hàng hoá:",
           "options": {
             "A": "Thay thế cho nhau.",
             "B": "Vừa thay thế vừa bổ sung cho nhau.",
@@ -244,10 +244,10 @@
         {
           "id": "kt_19",
           "num": 19,
-          "question": "Cầu hàng hoá ( là hàng hoá th ng thường) tăng khi",
+          "question": "Cầu hàng hoá X (X là hàng hoá thông thường) tăng khi:",
           "options": {
-            "A": "Công nghệ sản xuất hàng hoá thay đổi.",
-            "B": "Giá của hàng hoá tăng.",
+            "A": "Công nghệ sản xuất hàng hoá X thay đổi.",
+            "B": "Giá của hàng hoá X tăng.",
             "C": "Thu nhập người tiêu dùng tăng.",
             "D": "Có nhiều người cung ứng mới xuất hiện trên thị trường."
           },
@@ -311,8 +311,8 @@
           "num": 24,
           "question": "Khoản mục nào sau đây không được tính một cách trực tiếp trong GDP của nước ta theo cách tiếp cận chi tiêu",
           "options": {
-            "A": "Dịch vụ giúp việc mà một gia đ nh thuê.",
-            "B": "Dịch vụ tư vấn luật mà một gia đ nh thuê.",
+            "A": "Dịch vụ giúp việc mà một gia đình thuê.",
+            "B": "Dịch vụ tư vấn luật mà một gia đình thuê.",
             "C": "Sợi bông mà công ty dệt 8-3 mua và dệt thành vải.",
             "D": "Giáo trình bán cho sinh viên."
           },
@@ -924,7 +924,7 @@
             "D": "Đều chỉ áp dụng cho chất thải rắn"
           },
           "answer": "C",
-          "explanation": "Cả thuế môi trường và côta ô nhiễm đều là công cụ kinh tế điều tiết hành vi gây ô nhiễm bằng chi phí tài chính."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính)."
         },
         {
           "id": "mt_28",
@@ -3833,20 +3833,20 @@
         {
           "id": "kt_7",
           "num": 7,
-          "question": "hân tố nào dưới đây làm dịch chuyển đường cung hàng hóa sang trái",
+          "question": "Nhân tố nào dưới đây làm dịch chuyển đường cung hàng hóa X sang trái:",
           "options": {
-            "A": "Lương công nhân sản xuất hàng hóa giảm",
-            "B": "Giá máy móc sản xuất ra hàng hóa tăng",
-            "C": "C ng nghệ sản xuất ra hàng hóa được cải tiến",
-            "D": "Là t nh huống lượng cầu lớn hơn lượng cung"
+            "A": "Lương công nhân sản xuất hàng hóa X giảm",
+            "B": "Giá máy móc sản xuất ra hàng hóa X tăng",
+            "C": "Công nghệ sản xuất ra hàng hóa X được cải tiến",
+            "D": "Là tình huống lượng cầu lớn hơn lượng cung"
           },
           "answer": "B",
-          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy móc sản xuất ra hàng hóa tăng)."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án B (Giá máy móc sản xuất ra hàng hóa X tăng)."
         },
         {
           "id": "kt_8",
           "num": 8,
-          "question": "Lượng cầu tăng có nghĩa là",
+          "question": "Lượng cầu tăng có nghĩa là:",
           "options": {
             "A": "Dịch chuyển đường cầu sang phải",
             "B": "Dịch chuyển đường cầu sang trái",
@@ -3872,7 +3872,7 @@
         {
           "id": "kt_10",
           "num": 10,
-          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này?",
+          "question": "Cho hình vẽ sau, trong đó điểm E là điểm cân bằng ban đầu của thị trường lương thực còn điểm E’ là điểm cân bằng mới. Yếu tố nào sau đây có thể gây ra sự thay đổi này:",
           "options": {
             "A": "Giá cả các yếu tố đầu vào tăng",
             "B": "Thời tiết xấu làm cho đường cung dịch chuyển",
@@ -3885,7 +3885,7 @@
         {
           "id": "kt_11",
           "num": 11,
-          "question": "Hiện tượng thiếu hụt hàng hóa trên thị trường có nghĩa là",
+          "question": "Hiện tượng thiếu hụt hàng hóa trên thị trường có nghĩa là:",
           "options": {
             "A": "Cầu tăng khi giá tăng",
             "B": "Lượng cầu lớn hơn lượng cung",
@@ -3898,7 +3898,7 @@
         {
           "id": "kt_12",
           "num": 12,
-          "question": "Hiện tượng dư thừa hàng hóa trên thị trường có nghĩa là",
+          "question": "Hiện tượng dư thừa hàng hóa trên thị trường có nghĩa là:",
           "options": {
             "A": "Tồn tại nếu giá cao hơn giá cân bằng",
             "B": "Là chênh lệch giữa lượng cầu và lượng cung",
@@ -3945,7 +3945,7 @@
             "D": "Sản lượng cân bằng chắc chắn tăng"
           },
           "answer": "A",
-          "explanation": "Khi cung tăng và cầu giảm, cả hai yếu tố đều tác động làm giảm mức giá cân bằng, nên giá cân bằng chắc chắn giảm."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án A (Giá cân bằng chắc chắn giảm)."
         },
         {
           "id": "kt_16",
@@ -3963,10 +3963,10 @@
         {
           "id": "kt_17",
           "num": 17,
-          "question": "Cơn b o số năm tại Việt Nam làm mất rất nhiều diện tích nu i trồng thủy sản có thể sẽ",
+          "question": "Cơn bão số 3 năm 2024 tại Việt Nam làm mất rất nhiều diện tích nuôi trồng thủy sản có thể sẽ:",
           "options": {
-            "A": "ây ra sự vận động dọc theo đường cung thủy sản ở Việt Nam tới mức giá cao hơn",
-            "B": "ây ra cầu tăng làm cho giá thủy sản cao hơn",
+            "A": "Gây ra sự vận động dọc theo đường cung thủy sản ở Việt Nam tới mức giá cao hơn",
+            "B": "Gây ra cầu tăng làm cho giá thủy sản cao hơn",
             "C": "Làm cho cầu đối với thủy sản giảm xuống",
             "D": "Làm cho đường cung thủy sản Việt Nam dịch chuyển lên trên sang trái"
           },
@@ -3976,7 +3976,7 @@
         {
           "id": "kt_18",
           "num": 18,
-          "question": "Khi giá hàng hoá Y PY = th lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác không đổi X và Y là 2 hàng hoá:",
+          "question": "Khi giá hàng hoá Y: PY = 4 thì lượng cầu hàng hoá X là QX = 15 và khi PY = 6 thì QX = 17, với điều kiện các yếu tố khác không đổi X và Y là 2 hàng hoá:",
           "options": {
             "A": "Thay thế cho nhau.",
             "B": "Vừa thay thế vừa bổ sung cho nhau.",
@@ -3989,10 +3989,10 @@
         {
           "id": "kt_19",
           "num": 19,
-          "question": "Cầu hàng hoá ( là hàng hoá th ng thường) tăng khi",
+          "question": "Cầu hàng hoá X (X là hàng hoá thông thường) tăng khi:",
           "options": {
-            "A": "Công nghệ sản xuất hàng hoá thay đổi.",
-            "B": "Giá của hàng hoá tăng.",
+            "A": "Công nghệ sản xuất hàng hoá X thay đổi.",
+            "B": "Giá của hàng hoá X tăng.",
             "C": "Thu nhập người tiêu dùng tăng.",
             "D": "Có nhiều người cung ứng mới xuất hiện trên thị trường."
           },
@@ -4056,8 +4056,8 @@
           "num": 24,
           "question": "Khoản mục nào sau đây không được tính một cách trực tiếp trong GDP của nước ta theo cách tiếp cận chi tiêu",
           "options": {
-            "A": "Dịch vụ giúp việc mà một gia đ nh thuê.",
-            "B": "Dịch vụ tư vấn luật mà một gia đ nh thuê.",
+            "A": "Dịch vụ giúp việc mà một gia đình thuê.",
+            "B": "Dịch vụ tư vấn luật mà một gia đình thuê.",
             "C": "Sợi bông mà công ty dệt 8-3 mua và dệt thành vải.",
             "D": "Giáo trình bán cho sinh viên."
           },
@@ -4660,7 +4660,7 @@
             "D": "Đều chỉ áp dụng cho chất thải rắn"
           },
           "answer": "C",
-          "explanation": "Cả thuế môi trường và côta ô nhiễm đều là công cụ kinh tế điều tiết hành vi gây ô nhiễm bằng chi phí tài chính."
+          "explanation": "Đáp án chuẩn theo tài liệu ôn tập: Phương án C (Đều nhằm điều tiết hành vi gây ô nhiễm thông qua cơ chế tài chính)."
         },
         {
           "id": "mt_28",
